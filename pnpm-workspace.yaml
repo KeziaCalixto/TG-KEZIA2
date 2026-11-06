@@ -1,0 +1,8 @@
+allowBuilds:
+  unrs-resolver: false
+patchedDependencies:
+  braces@3.0.3: patches/braces@3.0.3.patch
+# Mitigação local testada; revisão até 18/11/2026. Ver docs/security/dependency-mitigation.md.
+auditConfig:
+  ignoreGhsas:
+    - GHSA-vfj7-8cjw-p6xm

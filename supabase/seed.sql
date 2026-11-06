@@ -1,0 +1,3 @@
+-- Intentionally empty. The demo calendar is versioned in application code.
+-- No source, rule, or calendar has received legal approval in this database.
+-- Test-only users and fixtures live in transactional pgTAP tests and roll back.

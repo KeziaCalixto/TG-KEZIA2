@@ -1,0 +1,5 @@
+# Perfis explícitos e preservação do motor civil
+
+Estado: aceito para a continuação local de 21/10/2026. Os novos perfis trabalhista/criminal usam motor 0.3.0 e snapshots de regra próprios. O motor civil 0.2.0 foi preservado em `civil-v0-2.ts`, chamado pela fronteira pública existente. Generalizar diretamente esse código sob a mesma versão mudaria o contrato e dificultaria conferir o histórico já salvo; a duplicação parcial é deliberada para preservar a versão anterior, sujeita à regressão e a mudanças futuras com versão explícita.
+
+O servidor seleciona calendário compatível com perfil/tribunal/localidade; os novos perfis exigem contexto informado, sem elegibilidade implícita. Calendários e revisões continuam demonstrativos. A confirmação do usuário não concede permissões e não atesta validade jurídica. Não houve alteração de tabelas/RLS: entrada/resultado continuam snapshots JSON, com validação/recálculo no servidor. O modelo não passa a garantir reexecução de qualquer versão histórica apenas por preservar a implementação civil atual.

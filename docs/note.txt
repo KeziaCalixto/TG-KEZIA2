@@ -1,0 +1,263 @@
+### **INTRODUÇÃO**
+
+O projeto visa desenvolver uma aplicação simples e acessível para a contagem de prazos processuais, facilitando a rotina de profissionais do Direito, estagiários, advogados e estudantes. O sistema será capaz de identificar automaticamente feriados nacionais e finais de semana, com base nas normas do CPC e em outras legislações aplicáveis.
+
+The project aims to develop a simple and accessible application for calculating procedural deadlines, facilitating the daily routine of legal professionals, interns, lawyers, and law students. The system will be able to automatically identify national holidays and weekends based on the rules established by the Brazilian Code of Civil Procedure (CPC) and other applicable legislation.
+
+**Keywords:** Deadlines. Law. Software Development. Software Testing. Software Engineering.
+
+ **1 - ESPECIFICAÇÃO DO SISTEMA**
+
+- **Escopo:**
+    
+    O aplicativo irá permitir o cadastro de processos, definição de tipo de prazo (corridos/úteis), datas de início e fim, cálculo automático do prazo final, alerta de vencimento, e geração de histórico.
+    
+- **Clientes do sistema:**
+    
+    Estudantes de Direito, advogados, estagiários, cartórios judiciais e servidores públicos.
+    
+    ┌─────────────────────────────┐
+    │       USUÁRIO               │
+    │ Advogado / Estagiário /     │
+    │ Estudante de Direito        │
+    └──────────────┬──────────────┘
+    │
+    │ Internet
+    ▼
+    ┌─────────────────────────────┐
+    │     COMPUTADOR / CELULAR    │
+    │                             │
+    │ Navegador Web               │
+    │ Chrome / Edge / Firefox     │
+    └──────────────┬──────────────┘
+    │
+    │ HTTPS
+    ▼
+    ┌─────────────────────────────┐
+    │       SERVIDOR WEB          │
+    │                             │
+    │ Aplicação Web               │
+    │ Sistema de Prazos           │
+    │ Processamento das regras    │
+    └──────────────┬──────────────┘
+    │
+    │
+    ▼
+    ┌─────────────────────────────┐
+    │       BANCO DE DADOS        │
+    │                             │
+    │ Usuários                    │
+    │ Processos                   │
+    │ Prazos                      │
+    │ Feriados                    │
+    └─────────────────────────────┘
+    
+- **Planejamento:**
+    
+    Projeto será desenvolvido no Figma,Lucidchart,  prototipado com Bravo Studio e controlado pelo Notion. Prazo: agosto novembro.
+    
+- **Metodologia:**
+    
+    Metodologia ágil com Kanban via Notion.
+    
+- **Gestão do Projeto:**
+    
+    Etapas divididas em planejamento, prototipação, desenvolvimento, testes e entrega.
+    
+
+### **REQUISITOS DO SISTEMA**
+
+- **Requisitos Funcionais:**
+    - RF1: Calcular prazo processual com base em datas fornecidas
+    - RF2: Considerar feriados e fins de semana
+    - RF3: Permitir cadastro de processos
+    - RF4: Gerar alertas de vencimento
+    - RF5: Salvar histórico de prazos
+    - RF6: **Login:** por e-mail e senha ou com o Google, sem precisar confirmar o e-mail.
+    
+- **Requisitos Não Funcionais:**
+    - RNF01: Interface amigável e responsiva
+    - RNF02: Compatibilidade com dispositivos móveis
+    - RNF03: Uso offline básico (opcional)
+    - RNF04: Armazenamento local ou em nuvem (GITHUB)
+    - LINK:https://github.com/KeziaCalixto/snap-calculating-friend.git
+    - LINK: Contagem de Prazos Processuais
+    
+- **Requisitos do Domínio:**
+    - RDC01: Deve seguir as normas do Código de Processo Civil (CPC)
+    - RDC02: Deve seguir as normas do Código de Processo Penal (CPP)
+    - RDC03: Permitir a contagem de dias úteis conforme legislação.
+    - Permitir a contagem em dias corridos conforme legislacao penal.
+    
+- **Diagrama de Casos de Uso:**
+    
+    (Faremos depois em imagem)
+    
+- **Narrativas de Utilização (Exemplo):**
+    
+    “Usuário cadastra um novo processo, escolhe o tipo de prazo (útil ou corrido), define a data de início, e o sistema mostra a data final considerando feriados.”
+    
+- **Metodologia de Desenvolvimento:**
+    
+    Figma (protótipo) + loveable
+    
+    (funcionalidade) + Firebase (opcional backend)
+    
+
+### **DEFINIÇÃO DO PROJETO**
+
+ **(Orientado a Objetos)**
+
+**Diagramas que podem ser incluídos:**
+
+- Diagrama de Classes: Entidades como Processo, Prazo, Usuário
+- Diagrama de Atividades: Fluxo de contagem de prazo
+- Diagrama de Sequência: Cadastro de processo até cálculo final
+- Diagrama de Componentes: Frontend e Backend ( Lovable - ia)
+- Diagrama E-R: Processo, Tipo de Prazo, Datas, Status
+- Dicionário de Dados: Tabela de processos, tabela de usuários, tabela de feriados
+
+### **ESCOLHA DA ARQUITETURA DA SOLUÇÃO**
+
+- **Arquitetura:** Cliente leve (mobile/web) + backend opcional em nuvem (Firebase)
+- **Testes:** Teste de usabilidade com usuários simulados no protótipo.
+- **Produção:** Sistema poderá ser exportado do Bravo Studio para publicação em lojas (com upgrade), ou usado como web app.
+
+1. A estrutura do projeto
+O app tem poucos arquivos, cada um com uma função clara:
+
+Arquivo	O que faz
+src/routes/index.tsx	É a única tela visível. Mostra os botões, campos de data e o resultado.
+src/lib/prazo.ts	É o “cérebro” da calculadora. Faz toda a conta de dias úteis, feriados e recesso.
+src/lib/prazos-presets.ts	Guarda os atalhos de prazos comuns (contestação, apelação, recurso ordinário etc.).
+src/styles.css	Define as cores, fontes e espaçamentos do visual.
+2. O que acontece quando você usa o app
+Passo 1: você escolhe o regime
+No topo da tela existem 3 botões: Cível, Trabalhista e Corridos.
+
+Cível: conta só dias úteis e desconta o recesso forense (20/12 a 06/01).
+Trabalhista: conta só dias úteis, mas sem recesso forense.
+Corridos: conta todos os dias, inclusive fins de semana.
+Esse regime é guardado numa variável chamada regime.
+
+Passo 2: você informa a data de publicação/intimação
+O app lê a data que você digitou e a converte para um formato interno (AAAA-MM-DD).
+
+Passo 3: você escolhe a quantidade de dias
+Você pode digitar um número ou clicar nos atalhos como “Contestação · 15d”.
+
+Passo 4: o app calcula o vencimento
+A função principal é a calcularPrazo(data, dias, regime). Ela segue estas regras:
+
+Ajusta a publicação: se a data cair em fim de semana ou feriado, considera-se publicada no primeiro dia útil seguinte.
+Pula o dia da publicação: a contagem só começa no dia útil seguinte.
+Conta dia a dia: vai somando apenas os dias úteis até atingir o número de dias informado.
+Anota o que foi descontado: finais de semana, feriados e recesso forense vão para uma lista de “dias não contados”.
+Ajusta o vencimento: se o último dia cair em dia não útil, o prazo se prorroga para o próximo dia útil.
+3. Como os feriados são descobertos
+A função holidaysOf(ano) monta a lista de feriados nacionais do Brasil para aquele ano. Algumas datas são fixas, como:
+
+01/01 — Ano Novo
+21/04 — Tiradentes
+01/05 — Dia do Trabalho
+07/09 — Independência
+12/10 — Nossa Senhora Aparecida
+02/11 — Finados
+15/11 — Proclamação da República
+20/11 — Consciência Negra
+25/12 — Natal.
+
+Outras datas “móveis” (Carnaval, Sexta-feira Santa, Corpus Christi) são calculadas a partir da Páscoa, usando um algoritmo matemático chamado de Meeus/Jones/Butcher.
+
+1. Os atalhos de prazos comuns
+Quando você clica num atalho, o app faz duas coisas ao mesmo tempo:
+
+preenche a quantidade de dias;
+muda o regime automaticamente (cível ou trabalhista).
+Isso está na lista de presets, onde cada botão guarda: nome, dias, regime e base legal (ex: art. 335 CPC).
+
+1. A tela de resultado
+Depois do cálculo, o app mostra:
+
+a data de vencimento em destaque;
+quantos dias faltam, se já venceu ou se vence hoje;
+a data de publicação;
+o dia em que a contagem começou;
+quantos dias foram descontados;
+um botão para abrir o detalhamento dia a dia, mostrando cada data contada e o motivo das datas puladas.
+6. Tecnologia usada
+O app foi feito com:
+
+React — para montar a interface;
+TanStack Start — para estruturar as rotas e o servidor;
+Tailwind CSS — para o visual (cores, espaçamentos, sombras);
+TypeScript — para deixar o código mais seguro e organizado.
+Não usa banco de dados nem login: tudo acontece no navegador, de forma instantânea.
+
+CODIGO:
+
+import streamlit as st
+from datetime import date, timedelta
+
+st.title("Contagem de Prazos Processuais")
+st.write("Calculadora demonstrativa de prazos judiciais")
+
+data_inicial = st.date_input(
+"Data inicial da contagem",
+value=date.today()
+)
+
+tipo = st.selectbox(
+"Tipo de contagem",
+["Dias úteis", "Dias corridos"]
+)
+
+quantidade = st.number_input(
+"Quantidade de dias",
+min_value=1,
+max_value=365,
+value=15
+)
+
+if st.button("Calcular prazo"):
+data = data_inicial
+contagem = 0
+
+```
+while contagem < quantidade:
+    data = data + timedelta(days=1)
+
+    if tipo == "Dias corridos":
+        contagem += 1
+
+    elif data.weekday() < 5:
+        contagem += 1
+
+st.success(
+    f"Data final calculada: {data.strftime('%d/%m/%Y')}"
+)
+
+st.warning(
+    "Confira feriados, suspensões e regras "
+    "do tribunal antes de utilizar o resultado."
+)
+```
+
+### **CONSIDERAÇÕES FINAIS**
+
+(Inserir também as telas aqui)
+
+O sistema visa facilitar o cotidiano de quem lida com prazos judiciais, automatizando e reduzindo erros. Os próximos passos são testes com usuários reais e integração com bases oficiais de feriados.
+
+### **REFERÊNCIAS**
+
+- Código de Processo Civil – Lei 13.105/2015
+- Código Processo Penal-  prazo dias corridos.
+- Bravo Studio – https://www.bravostudio.app. ( inserir link do bravo)
+- Notion – https://www.notion.so
+- Figma – https://www.figma.com. ( inserir link da plataforma)
+- CNJ – Resoluções sobre prazos e feriados
+- GitHub: ‣
+
+### ****
+

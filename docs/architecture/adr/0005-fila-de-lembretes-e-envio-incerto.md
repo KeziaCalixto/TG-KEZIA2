@@ -1,0 +1,5 @@
+# Fila persistida e confirmação de aceite separada da entrega
+
+Estado: aceito para a primeira fatia local de 23/10/2026. Lembretes usam registros próprios e claim transacional no Postgres, preservando cálculo original e isolamento individual. RPCs limitam alterações do usuário; funções privilegiadas ficam em schema não exposto com wrappers invoker e permissões explícitas. Evita conceder atualização de estado/token/destinatário ao navegador e mantém a Data API estabelecida no ADR 0002.
+
+Envio HTTP e transação do banco não são atômicos. Sem idempotência comprovada do provedor, timeout após começar o envio ou lease expirado produz estado incerto, sem repetição automática; prefere-se conferência e possível perda de lembrete a duplicação silenciosa. Aceite do Mailpit não significa entrega externa. Primeiro adaptador e execução são estritamente locais; scheduler e provedor externos exigem nova etapa, sem reutilizar implicitamente o SMTP do Auth. [Contrato e limites](../../email-reminders.md).
