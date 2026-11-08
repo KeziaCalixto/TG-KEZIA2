@@ -1,0 +1,658 @@
+{
+  "pages": [
+    {
+      "source": "website/content/visao-geral/introducao.md",
+      "id": "visao-geral/introducao",
+      "title": "Visão geral",
+      "group": "visao-geral"
+    },
+    {
+      "source": "website/content/visao-geral/estado.md",
+      "id": "visao-geral/estado",
+      "title": "Estado da entrega",
+      "group": "visao-geral"
+    },
+    {
+      "source": "website/content/manual/uso.md",
+      "id": "manual/uso",
+      "title": "Simular e conferir a memória",
+      "group": "manual"
+    },
+    {
+      "source": "website/content/manual/conta.md",
+      "id": "manual/conta",
+      "title": "Conta e histórico",
+      "group": "manual"
+    },
+    {
+      "source": "website/content/manual/lembretes.md",
+      "id": "manual/lembretes",
+      "title": "Agendar e acompanhar lembretes",
+      "group": "manual"
+    },
+    {
+      "source": "website/content/engenharia/concepcao.md",
+      "id": "engenharia/concepcao",
+      "title": "Concepção e decisões de engenharia",
+      "group": "engenharia"
+    },
+    {
+      "source": "website/content/banco/visao-geral.md",
+      "id": "banco/visao-geral",
+      "title": "Banco de dados e diagramas gerais",
+      "group": "banco"
+    },
+    {
+      "source": "website/content/desenvolvimento/portal.md",
+      "id": "desenvolvimento/portal",
+      "title": "Manter e publicar a documentação",
+      "group": "desenvolvimento"
+    },
+    {
+      "source": "website/content/entrega/biblioteca.md",
+      "id": "entrega/biblioteca",
+      "title": "Biblioteca acadêmica e downloads",
+      "group": "entrega"
+    },
+    {
+      "source": "docs/requirements.md",
+      "id": "engenharia/requisitos",
+      "title": "Requisitos e critérios",
+      "group": "engenharia"
+    },
+    {
+      "source": "GLOSSARY.md",
+      "id": "engenharia/glossario",
+      "title": "Glossário do domínio",
+      "group": "engenharia"
+    },
+    {
+      "source": "docs/architecture.md",
+      "id": "engenharia/arquitetura",
+      "title": "Arquitetura modular",
+      "group": "engenharia"
+    },
+    {
+      "source": "docs/api/README.md",
+      "id": "engenharia/api",
+      "title": "Contratos HTTP",
+      "group": "engenharia"
+    },
+    {
+      "source": "docs/relatorio-banco/relatorio.md",
+      "id": "banco/relatorio-completo",
+      "title": "Relatório completo do banco",
+      "group": "banco",
+      "transform": "database"
+    },
+    {
+      "source": "docs/entrega/instalacao.md",
+      "id": "desenvolvimento/instalacao",
+      "title": "Instalação do aplicativo",
+      "group": "desenvolvimento"
+    },
+    {
+      "source": "docs/deployment.md",
+      "id": "operacao/implantacao",
+      "title": "Ambientes e implantação",
+      "group": "operacao"
+    },
+    {
+      "source": "docs/reminder-scheduler-operations.md",
+      "id": "operacao/agendador",
+      "title": "Operação do agendador",
+      "group": "operacao"
+    },
+    {
+      "source": "docs/security/README.md",
+      "id": "qualidade/seguranca",
+      "title": "Modelo de segurança",
+      "group": "qualidade"
+    },
+    {
+      "source": "docs/testing/strategy.md",
+      "id": "qualidade/estrategia",
+      "title": "Estratégia de testes",
+      "group": "qualidade",
+      "historical": true
+    },
+    {
+      "source": "CHANGELOG.md",
+      "id": "evolucao/marcos",
+      "title": "Registro de avanços",
+      "group": "evolucao"
+    },
+    {
+      "source": "docs/backlog.md",
+      "id": "evolucao/backlog",
+      "title": "Backlog e aceites",
+      "group": "evolucao"
+    },
+    {
+      "source": "docs/apresentacao-tg2/roteiro-de-fala.md",
+      "id": "entrega/roteiro-de-fala",
+      "title": "Roteiro da apresentação",
+      "group": "entrega"
+    },
+    {
+      "source": "docs/entrega/demonstracao.md",
+      "id": "entrega/demonstracao",
+      "title": "Demonstração dos perfis",
+      "group": "entrega"
+    },
+    {
+      "source": "docs/Documentação sobre Contagem de Prazos Processuais.md",
+      "id": "referencias/documentacao-sobre-contagem-de-prazos-processuais",
+      "title": "Documentação sobre Contagem de Prazos Processuais — Brasil",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/architecture/adr/0001-motor-independente-e-versoes-preservadas.md",
+      "id": "engenharia/decisoes/0001-motor-independente-e-versoes-preservadas",
+      "title": "Motor independente e versões preservadas",
+      "group": "engenharia",
+      "historical": false
+    },
+    {
+      "source": "docs/architecture/adr/0002-supabase-data-api-sem-orm-inicial.md",
+      "id": "engenharia/decisoes/0002-supabase-data-api-sem-orm-inicial",
+      "title": "Supabase Data API e RLS na primeira fatia",
+      "group": "engenharia",
+      "historical": false
+    },
+    {
+      "source": "docs/architecture/adr/0003-historico-individual-antes-de-organizacoes.md",
+      "id": "engenharia/decisoes/0003-historico-individual-antes-de-organizacoes",
+      "title": "Histórico individual antes de organizações",
+      "group": "engenharia",
+      "historical": false
+    },
+    {
+      "source": "docs/architecture/adr/0004-perfis-explicitos-e-motor-civil-preservado.md",
+      "id": "engenharia/decisoes/0004-perfis-explicitos-e-motor-civil-preservado",
+      "title": "Perfis explícitos e preservação do motor civil",
+      "group": "engenharia",
+      "historical": false
+    },
+    {
+      "source": "docs/architecture/adr/0005-fila-de-lembretes-e-envio-incerto.md",
+      "id": "engenharia/decisoes/0005-fila-de-lembretes-e-envio-incerto",
+      "title": "Fila persistida e confirmação de aceite separada da entrega",
+      "group": "engenharia",
+      "historical": false
+    },
+    {
+      "source": "docs/architecture/adr/0006-agendamento-com-assinatura-descartavel.md",
+      "id": "engenharia/decisoes/0006-agendamento-com-assinatura-descartavel",
+      "title": "Agendamento hospedado com assinatura descartável",
+      "group": "engenharia",
+      "historical": false
+    },
+    {
+      "source": "docs/brevo-setup.md",
+      "id": "referencias/brevo-setup",
+      "title": "Preparar o Brevo para os lembretes",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/continuation-plan.md",
+      "id": "referencias/continuation-plan",
+      "title": "Continuação do Prazo Claro",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/email-reminders-external.md",
+      "id": "referencias/email-reminders-external",
+      "title": "Lembretes externos — contrato incremental de 23/10/2026",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/email-reminders.md",
+      "id": "referencias/email-reminders",
+      "title": "Lembretes opcionais — primeira fatia local",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/entrega/README.md",
+      "id": "referencias/entrega/indice",
+      "title": "Entrega do Prazo Claro",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/entrega/aceite-2026-10-20.md",
+      "id": "referencias/entrega/aceite-2026-10-20",
+      "title": "Aceite da entrega acadêmica local",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/entrega/aceite.md",
+      "id": "referencias/entrega/aceite",
+      "title": "Aceite da entrega acadêmica — estado vigente",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/entrega/conferencia-final.md",
+      "id": "referencias/entrega/conferencia-final",
+      "title": "Conferência final da versão publicada",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/entrega/guia-do-aplicativo.md",
+      "id": "referencias/entrega/guia-do-aplicativo",
+      "title": "Prazo Claro",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/entrega/operacao.md",
+      "id": "referencias/entrega/operacao",
+      "title": "Operação e manutenção da entrega acadêmica",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/google-login.md",
+      "id": "referencias/google-login",
+      "title": "Login com Google",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/history-organization.md",
+      "id": "referencias/history-organization",
+      "title": "Organização do histórico privado — contrato local",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/legal/rules/civil-mvp.md",
+      "id": "juridico/rules/civil-mvp",
+      "title": "Regras candidatas — civil comum / TJSP São Paulo",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/rules/criminal-djen-research-2026-10-21.md",
+      "id": "juridico/rules/criminal-djen-research-2026-10-21",
+      "title": "Pesquisa normativa — primeira fatia criminal no DJEN",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/rules/labor-djen-research-2026-10-21.md",
+      "id": "juridico/rules/labor-djen-research-2026-10-21",
+      "title": "Pesquisa da regra trabalhista por DJEN",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/rules/procedural-acts-2026-10-22.md",
+      "id": "juridico/rules/procedural-acts-2026-10-22",
+      "title": "Pesquisa normativa — catálogo inicial de atos processuais",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/sources/calendar-2027-research.md",
+      "id": "juridico/sources/calendar-2027-research",
+      "title": "Pesquisa de calendários forenses de SP para 2027",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/sources/criminal-sp-comarcas-2026.md",
+      "id": "juridico/sources/criminal-sp-comarcas-2026",
+      "title": "Ampliação criminal TJSP — dez comarcas, 2026",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/sources/index.md",
+      "id": "juridico/sources/index",
+      "title": "Fontes jurídicas da primeira fatia civil",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/sources/labor-sp-2026-research.md",
+      "id": "juridico/sources/labor-sp-2026-research",
+      "title": "Pesquisa do calendário trabalhista — TRT-2, São Paulo, 2026",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/sources/labor-sp-2027.md",
+      "id": "juridico/sources/labor-sp-2027",
+      "title": "Calendário trabalhista TRT-2 Capital — versão de 2027",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/sources/sp-comarcas-2026.md",
+      "id": "juridico/sources/sp-comarcas-2026",
+      "title": "Calendários demonstrativos de comarcas de SP — 2026",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/validation-cases/civil.md",
+      "id": "juridico/validation-cases/civil",
+      "title": "Casos independentes para validação do motor civil",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/legal/validation-cases/multi-regime.md",
+      "id": "juridico/validation-cases/multi-regime",
+      "title": "Referências técnicas dos novos perfis de SP",
+      "group": "juridico",
+      "historical": false
+    },
+    {
+      "source": "docs/review-existing-work.md",
+      "id": "referencias/review-existing-work",
+      "title": "Leitura do trabalho existente",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/review-original-documents-2026-10-21.md",
+      "id": "referencias/review-original-documents-2026-10-21",
+      "title": "Auditoria dos documentos originais — 21/10/2026",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/scope-audit-2026-10-21.md",
+      "id": "referencias/scope-audit-2026-10-21",
+      "title": "Auditoria de cobertura do projeto — 21/10/2026",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/security/dependency-mitigation.md",
+      "id": "referencias/security/dependency-mitigation",
+      "title": "Mitigação temporária da dependência de lint",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/security/release-review.md",
+      "id": "referencias/security/release-review",
+      "title": "Revisão técnica da entrega local — 20/10/2026",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/skills.md",
+      "id": "referencias/skills",
+      "title": "Skills e referências de engenharia",
+      "group": "referencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/brevo-preparation.md",
+      "id": "evidencias/brevo-preparation",
+      "title": "Preparação do Brevo — 23/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/criminal-sp-expansion.md",
+      "id": "evidencias/criminal-sp-expansion",
+      "title": "Ampliação criminal municipal — evidências locais",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/deployment-readiness.md",
+      "id": "evidencias/deployment-readiness",
+      "title": "Prontidão para primeiro deploy — 19/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/email-reminders.md",
+      "id": "evidencias/email-reminders",
+      "title": "Lembretes opcionais — evidências locais",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/email-templates.md",
+      "id": "evidencias/email-templates",
+      "title": "Templates locais — 19/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/export-print.md",
+      "id": "evidencias/export-print",
+      "title": "Exportação e impressão de memória — 20/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/final-delivery.md",
+      "id": "evidencias/final-delivery",
+      "title": "Verificação final da entrega local — 20/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/final-deployment.md",
+      "id": "evidencias/final-deployment",
+      "title": "Publicação da entrega — 20/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/finalization-2026-10-23.md",
+      "id": "evidencias/finalization-2026-10-23",
+      "title": "Fechamento técnico da entrega — 23/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/first-deployment.md",
+      "id": "evidencias/first-deployment",
+      "title": "Primeiro deploy acadêmico — 19/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/google-login.md",
+      "id": "evidencias/google-login",
+      "title": "Login com Google — preparação e retomada em 20/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/history-organization.md",
+      "id": "evidencias/history-organization",
+      "title": "Organização do histórico privado — evidências locais",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/hosted-smtp-diagnosis.md",
+      "id": "evidencias/hosted-smtp-diagnosis",
+      "title": "Falha de envio SMTP hospedado — 19/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/invitation-login.md",
+      "id": "evidencias/invitation-login",
+      "title": "Convite administrativo e indicador de sessão — 19/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/labor-2027.md",
+      "id": "evidencias/labor-2027",
+      "title": "TRT-2 Capital 2027 e travessia — evidências locais",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/local-finishing.md",
+      "id": "evidencias/local-finishing",
+      "title": "Continuação local — comarcas de SP, recuperação e histórico",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/local-supabase.md",
+      "id": "evidencias/local-supabase",
+      "title": "Supabase local — nova execução em 19/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/multi-regime.md",
+      "id": "evidencias/multi-regime",
+      "title": "Continuação local — perfis trabalhista e criminal",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/procedural-acts.md",
+      "id": "evidencias/procedural-acts",
+      "title": "Catálogo inicial de atos — evidências locais",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/release-2026-10-24.md",
+      "id": "evidencias/release-2026-10-24",
+      "title": "Publicação e conferência final — 24/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/reminder-delivery-modes.md",
+      "id": "evidencias/reminder-delivery-modes",
+      "title": "Isolamento dos modos de entrega — 23/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/reminder-receipt-2026-10-24.md",
+      "id": "evidencias/reminder-receipt-2026-10-24",
+      "title": "Aceite humano de recebimento e memória — 24/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/reminder-schedule-feedback.md",
+      "id": "evidencias/reminder-schedule-feedback",
+      "title": "Confirmação de agendamento — 24/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/reminder-scheduler.md",
+      "id": "evidencias/reminder-scheduler",
+      "title": "Agendador de lembretes — verificação local",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/reminders-brevo-adapter.md",
+      "id": "evidencias/reminders-brevo-adapter",
+      "title": "Adaptador Brevo — evidências de 23/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/reminders-production.md",
+      "id": "evidencias/reminders-production",
+      "title": "Publicação e preparação hospedada — 23/10/2026",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/results.md",
+      "id": "evidencias/results",
+      "title": "Evidências da primeira entrega local",
+      "group": "evidencias",
+      "historical": true
+    },
+    {
+      "source": "docs/testing/signup-confirmation-page.md",
+      "id": "evidencias/signup-confirmation-page",
+      "title": "Página após cadastro — 24/10/2026",
+      "group": "evidencias",
+      "historical": true
+    }
+  ],
+  "assets": [
+    "docs/relatorio-banco/diagramas/agendador.pdf",
+    "docs/relatorio-banco/diagramas/agendador.png",
+    "docs/relatorio-banco/diagramas/agendador.svg",
+    "docs/relatorio-banco/diagramas/arquitetura-completa.pdf",
+    "docs/relatorio-banco/diagramas/arquitetura-completa.png",
+    "docs/relatorio-banco/diagramas/arquitetura-completa.svg",
+    "docs/relatorio-banco/diagramas/banco-geral-completo.pdf",
+    "docs/relatorio-banco/diagramas/banco-geral-completo.png",
+    "docs/relatorio-banco/diagramas/banco-geral-completo.svg",
+    "docs/relatorio-banco/diagramas/conceitual.pdf",
+    "docs/relatorio-banco/diagramas/conceitual.png",
+    "docs/relatorio-banco/diagramas/conceitual.svg",
+    "docs/relatorio-banco/diagramas/estados.pdf",
+    "docs/relatorio-banco/diagramas/estados.png",
+    "docs/relatorio-banco/diagramas/estados.svg",
+    "docs/relatorio-banco/diagramas/fisico.pdf",
+    "docs/relatorio-banco/diagramas/fisico.png",
+    "docs/relatorio-banco/diagramas/fisico.svg",
+    "docs/relatorio-banco/diagramas/infraestrutura.pdf",
+    "docs/relatorio-banco/diagramas/infraestrutura.png",
+    "docs/relatorio-banco/diagramas/infraestrutura.svg",
+    "docs/relatorio-banco/diagramas/persistencia.pdf",
+    "docs/relatorio-banco/diagramas/persistencia.png",
+    "docs/relatorio-banco/diagramas/persistencia.svg",
+    "docs/relatorio-banco/diagramas/pranchas-ampliadas.pdf",
+    "docs/relatorio-tg2/figuras/arquitetura.pdf",
+    "docs/relatorio-tg2/figuras/arquitetura.png",
+    "docs/relatorio-tg2/figuras/autenticacao.pdf",
+    "docs/relatorio-tg2/figuras/autenticacao.png",
+    "docs/relatorio-tg2/figuras/calculo.pdf",
+    "docs/relatorio-tg2/figuras/calculo.png",
+    "docs/relatorio-tg2/figuras/contexto.pdf",
+    "docs/relatorio-tg2/figuras/contexto.png",
+    "docs/relatorio-tg2/figuras/dados.pdf",
+    "docs/relatorio-tg2/figuras/dados.png",
+    "docs/relatorio-tg2/figuras/dominio.pdf",
+    "docs/relatorio-tg2/figuras/dominio.png",
+    "docs/relatorio-tg2/figuras/implantacao.pdf",
+    "docs/relatorio-tg2/figuras/implantacao.png",
+    "docs/relatorio-tg2/figuras/lembretes.pdf",
+    "docs/relatorio-tg2/figuras/lembretes.png",
+    "docs/relatorio-tg2/figuras/tela-calculadora.png",
+    "docs/relatorio-tg2/figuras/tela-confirmacao.png",
+    "output/documents/prazo-claro-guia-entrega-2026-10-24.docx",
+    "output/documents/prazo-claro-guia-entrega-2026-10-24.pdf",
+    "output/documents/prazo-claro-relatorio-banco-de-dados-2026-11-04.docx",
+    "output/documents/prazo-claro-relatorio-banco-de-dados-2026-11-04.pdf",
+    "output/documents/prazo-claro-relatorio-tg2-2026-10-24.docx",
+    "output/documents/prazo-claro-relatorio-tg2-2026-10-24.pdf",
+    "output/documents/prazo-claro-relatorio-tg2-latex-2026-10-24.pdf",
+    "output/presentations/prazo-claro-apresentacao-tg2-2026-10-24.pdf",
+    "output/presentations/prazo-claro-apresentacao-tg2-2026-10-24.pptx",
+    "output/presentations/prazo-claro-poster-tg2-2026-10-24.pdf",
+    "output/presentations/prazo-claro-poster-tg2-2026-10-24.pptx",
+    "output/pdf/memoria-ato-criminal.pdf",
+    "output/pdf/memoria-demonstrativa-santos.pdf",
+    "output/pdf/memoria-travessia-trt2-2026-2027.pdf"
+  ]
+}

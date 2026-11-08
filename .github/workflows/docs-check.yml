@@ -1,0 +1,29 @@
+name: Verificar documentação
+on:
+  pull_request:
+    paths:
+      [
+        "website/**",
+        "docs/**",
+        "output/**",
+        "GLOSSARY.md",
+        "CHANGELOG.md",
+        ".github/workflows/docs-*.yml",
+      ]
+permissions:
+  contents: read
+jobs:
+  documentation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+      - run: npm --prefix website ci --ignore-scripts
+      - run: npm --prefix website test
+      - run: npm --prefix website run build
+      - run: npm --prefix website run verify:build

@@ -1,5 +1,11 @@
 # Avanços do Prazo Claro
 
+## 08/11/2026 — portal de documentação e recuperação dos materiais
+
+- Continuação na cópia Documents e no repositório KeziaCalixto/TG-KEZIA2; branch login/prazo. Proposta aprovada e execução pelo workflow Matt Pocock.
+- Recuperados 114 arquivos de materiais acadêmicos e aceite posterior, com hashes e sem alteração do código funcional ou migrations. [Lista de recuperação](docs/documentation-portal/recovered-materials.json).
+- Portal Docusaurus isolado em website/, com fontes explícitas, manual, engenharia, banco, infraestrutura, base jurídica, evidências e downloads. Build, revisão e publicação têm resultados próprios no registro de testes.
+
 ## 24/10/2026 — aceite do lembrete permanece inconclusivo
 
 - Responsável informou ausência de e-mail e exclusão do cálculo de teste, sem lembrar o horário. Conferência às 13h30: fila vazia, sem invocação de despacho registrada, Cron ativo. Exclusão em cascata explica a remoção da fila, sem provar a causa da ausência de envio.
