@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-11-08T17:30:39.642Z",
+  "base": "https://keziacalixto.github.io/TG-KEZIA2/",
+  "sourceCommit": "2b04b54b749980807401a8f0ff8ec807349d7c67",
+  "home": 200,
+  "search": "https://keziacalixto.github.io/TG-KEZIA2/docs/manual/lembretes/?_highlight=lembretes",
+  "bank": 200,
+  "bankImages": 2,
+  "pdf": {
+    "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/documents/prazo-claro-relatorio-banco-de-dados-2026-11-04.pdf",
+    "status": 200,
+    "bytes": 1564733,
+    "signature": "%PDF-"
+  },
+  "directReload": 200,
+  "mermaid": true,
+  "libraryDownloads": [
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/documents/prazo-claro-guia-entrega-2026-10-24.pdf",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/documents/prazo-claro-guia-entrega-2026-10-24.docx",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/documents/prazo-claro-relatorio-tg2-2026-10-24.pdf",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/documents/prazo-claro-relatorio-tg2-2026-10-24.docx",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/documents/prazo-claro-relatorio-tg2-latex-2026-10-24.pdf",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/documents/prazo-claro-relatorio-banco-de-dados-2026-11-04.pdf",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/documents/prazo-claro-relatorio-banco-de-dados-2026-11-04.docx",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/presentations/prazo-claro-apresentacao-tg2-2026-10-24.pdf",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/presentations/prazo-claro-apresentacao-tg2-2026-10-24.pptx",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/presentations/prazo-claro-poster-tg2-2026-10-24.pdf",
+      "status": 200
+    },
+    {
+      "url": "https://keziacalixto.github.io/TG-KEZIA2/generated/output/presentations/prazo-claro-poster-tg2-2026-10-24.pptx",
+      "status": 200
+    }
+  ],
+  "pageErrors": []
+}

@@ -12,7 +12,7 @@ Base da implementação: 5f21224. Permanecer na branch login/prazo e fazer commi
 - [x] Escrever percursos atuais e publicar referências existentes, relatório de banco expandido, diagramas e biblioteca acadêmica. Distinguir referências históricas do estado atual.
 - [x] Validar testes do publisher, build, todos os links/âncoras/arquivos locais do HTML, desktop/celular/teclado e regressões pertinentes da aplicação.
 - [x] Criar workflow de PR e Pages, registrar operação, evidências e revisão Standards/Spec conforme Matt Pocock.
-- [ ] Enviar commits e verificar a publicação; se Pages exigir ação administrativa indisponível, informar exatamente a etapa restante com o portal já validado.
+- [x] Enviar commits e verificar a publicação: workflow 42505166931 aprovado, site público com busca, diagramas, PDF, recarga e 11 downloads da biblioteca conferidos. Evidências em docs/testing/documentation-portal-2026-11-08.md.
 
 ## Interfaces de verificação aprovadas pelo escopo
 

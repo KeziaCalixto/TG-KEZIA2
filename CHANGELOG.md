@@ -5,6 +5,7 @@
 - Continuação na cópia Documents e no repositório KeziaCalixto/TG-KEZIA2; branch login/prazo. Proposta aprovada e execução pelo workflow Matt Pocock.
 - Recuperados 114 arquivos de materiais acadêmicos e aceite posterior, com hashes e sem alteração do código funcional ou migrations. [Lista de recuperação](docs/documentation-portal/recovered-materials.json).
 - Portal Docusaurus isolado em website/, com fontes explícitas, manual, engenharia, banco, infraestrutura, base jurídica, evidências e downloads. Build, revisão e publicação têm resultados próprios no registro de testes.
+- Publicação Pages confirmada no workflow 42505166931. Corrigida a barra indevida nos links de download, com regressão no HTML e conferência pública de busca, diagramas, PDF, recarga e 11 arquivos da biblioteca.
 
 ## 24/10/2026 — aceite do lembrete permanece inconclusivo
 
