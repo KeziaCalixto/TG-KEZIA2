@@ -1,0 +1,41 @@
+\chapter{CASOS DE USO DETALHADOS}
+\label{chapter-A}
+\section{UC01 Realizar simulação pública}
+\label{section-A-1}
+Ator: visitante. Precondição: aplicação acessível. Fluxo: selecionar perfil e localidade, indicar comunicação, data e duração, declarar contexto quando necessário e solicitar cálculo. O servidor valida e seleciona os catálogos; a tela apresenta memória provisória ou incompleta. Alternativas: campo inválido recebe mensagem associada; combinação não coberta não gera vencimento; falha de rede permite nova tentativa sem salvar resultado fictício. Pós-condição: nenhuma persistência privada é criada automaticamente.
+
+\section{UC02 Selecionar ato do catálogo}
+\label{section-A-2}
+Ator: visitante ou pessoa autenticada. Precondição: perfil compatível. Fluxo: escolher um dos três atos disponíveis, examinar as condições e confirmar seu enquadramento; a duração fica fixa. Alternativas: condição desconhecida ou excluída, versão inexistente ou duração divergente impedem data final. Ao retornar à quantidade manual, a identificação do ato e sua declaração não são carregadas indevidamente. Pós-condição: memória conserva ficha e versão do ato quando aplicável.
+
+\section{UC03 Exportar memória}
+\label{section-A-3}
+Ator: pessoa que possui um resultado na tela. Fluxo: examinar avisos e solicitar JSON ou impressão. A saída inclui entrada, marcos, trilha, fontes, versões e estado. Alternativa: resultado incompleto é exportado com vencimento nulo, sem ocultar pendências. Pós-condição: arquivo local ou diálogo de impressão; não há criação automática de conta, certificação ou assinatura de autenticidade.
+
+\section{UC04 Cadastrar e confirmar conta}
+\label{section-A-4}
+Ator: visitante. Fluxo: informar e-mail e senha, enviar, abrir a página de orientação, receber mensagem e confirmar no mesmo navegador. O retorno válido cria a sessão. Alternativas: erro de validação, limite ou indisponibilidade mantém mensagem compreensível; resposta genérica não revela se a conta existe. Pós-condição: conta confirmada e sessão quando o fluxo é concluído. Receber a mensagem sem abrir o retorno não equivale a estar conectado.
+
+\section{UC05 Entrar ou recuperar acesso}
+\label{section-A-5}
+Ator: titular da conta. Fluxo: usar e-mail e senha ou Google; no caso de recuperação, solicitar mensagem, abrir o retorno e definir nova senha. Alternativas: credenciais inválidas não concedem sessão; código ausente ou inválido não abre recurso privado; indisponibilidade é distinta de conta inexistente. Pós-condição: sessão verificada ou mensagem de falha. Senha e links não são incluídos nas evidências compartilhadas.
+
+\section{UC06 Aceitar convite}
+\label{section-A-6}
+Ator: pessoa convidada. Precondição: convite emitido no ambiente correto. Fluxo: receber mensagem, abrir o retorno e concluir definição de senha/acesso. O aplicativo trata o retorno e a sessão do convite. Alternativas: link expirado, uso de destino incorreto ou sessão não estabelecida exigem novo fluxo controlado. Pós-condição: conta acessível quando o convite for aceito. O aceite hospedado deve ser registrado separadamente do teste local.
+
+\section{UC07 Salvar e consultar histórico}
+\label{section-A-7}
+Ator: pessoa autenticada. Fluxo: salvar entrada calculável com título opcional, abrir histórico, filtrar ramo e navegar pelas páginas. O servidor reexecuta a entrada antes da gravação e fixa o proprietário. Alternativas: sessão ausente retorna 401; cálculo incompleto não é salvo como provisório; memória antiga incompatível conserva original sem recomputação. Pós-condição: cálculo pertencente à conta, com versões e avisos preservados.
+
+\section{UC08 Excluir cálculo}
+\label{section-A-8}
+Ator: proprietário. Fluxo: selecionar exclusão e confirmar na interface; servidor e RLS restringem a operação. Alternativa: ID de outra conta não permite exclusão. Pós-condição: cálculo removido e lembretes associados removidos em cascata, com atualização da paginação. Não excluir um cálculo usado em ensaio de entrega antes de registrar seu resultado.
+
+\section{UC09 Agendar lembrete}
+\label{section-A-9}
+Ator: proprietário com e-mail confirmado. Precondições: cálculo elegível salvo, envio futuro e configuração disponível. Fluxo: escolher antecedência e horário, marcar consentimento externo quando exigido e agendar. O servidor resolve destino, fuso e modo. Alternativas: horário passado, geração ativa ou modo incompatível não criam novo envio. Pós-condição: estado Agendado no site. Não há mensagem imediata adicional de confirmação.
+
+\section{UC10 Cancelar e acompanhar lembrete}
+\label{section-A-10}
+Ator: proprietário. Fluxo: consultar estado, cancelar a geração ou todos os lembretes ativos da conta. Alternativas: tentativa em curso pode já ter sido aceita; estado incerto exige conferência antes de novo pedido. Pós-condição: cancelamento registrado quando cabível, preservando o cálculo. O usuário deve distinguir agendamento, aceite do provedor e recebimento efetivo.

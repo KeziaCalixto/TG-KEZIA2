@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="660" height="420" preserveAspectRatio="xMinYMin meet" viewBox="0 0 660 420" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="660" height="420"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-420)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="15" y="270" width="310" height="115" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="15" y="351" width="310" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="25" y="362" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,724) scale(1,-1)">reminder_private.scheduler_config</text>
+			<text x="25" y="328" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,656) scale(1,-1)">PK singleton : boolean = true</text>
+			<text x="25" y="307" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,614) scale(1,-1)">enabled : boolean = false</text>
+			<rect x="15" y="35" width="310" height="190" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="15" y="191" width="310" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="25" y="202" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,404) scale(1,-1)">reminder_private.scheduler_invocations</text>
+			<text x="25" y="168" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,336) scale(1,-1)">PK nonce : uuid</text>
+			<text x="25" y="147" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,294) scale(1,-1)">issued_at, operation</text>
+			<text x="25" y="126" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,252) scale(1,-1)">UK request_id : bigint (opcional)</text>
+			<text x="25" y="105" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,210) scale(1,-1)">used_at, http_status, summary</text>
+			<text x="25" y="84" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,168) scale(1,-1)">Retenção operacional: sete dias</text>
+			<rect x="400" y="270" width="245" height="115" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="400" y="351" width="245" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="410" y="362" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,724) scale(1,-1)">cron.job  [extensão]</text>
+			<text x="410" y="328" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,656) scale(1,-1)">Job por minuto</text>
+			<text x="410" y="307" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,614) scale(1,-1)">active e schedule</text>
+			<rect x="400" y="65" width="245" height="145" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="400" y="176" width="245" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="410" y="187" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,374) scale(1,-1)">net._http_response</text>
+			<text x="410" y="153" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,306) scale(1,-1)">id : bigint</text>
+			<text x="410" y="132" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,264) scale(1,-1)">status_code, timed_out</text>
+			<text x="410" y="111" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,222) scale(1,-1)">Resposta HTTP assíncrona</text>
+			<path d="M 325,325 L 400,325 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<polygon points="400 325, 392.7964 328.4797, 392.7964 321.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="332" y="345" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,690) scale(1,-1)">controle</text>
+			<path d="M 325,125 L 400,125 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<polygon points="400 125, 392.7964 128.4797, 392.7964 121.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="331" y="145" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,290) scale(1,-1)">request_id</text>
+			<text x="15" y="12" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,24) scale(1,-1)">Linhas tracejadas: controle ou correlação por valor. Não há FKs entre esses objetos.</text>
+		</g>
+	</g>
+</svg>

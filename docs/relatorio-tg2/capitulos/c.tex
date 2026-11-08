@@ -1,0 +1,59 @@
+\chapter{REFERÊNCIA DA API}
+\label{chapter-C}
+\section{Cálculo público}
+\label{section-C-1}
+POST /api/calculate recebe JSON de até 16 KB. Datas seguem AAAA-MM-DD; days é inteiro de 1 a 365, sujeito à cobertura. medium identifica suporte dos autos em electronic ou physical, enquanto communication aceita publication ou availability. No civil não se envia context; nos perfis labor e criminal, context é obrigatório e somente ordinary confirmado permite a contagem do recorte.
+
+\begin{quote}\begin{singlespace}\raggedright\ttfamily\footnotesize
+\hspace*{0.0em}\{\\
+\hspace*{1.0em}"regime": "civil",\\
+\hspace*{1.0em}"court": "TJSP",\\
+\hspace*{1.0em}"locality": "São Paulo",\\
+\hspace*{1.0em}"medium": "electronic",\\
+\hspace*{1.0em}"communication": "publication",\\
+\hspace*{1.0em}"eventDate": "2026-10-06",\\
+\hspace*{1.0em}"days": 5\\
+\hspace*{0.0em}\}\\
+\end{singlespace}\end{quote}
+HTTP 200 retorna CalculationResult diretamente, com status provisional e dueDate 2026-10-14 no exemplo demonstrativo. Um domínio incompleto também usa 200, mas dueDate é null e os motivos são explícitos. JSON inválido ou combinação incompatível usa 400; tamanho excedido usa 413. O resultado completo contém a trilha e não é reduzido aos dois campos citados nesta explicação.
+
+Para apelação civil desta versão, acrescenta-se act com id civil-appeal, version 2026-10-22.demo.1 e eligibility confirmed, usando days 15. Outros IDs são labor-ordinary-appeal e criminal-sentence-clarification. O servidor resolve ficha e duração. Condições unknown ou excluded produzem bloqueio, sem aceitar fonte ou título arbitrário enviados pelo cliente.
+
+\section{Conta e histórico}
+\label{section-C-2}
+\begin{quadro}[H]\centering
+\caption{Rotas de conta}
+\label{quadro-7}
+\begin{singlespace}\fontsize{10}{12}\selectfont
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Método e rota} & \textbf{Contrato principal} \\
+\hline
+POST /api/auth/signup & email/password; resposta neutra, confirmação exigida e navegação para orientação. \\
+\hline
+POST /api/auth/login & email/password; sessão SSR por cookie após verificação. \\
+\hline
+POST /api/auth/logout & Encerra sessão atual; exige mesma origem. \\
+\hline
+GET /api/auth/session & configured e user; não retorna credenciais. \\
+\hline
+POST /api/auth/google & Provedor fixo e retorno PKCE; mesma origem. \\
+\hline
+POST /api/auth/recovery & email; mensagem genérica e retorno controlado. \\
+\hline
+POST /api/auth/password & password/confirmation; sessão verificada. \\
+\hline
+GET /auth/callback & Troca de código válido por sessão e destino permitido. \\
+\hline
+\end{tabularx}\end{singlespace}
+\par\smallskip{\fontsize{10}{12}\selectfont Fonte: elaboração com base nos registros do projeto (2026).}
+\end{quadro}
+Sem configuração, operações dependentes informam indisponibilidade; a consulta de sessão pode informar configured false. Validação e limites podem produzir 400 ou 429; senha inválida não concede sessão. Não se enviam ID de usuário nem destinos externos para escolher a identidade da operação.
+
+GET /api/history aceita page de 1 a 1000, pageSize de 1 a 50, regime opcional e calculationId UUID opcional. Parâmetros desconhecidos ou repetidos são recusados. O retorno contém calculations, asOfDate, timeZone e pagination com totais e navegação. POST recebe input e title opcional, reexecuta e cria resultado provisório com 201. DELETE recebe id do cálculo e restringe a exclusão ao proprietário; não aceita parâmetro para operar como outra conta. Ausência de sessão produz 401.
+
+\section{Lembretes e despacho interno}
+\label{section-C-3}
+GET /api/reminders consulta estados por cálculos da conta. POST recebe calculationId, leadDays e hour; externalEmailConsent true é obrigatório no modo Brevo e incompatível com o modo local. O servidor escolhe modo e destinatário e responde 201 quando agenda. DELETE cancela geração indicada ou todas as ativas conforme o contrato detalhado. Conflitos de elegibilidade e modo são explícitos, sem fallback para outro provedor.
+
+POST /api/internal/reminders/dispatch recebe operação probe ou dispatch e autenticação de serviço. O protocolo hospedado valida assinatura temporária, timestamp e nonce previamente registrado, consumido uma única vez. Não é uma API para o usuário acionar envio livre. Credenciais e exemplos de assinatura reais não integram este documento. Contratos completos e atualizados permanecem em docs/api e docs/email-reminders-external.md.

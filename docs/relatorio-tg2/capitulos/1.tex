@@ -1,0 +1,31 @@
+\chapter{INTRODUÇÃO}
+\label{chapter-1}
+\section{Contextualização}
+\label{section-1-1}
+A contagem de um prazo processual exige identificar o evento comunicado, a regra aplicável e o calendário do órgão competente. A data exibida no diário, a publicação juridicamente considerada e o primeiro dia computado podem ser diferentes. A mesma duração também pode produzir resultados distintos em localidades ou regimes diferentes. Essa combinação torna insuficiente uma calculadora que apenas some dias a uma data.
+
+O Prazo Claro foi concebido como aplicação acadêmica para tornar essas decisões visíveis. A proposta reúne formulário orientado, motor determinístico, calendário versionado e memória de cálculo. O resultado permite examinar os marcos e o motivo de cada inclusão ou exclusão. O foco do Trabalho de Graduação II é a construção e a verificação de um artefato de software explicável, com documentação suficiente para sua continuidade.
+
+O projeto originou-se dos documentos de concepção e do rascunho de TG preservados no repositório. Durante a implementação, a proposta foi delimitada para uma aplicação web responsiva, inicialmente civil e posteriormente ampliada a perfis criminais e trabalhistas expressos. As referências a aplicativo móvel, inteligência artificial em produção e funcionalidades ainda não construídas não são apresentadas como resultados alcançados. Essa distinção entre intenção e implementação orienta todo o relatório.
+
+\section{Problema e justificativa}
+\label{section-1-2}
+A questão de desenvolvimento foi formulada da seguinte maneira: como construir uma aplicação que produza estimativas processuais reproduzíveis e apresente seus fundamentos e limitações, sem ocultar a dependência de regras e calendários locais? A questão envolve tanto a operação de contagem quanto o tratamento de entradas incompletas, a preservação histórica e a comunicação de incerteza.
+
+Uma data final isolada não permite verificar se o sistema selecionou a comarca correta, confundiu disponibilização com publicação ou aplicou indevidamente uma suspensão. Por isso, a justificativa técnica do projeto está na rastreabilidade: registrar as premissas e as versões utilizadas torna possível investigar divergências e comparar resultados após mudanças de catálogo. O software também oferece um objeto concreto para estudar requisitos, modelagem, segurança e testes em um domínio no qual erros têm consequências relevantes.
+
+O Código de Processo Civil, a legislação trabalhista e o Código de Processo Penal possuem dispositivos próprios sobre contagem e suspensão. A existência desses dispositivos fundamenta a separação de perfis adotada no projeto; não autoriza aplicar uma única opção de dias úteis ou corridos a qualquer procedimento. A demonstração acadêmica conserva a necessidade de conferência profissional e de documentação da comunicação efetivamente ocorrida \hyperref[ref:CPC]{(BRASIL, 2015)} \hyperref[ref:CLT]{(BRASIL, 1943)} \hyperref[ref:CPP]{(BRASIL, 1941)}.
+
+\section{Objetivos}
+\label{section-1-3}
+O objetivo geral foi desenvolver e verificar uma aplicação web de contagem processual com memória explicável, versões preservadas e serviços privados de histórico e lembrete, dentro de recortes declarados do Estado de São Paulo.
+
+Os objetivos específicos foram: (1) especificar requisitos e modelos que distinguissem comunicação, contagem, fontes e cobertura; (2) implementar um motor independente da interface e integrá-lo à aplicação, à autenticação e à persistência com autorização; e (3) verificar o comportamento por casos de referência e testes em diferentes fronteiras, documentando resultados, limitações e procedimentos de entrega.
+
+\section{Delimitação e organização}
+\label{section-1-4}
+O recorte civil contempla processo comum, TJSP, dez comarcas cadastradas, exercício de 2026, comunicação pelo diário e contagem em dias úteis. O criminal contempla contexto ordinário confirmado nessas mesmas comarcas e ano, com início e prorrogação próprios. O trabalhista contempla exclusivamente TRT da 2\textordfeminine{} Região, município de São Paulo, contexto ordinário e calendários de 2026 e 2027. A escolha do suporte físico ou eletrônico dos autos não transforma o diário em comunicação pessoal.
+
+Os calendários são demonstrativos e parciais, com revisão jurídica profissional pendente. Não há suporte geral a todo o Estado, a todos os procedimentos ou a qualquer prazo brasileiro. Permanecem excluídos, entre outros, TRT-15, TJSP 2027, juizados, procedimentos especiais, prazo material penal, horas, meses, anos, prazo em dobro e comunicações por AR, mandado ou Domicílio Judicial Eletrônico.
+
+O relatório apresenta fundamentos, método, concepção, implementação e resultados. Os apêndices detalham casos de uso, dados, API, rastreabilidade e procedimentos de continuidade. A base funcional descrita é o commit 9632fd2. O corte documental é 24 de outubro de 2026: resultados posteriores precisam de nova evidência e não são presumidos neste texto.

@@ -1,0 +1,741 @@
+{
+  "cutoff": "2026-11-04",
+  "method": "static_versioned_migrations",
+  "migrations": [
+    {
+      "path": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "version": "20261020001602",
+      "sha256": "a8de1ced42b5f8b2b169ae949baa8c19a821fdae83ecb4ceca24b4ef24dc7091"
+    },
+    {
+      "path": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "version": "20261023172741",
+      "sha256": "4d6aea74438d08b708668f7b0dbccb4a73ce0a97351dc4dafead6712ae9255cc"
+    },
+    {
+      "path": "supabase/migrations/20261023184137_reminder_delivery_modes.sql",
+      "version": "20261023184137",
+      "sha256": "6869a85f3b3717efaafb8f624a4c43853423b89c8ee93fc2d96e558222fb5943"
+    },
+    {
+      "path": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "version": "20261023192044",
+      "sha256": "3af1bdc5f65fd883b58299e3c40a9449a8656bbe538693f669901f0140912d45"
+    }
+  ],
+  "tables": {
+    "public.legal_sources": {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 2,
+      "columns": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "default": "gen_random_uuid()",
+          "definition": "uuid primary key default gen_random_uuid()"
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null check (length(title) between 1 and 300)"
+        },
+        {
+          "name": "url",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null check (url ~ '^https://')"
+        },
+        {
+          "name": "provision",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null"
+        },
+        {
+          "name": "consulted_at",
+          "type": "timestamptz",
+          "nullable": false,
+          "default": null,
+          "definition": "timestamptz not null"
+        },
+        {
+          "name": "review_status",
+          "type": "text",
+          "nullable": false,
+          "default": "'pending'",
+          "definition": "text not null default 'pending' check (review_status in ('pending', 'approved', 'rejected'))"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamptz",
+          "nullable": false,
+          "default": "now()",
+          "definition": "timestamptz not null default now()"
+        }
+      ]
+    },
+    "public.legal_rule_versions": {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 12,
+      "columns": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "default": "gen_random_uuid()",
+          "definition": "uuid primary key default gen_random_uuid()"
+        },
+        {
+          "name": "rule_key",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null"
+        },
+        {
+          "name": "version",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null"
+        },
+        {
+          "name": "source_id",
+          "type": "uuid",
+          "nullable": false,
+          "default": null,
+          "definition": "uuid not null references public.legal_sources(id) on delete restrict"
+        },
+        {
+          "name": "scope",
+          "type": "jsonb",
+          "nullable": false,
+          "default": null,
+          "definition": "jsonb not null check (jsonb_typeof(scope) = 'object')"
+        },
+        {
+          "name": "valid_from",
+          "type": "date",
+          "nullable": false,
+          "default": null,
+          "definition": "date not null"
+        },
+        {
+          "name": "valid_until",
+          "type": "date",
+          "nullable": true,
+          "default": null,
+          "definition": "date"
+        },
+        {
+          "name": "definition",
+          "type": "jsonb",
+          "nullable": false,
+          "default": null,
+          "definition": "jsonb not null check (jsonb_typeof(definition) = 'object')"
+        },
+        {
+          "name": "review_status",
+          "type": "text",
+          "nullable": false,
+          "default": "'pending'",
+          "definition": "text not null default 'pending' check (review_status in ('pending', 'approved', 'rejected'))"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamptz",
+          "nullable": false,
+          "default": "now()",
+          "definition": "timestamptz not null default now()"
+        }
+      ]
+    },
+    "public.calendar_versions": {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 28,
+      "columns": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "default": "gen_random_uuid()",
+          "definition": "uuid primary key default gen_random_uuid()"
+        },
+        {
+          "name": "calendar_key",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null"
+        },
+        {
+          "name": "version",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null"
+        },
+        {
+          "name": "court",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null"
+        },
+        {
+          "name": "locality",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text not null"
+        },
+        {
+          "name": "coverage_start",
+          "type": "date",
+          "nullable": false,
+          "default": null,
+          "definition": "date not null"
+        },
+        {
+          "name": "coverage_end",
+          "type": "date",
+          "nullable": false,
+          "default": null,
+          "definition": "date not null"
+        },
+        {
+          "name": "is_complete",
+          "type": "boolean",
+          "nullable": false,
+          "default": "false",
+          "definition": "boolean not null default false"
+        },
+        {
+          "name": "review_status",
+          "type": "text",
+          "nullable": false,
+          "default": "'pending'",
+          "definition": "text not null default 'pending' check (review_status in ('pending', 'approved', 'rejected'))"
+        },
+        {
+          "name": "snapshot",
+          "type": "jsonb",
+          "nullable": false,
+          "default": null,
+          "definition": "jsonb not null check (jsonb_typeof(snapshot) = 'object')"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamptz",
+          "nullable": false,
+          "default": "now()",
+          "definition": "timestamptz not null default now()"
+        }
+      ]
+    },
+    "public.deadline_calculations": {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 45,
+      "columns": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "default": "gen_random_uuid()",
+          "definition": "uuid primary key default gen_random_uuid()"
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "nullable": false,
+          "default": null,
+          "definition": "uuid not null references auth.users(id) on delete cascade"
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "nullable": false,
+          "default": "'Cálculo demonstrativo'",
+          "definition": "text not null default 'Cálculo demonstrativo' check (length(title) between 1 and 120)"
+        },
+        {
+          "name": "input",
+          "type": "jsonb",
+          "nullable": false,
+          "default": null,
+          "definition": "jsonb not null check (jsonb_typeof(input) = 'object')"
+        },
+        {
+          "name": "result_snapshot",
+          "type": "jsonb",
+          "nullable": false,
+          "default": null,
+          "definition": "jsonb not null check (jsonb_typeof(result_snapshot) = 'object')"
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "default": "'provisional'",
+          "definition": "text not null default 'provisional' check (status = 'provisional')"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamptz",
+          "nullable": false,
+          "default": "now()",
+          "definition": "timestamptz not null default now()"
+        }
+      ]
+    },
+    "public.deadline_reminders": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 5,
+      "columns": [
+        {
+          "name": "id",
+          "type": "uuid",
+          "nullable": false,
+          "default": "gen_random_uuid()",
+          "definition": "uuid NOT NULL DEFAULT gen_random_uuid()"
+        },
+        {
+          "name": "calculation_id",
+          "type": "uuid",
+          "nullable": false,
+          "default": null,
+          "definition": "uuid NOT NULL"
+        },
+        {
+          "name": "owner_id",
+          "type": "uuid",
+          "nullable": false,
+          "default": null,
+          "definition": "uuid NOT NULL"
+        },
+        {
+          "name": "due_date",
+          "type": "date",
+          "nullable": false,
+          "default": null,
+          "definition": "date NOT NULL"
+        },
+        {
+          "name": "lead_days",
+          "type": "integer",
+          "nullable": false,
+          "default": null,
+          "definition": "integer NOT NULL"
+        },
+        {
+          "name": "send_hour",
+          "type": "integer",
+          "nullable": false,
+          "default": null,
+          "definition": "integer NOT NULL"
+        },
+        {
+          "name": "time_zone",
+          "type": "text",
+          "nullable": false,
+          "default": "'America/Sao_Paulo'::text",
+          "definition": "text NOT NULL DEFAULT 'America/Sao_Paulo'::text"
+        },
+        {
+          "name": "send_at",
+          "type": "timestamp with time zone",
+          "nullable": false,
+          "default": null,
+          "definition": "timestamp with time zone NOT NULL"
+        },
+        {
+          "name": "snapshot_metadata",
+          "type": "jsonb",
+          "nullable": false,
+          "default": null,
+          "definition": "jsonb NOT NULL"
+        },
+        {
+          "name": "status",
+          "type": "text",
+          "nullable": false,
+          "default": "'pending'::text",
+          "definition": "text NOT NULL DEFAULT 'pending'::text"
+        },
+        {
+          "name": "attempt_count",
+          "type": "integer",
+          "nullable": false,
+          "default": "0",
+          "definition": "integer NOT NULL DEFAULT 0"
+        },
+        {
+          "name": "next_attempt_at",
+          "type": "timestamp with time zone",
+          "nullable": false,
+          "default": "now()",
+          "definition": "timestamp with time zone NOT NULL DEFAULT now()"
+        },
+        {
+          "name": "claim_token",
+          "type": "uuid",
+          "nullable": true,
+          "default": null,
+          "definition": "uuid"
+        },
+        {
+          "name": "claimed_at",
+          "type": "timestamp with time zone",
+          "nullable": true,
+          "default": null,
+          "definition": "timestamp with time zone"
+        },
+        {
+          "name": "accepted_at",
+          "type": "timestamp with time zone",
+          "nullable": true,
+          "default": null,
+          "definition": "timestamp with time zone"
+        },
+        {
+          "name": "error_code",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "definition": "text"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "nullable": false,
+          "default": "now()",
+          "definition": "timestamp with time zone NOT NULL DEFAULT now()"
+        },
+        {
+          "name": "delivery_mode",
+          "type": "text",
+          "nullable": false,
+          "default": "'local'::text",
+          "definition": "text NOT NULL DEFAULT 'local'::text"
+        }
+      ]
+    },
+    "reminder_private.scheduler_config": {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 14,
+      "columns": [
+        {
+          "name": "singleton",
+          "type": "boolean",
+          "nullable": false,
+          "default": "true",
+          "definition": "boolean NOT NULL DEFAULT true"
+        },
+        {
+          "name": "enabled",
+          "type": "boolean",
+          "nullable": false,
+          "default": "false",
+          "definition": "boolean NOT NULL DEFAULT false"
+        }
+      ]
+    },
+    "reminder_private.scheduler_invocations": {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 24,
+      "columns": [
+        {
+          "name": "nonce",
+          "type": "uuid",
+          "nullable": false,
+          "default": null,
+          "definition": "uuid NOT NULL"
+        },
+        {
+          "name": "issued_at",
+          "type": "bigint",
+          "nullable": false,
+          "default": null,
+          "definition": "bigint NOT NULL"
+        },
+        {
+          "name": "operation",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "definition": "text NOT NULL"
+        },
+        {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "nullable": false,
+          "default": "now()",
+          "definition": "timestamp with time zone NOT NULL DEFAULT now()"
+        },
+        {
+          "name": "used_at",
+          "type": "timestamp with time zone",
+          "nullable": true,
+          "default": null,
+          "definition": "timestamp with time zone"
+        },
+        {
+          "name": "request_id",
+          "type": "bigint",
+          "nullable": true,
+          "default": null,
+          "definition": "bigint"
+        },
+        {
+          "name": "http_status",
+          "type": "integer",
+          "nullable": true,
+          "default": null,
+          "definition": "integer"
+        },
+        {
+          "name": "completed_at",
+          "type": "timestamp with time zone",
+          "nullable": true,
+          "default": null,
+          "definition": "timestamp with time zone"
+        },
+        {
+          "name": "timed_out",
+          "type": "boolean",
+          "nullable": true,
+          "default": null,
+          "definition": "boolean"
+        },
+        {
+          "name": "summary",
+          "type": "jsonb",
+          "nullable": false,
+          "default": "'{}'::jsonb",
+          "definition": "jsonb NOT NULL DEFAULT '{}'::jsonb"
+        }
+      ]
+    }
+  },
+  "functions": {
+    "public.cancel_deadline_reminders": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 42,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "public.claim_deadline_reminders": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 52,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "public.list_deadline_reminders": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 65,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "public.prepare_deadline_reminder": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 94,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "public.schedule_deadline_reminder": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 105,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "public.settle_deadline_reminder": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 119,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "reminder_private.cancel": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 131,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "reminder_private.claim": {
+      "source": "supabase/migrations/20261023184137_reminder_delivery_modes.sql",
+      "line": 63,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "reminder_private.prepare": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 179,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "reminder_private.schedule": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 207,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "reminder_private.settle": {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 250,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "public.claim_deadline_reminders_for_mode": {
+      "source": "supabase/migrations/20261023184137_reminder_delivery_modes.sql",
+      "line": 8,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "public.list_deadline_reminders_for_mode": {
+      "source": "supabase/migrations/20261023184137_reminder_delivery_modes.sql",
+      "line": 24,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "public.schedule_deadline_reminder_for_mode": {
+      "source": "supabase/migrations/20261023184137_reminder_delivery_modes.sql",
+      "line": 48,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "reminder_private.claim_for_mode": {
+      "source": "supabase/migrations/20261023184137_reminder_delivery_modes.sql",
+      "line": 76,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "reminder_private.schedule_for_mode": {
+      "source": "supabase/migrations/20261023184137_reminder_delivery_modes.sql",
+      "line": 104,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "public.consume_reminder_invocation": {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 45,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "reminder_private.collect_scheduler_results": {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 59,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "reminder_private.consume_invocation": {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 93,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "reminder_private.dispatch_tick": {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 113,
+      "security": "definer",
+      "search_path_empty": true
+    },
+    "reminder_private.prepare_scheduler": {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 146,
+      "security": "invoker",
+      "search_path_empty": true
+    },
+    "reminder_private.set_scheduler_enabled": {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 163,
+      "security": "invoker",
+      "search_path_empty": true
+    }
+  },
+  "indexes": [
+    {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 26,
+      "sql": "create index legal_rule_versions_source_idx on public.legal_rule_versions(source_id);"
+    },
+    {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 57,
+      "sql": "create index deadline_calculations_owner_created_idx on public.deadline_calculations(owner_id, created_at desc);"
+    },
+    {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 286,
+      "sql": "CREATE INDEX deadline_reminders_calculation_idx ON public.deadline_reminders USING btree (calculation_id);"
+    },
+    {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 288,
+      "sql": "CREATE UNIQUE INDEX deadline_reminders_one_active_idx ON public.deadline_reminders USING btree (calculation_id) WHERE (status = ANY (ARRAY['pending'::text, 'processing'::text, 'uncertain'::text]));"
+    },
+    {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 291,
+      "sql": "CREATE INDEX deadline_reminders_owner_created_idx ON public.deadline_reminders USING btree (owner_id, created_at DESC);"
+    },
+    {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 293,
+      "sql": "CREATE INDEX deadline_reminders_pending_idx ON public.deadline_reminders USING btree (next_attempt_at, send_at) WHERE (status = 'pending'::text);"
+    },
+    {
+      "source": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "line": 185,
+      "sql": "CREATE INDEX scheduler_invocations_created_idx ON reminder_private.scheduler_invocations USING btree (created_at);"
+    }
+  ],
+  "policies": [
+    {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 69,
+      "sql": "create policy approved_sources_read on public.legal_sources for select to anon, authenticated using (review_status = 'approved');"
+    },
+    {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 71,
+      "sql": "create policy approved_rules_read on public.legal_rule_versions for select to anon, authenticated using (review_status = 'approved' and exists ( select 1 from public.legal_sources s where s.id = source_id and s.review_status = 'approved' ));"
+    },
+    {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 75,
+      "sql": "create policy approved_calendars_read on public.calendar_versions for select to anon, authenticated using (review_status = 'approved' and is_complete);"
+    },
+    {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 78,
+      "sql": "create policy owner_read_calculations on public.deadline_calculations for select to authenticated using ((select auth.uid()) = owner_id and not coalesce((select auth.jwt()->>'is_anonymous')::boolean, false));"
+    },
+    {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 80,
+      "sql": "create policy owner_insert_calculations on public.deadline_calculations for insert to authenticated with check ((select auth.uid()) = owner_id and not coalesce((select auth.jwt()->>'is_anonymous')::boolean, false));"
+    },
+    {
+      "source": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "line": 82,
+      "sql": "create policy owner_delete_calculations on public.deadline_calculations for delete to authenticated using ((select auth.uid()) = owner_id and not coalesce((select auth.jwt()->>'is_anonymous')::boolean, false));"
+    },
+    {
+      "source": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "line": 296,
+      "sql": "CREATE POLICY \"owner_read_reminders\" ON \"public\".\"deadline_reminders\" FOR SELECT TO \"authenticated\" USING (((( SELECT auth.uid() AS uid) = owner_id) AND (NOT COALESCE(((( SELECT auth.jwt() AS jwt) ->> 'is_anonymous'::text))::boolean, false))));"
+    }
+  ],
+  "counts": {
+    "migrations": 4,
+    "project_tables": 7,
+    "columns": 65,
+    "explicit_indexes": 7,
+    "rls_policies": 7,
+    "final_functions": 22
+  }
+}

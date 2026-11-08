@@ -1,0 +1,13 @@
+sequenceDiagram
+participant U as Navegador
+participant A as Next.js
+participant I as Supabase Auth
+participant D as Data API e PostgreSQL
+U->>A: POST input e título
+A->>I: getUser
+I-->>A: Identidade verificada
+Note over A: Valida e recalcula sem banco no motor
+A->>D: INSERT com owner_id da conta
+Note over D: GRANT RLS FK CHECK
+D-->>A: Registro preservado
+A-->>U: Resposta privada

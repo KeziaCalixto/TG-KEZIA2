@@ -1,0 +1,58 @@
+\chapter{RASTREABILIDADE E REPRODUÇÃO}
+\label{chapter-D}
+\section{Requisito, módulo e evidência}
+\label{section-D-1}
+\begin{quadro}[H]\centering
+\caption{Rastreabilidade resumida}
+\label{quadro-8}
+\begin{singlespace}\fontsize{10}{12}\selectfont
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Requisito} & \textbf{Implementação principal} & \textbf{Evidência no repositório} \\
+\hline
+RF01--RF05 & domain/deadlines e application/calculate & multi-regime.md; criminal-sp-expansion.md; labor-2027.md \\
+\hline
+RF03 & domain/calendars e composição anual & sp-calendars.test.ts; labor-2027.test.ts \\
+\hline
+RF06 & Memória, exportação e impressão & testing/export-print.md \\
+\hline
+RF07 & Auth, history e RLS & testing/local-finishing.md; history-organization.md; signup-confirmation-page.md \\
+\hline
+RF08 & Páginas de calendário e referências & testing/local-finishing.md; release-2026-10-24.md \\
+\hline
+RF09 & Fila, dispatcher e scheduler & testing/email-reminders.md; reminder-delivery-modes.md; reminders-production.md \\
+\hline
+RNF01/RNF05 & Motores preservados e snapshot & ADR 0001/0004; testes do domínio e histórico \\
+\hline
+RNF03/RNF04 & Formulários, rotas e políticas & E2E/Axe, helpers locais e testes SQL \\
+\hline
+RNF06/RNF07 & Workflows e publicação & CI 40061653068 e testing/release-2026-10-24.md \\
+\hline
+\end{tabularx}\end{singlespace}
+\par\smallskip{\fontsize{10}{12}\selectfont Fonte: elaboração com base nos registros do projeto (2026).}
+\end{quadro}
+Os caminhos abreviados de evidência textual partem de docs/testing; os arquivos .test.ts partem de tests. A tabela indica onde conferir resultados e limites, sem declarar que cada cenário de navegador percorreu serviços reais.
+
+\section{Instalação e comandos de verificação}
+\label{section-D-2}
+Obter acesso ao repositório privado ou extrair pacote fonte identificado. Instalar Node e pnpm compatíveis, executar pnpm install --frozen-lockfile e pnpm dev. A calculadora pode funcionar sem Supabase configurado; recursos de conta informam indisponibilidade. O endereço local padrão é http://127.0.0.1:3000.
+
+Para os serviços locais, iniciar Docker e executar pnpm db:start. O helper supabase/scripts/write-local-env.ps1 prepara configuração própria sem sobrescrever arquivo existente. Conferir migration list e aplicar migration up --local quando necessário. Não usar db reset para atualizar uma instalação com dados a preservar. Studio usa 127.0.0.1:54323 e Mailpit 127.0.0.1:54324.
+
+\begin{quote}\begin{singlespace}\raggedright\ttfamily\footnotesize
+\hspace*{0.0em}pnpm check\\
+\hspace*{0.0em}pnpm build\\
+\hspace*{0.0em}pnpm test:e2e\\
+\hspace*{0.0em}pnpm db:test\\
+\hspace*{0.0em}pnpm db:test:app\\
+\hspace*{0.0em}pnpm db:test:invite\\
+\hspace*{0.0em}pnpm db:test:recovery\\
+\hspace*{0.0em}pnpm db:test:reminders\\
+\end{singlespace}\end{quote}
+Executar helpers reais sequencialmente no ambiente local isolado e conferir limpeza das fixtures. Lembretes locais exigem configuração própria e watcher ativo; usam Mailpit sem relay externo. Não copiar credenciais de produção para reproduzir testes. Os comandos são instruções de reprodução, não resultados de novas execuções realizadas ao gerar este relatório.
+
+\section{Ensaio de apresentação e aceite}
+\label{section-D-3}
+Preparar conta de demonstração, títulos fictícios e uma memória PDF já exportada. Em aproximadamente oito a doze minutos de roteiro proposto, apresentar problema e limites, um caso civil, comparação municipal, perfil criminal ou travessia trabalhista, histórico e lembrete. O tempo é estimativa de planejamento, não duração medida de apresentação realizada.
+
+Testar recarga, teclado e tela de celular. Se conexão ou conta falhar, identificar a indisponibilidade e utilizar arquivos preparados, sem chamar uma captura de integração ao vivo. Antes da entrega acadêmica, registrar confirmação de acesso da autora aos materiais, revisão da orientação e resultado do lembrete mantendo o cálculo até o encerramento do ensaio.

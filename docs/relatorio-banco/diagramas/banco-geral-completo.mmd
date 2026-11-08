@@ -1,0 +1,85 @@
+erDiagram
+AUTH_USERS ||--o{ DEADLINE_CALCULATIONS : owner_id
+AUTH_USERS ||--o{ DEADLINE_REMINDERS : owner_id
+DEADLINE_CALCULATIONS ||--o{ DEADLINE_REMINDERS : calculation_id
+LEGAL_SOURCES ||--o{ LEGAL_RULE_VERSIONS : source_id
+AUTH_USERS { uuid id PK }
+LEGAL_SOURCES {
+ uuid id PK
+ text title
+ text url
+ text provision
+ timestamptz consulted_at
+ text review_status
+ timestamptz created_at
+}
+LEGAL_RULE_VERSIONS {
+ uuid id PK
+ text rule_key
+ text version
+ uuid source_id FK
+ jsonb scope
+ date valid_from
+ date valid_until
+ jsonb definition
+ text review_status
+ timestamptz created_at
+}
+CALENDAR_VERSIONS {
+ uuid id PK
+ text calendar_key
+ text version
+ text court
+ text locality
+ date coverage_start
+ date coverage_end
+ boolean is_complete
+ text review_status
+ jsonb snapshot
+ timestamptz created_at
+}
+DEADLINE_CALCULATIONS {
+ uuid id PK
+ uuid owner_id FK
+ text title
+ jsonb input
+ jsonb result_snapshot
+ text status
+ timestamptz created_at
+}
+DEADLINE_REMINDERS {
+ uuid id PK
+ uuid calculation_id FK
+ uuid owner_id FK
+ date due_date
+ integer lead_days
+ integer send_hour
+ text time_zone
+ timestamptz send_at
+ jsonb snapshot_metadata
+ text status
+ integer attempt_count
+ timestamptz next_attempt_at
+ uuid claim_token
+ timestamptz claimed_at
+ timestamptz accepted_at
+ text error_code
+ timestamptz created_at
+ text delivery_mode
+}
+SCHEDULER_CONFIG {
+ boolean singleton PK
+ boolean enabled
+}
+SCHEDULER_INVOCATIONS {
+ uuid nonce PK
+ bigint issued_at
+ text operation
+ timestamptz created_at
+ timestamptz used_at
+ bigint request_id
+ integer http_status
+ timestamptz completed_at
+ boolean timed_out
+ jsonb summary
+}

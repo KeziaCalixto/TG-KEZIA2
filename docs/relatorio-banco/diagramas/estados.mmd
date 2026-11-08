@@ -1,0 +1,10 @@
+stateDiagram-v2
+pending --> processing: claim
+processing --> accepted: aceite
+processing --> pending: falha pré-envio elegível
+processing --> failed: rejeição ou limite
+processing --> uncertain: envio duvidoso ou lease
+uncertain --> accepted: aceite tardio correlacionado
+pending --> cancelled: cancelamento
+processing --> cancelled: cancelamento
+uncertain --> cancelled: cancelamento

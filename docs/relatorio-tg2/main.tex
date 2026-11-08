@@ -1,0 +1,123 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\babelprovide[import,main]{brazilian}
+\usepackage{mathptmx}
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm,headheight=15pt,headsep=18pt]{geometry}
+\usepackage{setspace,graphicx,float,tabularx,array,caption,titlesec,fancyhdr,xurl,indentfirst}
+\usepackage[hidelinks,unicode]{hyperref}
+\hypersetup{pdftitle={Prazo Claro --- Sistema de contagem de prazos processuais brasileiros},pdfauthor={Kezia Calixto},pdfsubject={Trabalho de Graduação II --- versão para revisão}}
+\selectlanguage{brazilian}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{3em}
+\titleformat{\chapter}[block]{\normalfont\bfseries\fontsize{14}{18}\selectfont}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{24pt}
+\titleformat{\section}{\normalfont\bfseries\fontsize{12}{16}\selectfont}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{18pt}{12pt}
+\DeclareCaptionFont{tgcaption}{\fontsize{10}{12}\selectfont}
+\captionsetup{font={tgcaption,stretch=1},labelfont=normalfont,labelsep=endash,position=top}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\floatstyle{plaintop}
+\newfloat{quadro}{H}{loq}
+\floatname{quadro}{Quadro}
+\newcommand{\listquadros}{\listof{quadro}{LISTA DE QUADROS}}
+\renewcommand{\contentsname}{SUMÁRIO}
+\renewcommand{\listfigurename}{LISTA DE FIGURAS}
+\renewcommand{\listtablename}{LISTA DE TABELAS}
+\addto\captionsbrazilian{\renewcommand{\contentsname}{SUMÁRIO}\renewcommand{\listfigurename}{LISTA DE FIGURAS}\renewcommand{\listtablename}{LISTA DE TABELAS}}
+\pagestyle{fancy}\fancyhf{}\fancyhead[R]{\fontsize{10}{12}\selectfont\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[R]{\fontsize{10}{12}\selectfont\thepage}\renewcommand{\headrulewidth}{0pt}}
+\setcounter{tocdepth}{1}
+\begin{document}
+\renewcommand{\contentsname}{SUMÁRIO}
+\renewcommand{\listfigurename}{LISTA DE FIGURAS}
+\renewcommand{\listtablename}{LISTA DE TABELAS}
+\pagestyle{empty}
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}}
+\hypersetup{pageanchor=false}
+\begin{titlepage}\centering
+{\bfseries CENTRO ESTADUAL DE EDUCAÇÃO TECNOLÓGICA PAULA SOUZA\par
+FACULDADE DE TECNOLOGIA DE CAMPINAS\par
+Curso de Análise e Desenvolvimento de Sistemas\par}
+\vspace{2.3cm}
+Kezia Calixto\par
+\vfill
+{\bfseries\fontsize{14}{20}\selectfont PRAZO CLARO\par
+Sistema de contagem de prazos processuais brasileiros\par}
+\vfill
+Campinas --- SP\par 2026
+\end{titlepage}
+\setcounter{page}{1}
+\hypersetup{pageanchor=true}
+\thispagestyle{empty}
+\begin{center}Kezia Calixto\end{center}
+\vspace{2.2cm}
+\begin{center}\bfseries\fontsize{14}{20}\selectfont PRAZO CLARO\par
+Sistema de contagem de prazos processuais brasileiros\end{center}
+\vspace{2cm}
+\begin{flushright}\begin{minipage}{.54\textwidth}\begin{singlespace}
+Trabalho de Graduação II apresentado à Faculdade de Tecnologia de Campinas, do Centro Estadual de Educação Tecnológica Paula Souza, como requisito parcial para obtenção do título de Tecnóloga em Análise e Desenvolvimento de Sistemas.\par\medskip
+Orientador: Prof. Eduardo Felipe Fonseca de Freitas.
+\end{singlespace}\end{minipage}\end{flushright}
+\vfill
+\begin{center}Versão para revisão da autora e do orientador\par
+24 de outubro de 2026\par\vspace{1cm}Campinas --- SP\par 2026\end{center}
+\clearpage
+\chapter*{RESUMO}\thispagestyle{empty}
+\begin{singlespace}\noindent A contagem de prazos processuais depende da identificação do evento comunicado, do regime aplicável e do calendário do órgão competente. Este trabalho apresenta a concepção, a implementação e a verificação do Prazo Claro, uma aplicação web acadêmica voltada à produção de estimativas explicáveis. O objetivo foi construir um motor determinístico com memória de cálculo, versões preservadas e integração a recursos privados de histórico e lembrete. O desenvolvimento utilizou análise documental, levantamento de fontes primárias, especificação incremental e testes em diferentes fronteiras. A solução separou o domínio de contagem da interface Next.js e dos serviços Supabase, adotou datas civis com Temporal e manteve regras e calendários versionados. O recorte implementado abrange perfis civis e criminais ordinários do TJSP em dez comarcas de São Paulo no exercício de 2026 e perfil trabalhista ordinário do TRT da 2\textordfeminine{} Região na Capital em 2026--2027. A verificação automatizada identificada registrou 256 testes unitários, 146 testes SQL e 67 cenários de navegador aprovados, com um cenário omitido. Os resultados incluem memória exportável, autenticação, histórico individual e agendamento opcional de lembretes. Calendários parciais, revisão jurídica pendente e recebimento externo ainda sujeito a aceite limitam o alcance da entrega. Conclui-se que o artefato atende ao recorte técnico documentado e oferece uma base rastreável para revisão e continuidade, sem constituir certificação de tempestividade ou cobertura universal de procedimentos.\par\medskip
+\noindent\textbf{Palavras-chave:} Engenharia de software. Prazos processuais. Rastreabilidade. Aplicação web.
+\end{singlespace}
+\clearpage
+\chapter*{ABSTRACT}\thispagestyle{empty}
+\begin{otherlanguage}{english}\begin{singlespace}\noindent Procedural deadline calculation depends on identifying the communicated event, the applicable procedural rules, and the competent court's calendar. This work presents the conception, implementation, and verification of Prazo Claro, an academic web application designed to produce explainable estimates. The objective was to build a deterministic engine with a calculation record, preserved versions, and integration with private history and reminder features. Development combined documentary analysis, primary-source research, incremental specification, and tests across different system boundaries. The solution separated the calculation domain from the Next.js interface and Supabase services, used Temporal for calendar dates, and preserved versioned rules and calendars. The implemented scope includes ordinary civil and criminal profiles for ten TJSP localities in São Paulo in 2026 and an ordinary labor profile for the TRT of the 2nd Region in the city of São Paulo in 2026--2027. The identified automated verification recorded 256 unit tests, 146 SQL tests, and 67 browser scenarios passing, with one scenario skipped. Results include exportable calculation records, authentication, individual history, and optional reminder scheduling. Partial calendars, pending legal review, and external email receipt still requiring acceptance limit the delivery's scope. The artifact meets its documented technical scope and provides a traceable basis for review and further development, without certifying procedural timeliness or universal procedural coverage.\par\medskip
+\noindent\textbf{Keywords:} Software engineering. Procedural deadlines. Traceability. Web application.
+\end{singlespace}\end{otherlanguage}
+\clearpage\listoffigures\thispagestyle{empty}
+\clearpage\listquadros\thispagestyle{empty}
+\clearpage\listoftables\thispagestyle{empty}
+\clearpage\chapter*{LISTA DE ABREVIATURAS E SIGLAS}\thispagestyle{empty}
+\begin{singlespace}\noindent
+ADS --- Análise e Desenvolvimento de Sistemas\\
+API --- Interface de programação de aplicações\\
+AR --- Aviso de recebimento\\
+CI --- Integração contínua\\
+CLT --- Consolidação das Leis do Trabalho\\
+CNJ --- Conselho Nacional de Justiça\\
+CPC --- Código de Processo Civil\\
+CPP --- Código de Processo Penal\\
+DJEN --- Diário de Justiça Eletrônico Nacional\\
+E2E --- Teste ponta a ponta\\
+LGPD --- Lei Geral de Proteção de Dados Pessoais\\
+PKCE --- Proof Key for Code Exchange\\
+RLS --- Row Level Security\\
+SSR --- Server-Side Rendering\\
+TG --- Trabalho de Graduação\\
+TJSP --- Tribunal de Justiça do Estado de São Paulo\\
+TRT --- Tribunal Regional do Trabalho\\
+WCAG --- Web Content Accessibility Guidelines
+\end{singlespace}
+\clearpage\tableofcontents\thispagestyle{empty}
+\clearpage\pagestyle{fancy}
+\fancypagestyle{plain}{\fancyhf{}\fancyhead[R]{\fontsize{10}{12}\selectfont\thepage}\renewcommand{\headrulewidth}{0pt}}
+\input{capitulos/1}
+\input{capitulos/2}
+\input{capitulos/3}
+\input{capitulos/4}
+\input{capitulos/5}
+\input{capitulos/6}
+\input{capitulos/7}
+\input{referencias}
+\appendix
+\titleformat{\chapter}[block]{\normalfont\bfseries\fontsize{14}{18}\selectfont}{APÊNDICE \thechapter\space---}{.5em}{}
+\input{capitulos/a}
+\input{capitulos/b}
+\input{capitulos/c}
+\input{capitulos/d}
+\input{capitulos/e}
+\input{capitulos/f}
+\end{document}

@@ -1,0 +1,28 @@
+{
+  "edition": "2026-11-04",
+  "verification": "document_artifacts_only",
+  "pages": 36,
+  "body_pages": 34,
+  "landscape_atlas_pages": 2,
+  "tables": 7,
+  "dictionary_columns": 65,
+  "final_functions": 22,
+  "explicit_indexes": 7,
+  "body_figures": 6,
+  "total_diagrams": 8,
+  "navigation_links": 17,
+  "unique_navigation_pages": 16,
+  "source_hashes_checked": 38,
+  "artifacts": [
+    {
+      "path": "output/documents/prazo-claro-relatorio-banco-de-dados-2026-11-04.pdf",
+      "bytes": 1564733,
+      "sha256": "fe02d88aa3b3959e43dc0eeff0857a7373b309d0d0f7ed56b214f2c789f60e81"
+    },
+    {
+      "path": "output/documents/prazo-claro-relatorio-banco-de-dados-2026-11-04.docx",
+      "bytes": 680742,
+      "sha256": "ec93671d3d34d2253d2636de37bed66490250c63c23343936fbfefc935f1d70f"
+    }
+  ]
+}

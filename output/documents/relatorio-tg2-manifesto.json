@@ -1,0 +1,461 @@
+{
+  "word": "output\\documents\\prazo-claro-relatorio-tg2-2026-10-24.docx",
+  "headings": [
+    {
+      "key": "chapter-1",
+      "label": "1 INTRODUÇÃO",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-1-1",
+      "label": "1.1 Contextualização",
+      "kind": "section"
+    },
+    {
+      "key": "section-1-2",
+      "label": "1.2 Problema e justificativa",
+      "kind": "section"
+    },
+    {
+      "key": "section-1-3",
+      "label": "1.3 Objetivos",
+      "kind": "section"
+    },
+    {
+      "key": "section-1-4",
+      "label": "1.4 Delimitação e organização",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-2",
+      "label": "2 FUNDAMENTAÇÃO E TRABALHOS DE REFERÊNCIA",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-2-1",
+      "label": "2.1 Engenharia de software e requisitos",
+      "kind": "section"
+    },
+    {
+      "key": "section-2-2",
+      "label": "2.2 Comunicação, calendário e contagem",
+      "kind": "section"
+    },
+    {
+      "key": "section-2-3",
+      "label": "2.3 Datas civis e reprodutibilidade",
+      "kind": "section"
+    },
+    {
+      "key": "section-2-4",
+      "label": "2.4 Arquitetura web e persistência",
+      "kind": "section"
+    },
+    {
+      "key": "section-2-5",
+      "label": "2.5 Segurança, privacidade e acessibilidade",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-3",
+      "label": "3 MATERIAIS E MÉTODO DE DESENVOLVIMENTO",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-3-1",
+      "label": "3.1 Natureza e fontes do trabalho",
+      "kind": "section"
+    },
+    {
+      "key": "section-3-2",
+      "label": "3.2 Procedimento incremental",
+      "kind": "section"
+    },
+    {
+      "key": "section-3-3",
+      "label": "3.3 Ambiente e instrumentos",
+      "kind": "section"
+    },
+    {
+      "key": "section-3-4",
+      "label": "3.4 Critérios de verificação e corte de evidências",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-4",
+      "label": "4 CONCEPÇÃO E ENGENHARIA DO SISTEMA",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-4-1",
+      "label": "4.1 Evolução da proposta e partes interessadas",
+      "kind": "section"
+    },
+    {
+      "key": "section-4-2",
+      "label": "4.2 Escopo funcional e requisitos",
+      "kind": "section"
+    },
+    {
+      "key": "quadro-1",
+      "label": "Quadro 1 — Requisitos funcionais do recorte entregue",
+      "kind": "table"
+    },
+    {
+      "key": "quadro-2",
+      "label": "Quadro 2 — Requisitos de qualidade e sua expressão no projeto",
+      "kind": "table"
+    },
+    {
+      "key": "section-4-3",
+      "label": "4.3 Casos de uso e fluxo principal",
+      "kind": "section"
+    },
+    {
+      "key": "figure-1",
+      "label": "Figura 1 — Contexto e recursos disponíveis ao usuário",
+      "kind": "figure"
+    },
+    {
+      "key": "section-4-4",
+      "label": "4.4 Modelo de domínio",
+      "kind": "section"
+    },
+    {
+      "key": "figure-2",
+      "label": "Figura 2 — Modelo conceitual de cálculo e memória",
+      "kind": "figure"
+    },
+    {
+      "key": "section-4-5",
+      "label": "4.5 Arquitetura e decisões",
+      "kind": "section"
+    },
+    {
+      "key": "figure-3",
+      "label": "Figura 3 — Camadas e dependências da implementação",
+      "kind": "figure"
+    },
+    {
+      "key": "section-4-6",
+      "label": "4.6 Modelo físico e persistência",
+      "kind": "section"
+    },
+    {
+      "key": "figure-4",
+      "label": "Figura 4 — Relações físicas essenciais do banco",
+      "kind": "figure"
+    },
+    {
+      "key": "section-4-7",
+      "label": "4.7 Interface e experiência de uso",
+      "kind": "section"
+    },
+    {
+      "key": "section-4-8",
+      "label": "4.8 Segurança e tratamento de dados",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-5",
+      "label": "5 IMPLEMENTAÇÃO E VERIFICAÇÃO",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-5-1",
+      "label": "5.1 Organização do código e contratos",
+      "kind": "section"
+    },
+    {
+      "key": "section-5-2",
+      "label": "5.2 Algoritmo de contagem e composição",
+      "kind": "section"
+    },
+    {
+      "key": "figure-5",
+      "label": "Figura 5 — Fluxo de decisão do cálculo demonstrativo",
+      "kind": "figure"
+    },
+    {
+      "key": "section-5-3",
+      "label": "5.3 Memória, exportação e histórico",
+      "kind": "section"
+    },
+    {
+      "key": "section-5-4",
+      "label": "5.4 Conta e autenticação",
+      "kind": "section"
+    },
+    {
+      "key": "figure-6",
+      "label": "Figura 6 — Confirmação de cadastro e criação de sessão",
+      "kind": "figure"
+    },
+    {
+      "key": "section-5-5",
+      "label": "5.5 Lembretes e concorrência",
+      "kind": "section"
+    },
+    {
+      "key": "figure-7",
+      "label": "Figura 7 — Estados principais de uma geração de lembrete",
+      "kind": "figure"
+    },
+    {
+      "key": "section-5-6",
+      "label": "5.6 Agendamento e implantação",
+      "kind": "section"
+    },
+    {
+      "key": "figure-8",
+      "label": "Figura 8 — Implantação e processamento hospedado",
+      "kind": "figure"
+    },
+    {
+      "key": "section-5-7",
+      "label": "5.7 Estratégia e execução dos testes",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-6",
+      "label": "6 RESULTADOS, DISCUSSÃO E LIMITAÇÕES",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-6-1",
+      "label": "6.1 Funcionalidades observadas",
+      "kind": "section"
+    },
+    {
+      "key": "figure-9",
+      "label": "Figura 9 — Resultado e avisos na interface publicada",
+      "kind": "figure"
+    },
+    {
+      "key": "figure-10",
+      "label": "Figura 10 — Orientação após cadastro em teste controlado",
+      "kind": "figure"
+    },
+    {
+      "key": "section-6-2",
+      "label": "6.2 Casos de referência e rastreabilidade",
+      "kind": "section"
+    },
+    {
+      "key": "quadro-3",
+      "label": "Quadro 3 — Casos demonstrativos de referência",
+      "kind": "table"
+    },
+    {
+      "key": "section-6-3",
+      "label": "6.3 Resultados automatizados e aceites humanos",
+      "kind": "section"
+    },
+    {
+      "key": "tabela-1",
+      "label": "Tabela 1 — Resultados registrados de verificação automatizada",
+      "kind": "table"
+    },
+    {
+      "key": "section-6-4",
+      "label": "6.4 Situação do lembrete externo",
+      "kind": "section"
+    },
+    {
+      "key": "section-6-5",
+      "label": "6.5 Análise dos objetivos e decisões",
+      "kind": "section"
+    },
+    {
+      "key": "section-6-6",
+      "label": "6.6 Custos, riscos e validade",
+      "kind": "section"
+    },
+    {
+      "key": "section-6-7",
+      "label": "6.7 Continuidade priorizada",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-7",
+      "label": "7 CONCLUSÃO",
+      "kind": "chapter"
+    },
+    {
+      "key": "chapter-A",
+      "label": "APÊNDICE A — CASOS DE USO DETALHADOS",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-A-1",
+      "label": "A.1 UC01 Realizar simulação pública",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-2",
+      "label": "A.2 UC02 Selecionar ato do catálogo",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-3",
+      "label": "A.3 UC03 Exportar memória",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-4",
+      "label": "A.4 UC04 Cadastrar e confirmar conta",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-5",
+      "label": "A.5 UC05 Entrar ou recuperar acesso",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-6",
+      "label": "A.6 UC06 Aceitar convite",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-7",
+      "label": "A.7 UC07 Salvar e consultar histórico",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-8",
+      "label": "A.8 UC08 Excluir cálculo",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-9",
+      "label": "A.9 UC09 Agendar lembrete",
+      "kind": "section"
+    },
+    {
+      "key": "section-A-10",
+      "label": "A.10 UC10 Cancelar e acompanhar lembrete",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-B",
+      "label": "APÊNDICE B — DICIONÁRIO DE DADOS",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-B-1",
+      "label": "B.1 Catálogos e histórico",
+      "kind": "section"
+    },
+    {
+      "key": "quadro-4",
+      "label": "Quadro 4 — Tabelas públicas de fontes e versões",
+      "kind": "table"
+    },
+    {
+      "key": "section-B-2",
+      "label": "B.2 Fila e agendador",
+      "kind": "section"
+    },
+    {
+      "key": "quadro-5",
+      "label": "Quadro 5 — Campos operacionais de lembretes",
+      "kind": "table"
+    },
+    {
+      "key": "section-B-3",
+      "label": "B.3 Estrutura lógica da memória",
+      "kind": "section"
+    },
+    {
+      "key": "quadro-6",
+      "label": "Quadro 6 — Principais elementos de CalculationResult",
+      "kind": "table"
+    },
+    {
+      "key": "chapter-C",
+      "label": "APÊNDICE C — REFERÊNCIA DA API",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-C-1",
+      "label": "C.1 Cálculo público",
+      "kind": "section"
+    },
+    {
+      "key": "section-C-2",
+      "label": "C.2 Conta e histórico",
+      "kind": "section"
+    },
+    {
+      "key": "quadro-7",
+      "label": "Quadro 7 — Rotas de conta",
+      "kind": "table"
+    },
+    {
+      "key": "section-C-3",
+      "label": "C.3 Lembretes e despacho interno",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-D",
+      "label": "APÊNDICE D — RASTREABILIDADE E REPRODUÇÃO",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-D-1",
+      "label": "D.1 Requisito, módulo e evidência",
+      "kind": "section"
+    },
+    {
+      "key": "quadro-8",
+      "label": "Quadro 8 — Rastreabilidade resumida",
+      "kind": "table"
+    },
+    {
+      "key": "section-D-2",
+      "label": "D.2 Instalação e comandos de verificação",
+      "kind": "section"
+    },
+    {
+      "key": "section-D-3",
+      "label": "D.3 Ensaio de apresentação e aceite",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-E",
+      "label": "APÊNDICE E — INSTRUMENTO PROPOSTO DE AVALIAÇÃO",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-E-1",
+      "label": "E.1 Protocolo ainda não executado",
+      "kind": "section"
+    },
+    {
+      "key": "section-E-2",
+      "label": "E.2 Critérios futuros de análise",
+      "kind": "section"
+    },
+    {
+      "key": "chapter-F",
+      "label": "APÊNDICE F — ADEQUAÇÃO ACADÊMICA E MANUTENÇÃO",
+      "kind": "chapter"
+    },
+    {
+      "key": "section-F-1",
+      "label": "F.1 Correspondência com o manual da FATEC",
+      "kind": "section"
+    },
+    {
+      "key": "section-F-2",
+      "label": "F.2 Revisão e governança do documento",
+      "kind": "section"
+    }
+  ],
+  "abstract_words": {
+    "abstract_pt": 219,
+    "abstract_en": 209
+  },
+  "content_words": 8814,
+  "references": 21
+}

@@ -1,0 +1,37 @@
+\chapter{FUNDAMENTAÇÃO E TRABALHOS DE REFERÊNCIA}
+\label{chapter-2}
+\section{Engenharia de software e requisitos}
+\label{section-2-1}
+O SWEBOK organiza conhecimentos de engenharia de software, incluindo requisitos, arquitetura e testes. A edição consultada é a versão 4.0a, cuja capa registra lançamento em agosto de 2026. Neste trabalho, essa referência apoiou a organização das atividades e dos artefatos, sem impor a adoção integral de um processo específico \hyperref[ref:SWEBOK]{(IEEE COMPUTER SOCIETY, 2026)}. A passagem da proposta ampla para critérios verificáveis foi uma decisão do projeto: cada funcionalidade recebeu um recorte, uma condição de aceite e uma evidência esperada.
+
+A especificação diferencia requisitos funcionais, atributos de qualidade e regras de negócio. Calcular, salvar e cancelar um lembrete são comportamentos observáveis; determinismo e controle de acesso são condições transversais. Uma norma jurídica não é tratada como requisito completo por si só: sua implementação depende de âmbito, vigência, condições de aplicação e casos de referência. A matriz de rastreabilidade estabelece as relações entre esses elementos no artefato construído.
+
+O resumo público da ISO/IEC 25010:2023 apresenta um modelo de qualidade de produto composto por nove características. A referência foi usada como orientação para discutir qualidade, não como certificação ou avaliação integral da norma. O texto completo pago não foi utilizado como se tivesse sido integralmente examinado \hyperref[ref:ISO25010]{(ISO; IEC, 2023)}. No Prazo Claro, os critérios efetivamente verificados foram registrados por teste ou observação, sem atribuir pontuações globais de qualidade.
+
+\section{Comunicação, calendário e contagem}
+\label{section-2-2}
+A Lei 11.419/2006 distingue a disponibilização no diário da data considerada de publicação e trata do início de prazos decorrentes desse meio. O CPC contém regras sobre dias úteis, suspensão e exclusão do dia do começo. Esses conceitos foram separados no contrato do motor para evitar o uso de um campo genérico de data inicial \hyperref[ref:LEI11419]{(BRASIL, 2006)} \hyperref[ref:CPC]{(BRASIL, 2015)}. A regulamentação do CNJ sobre DJEN e Domicílio, com a alteração da Resolução 569/2024, reforça a necessidade de distinguir os meios de comunicação; o sistema implementa apenas o perfil de diário especificado \hyperref[ref:CNJ569]{(CNJ, 2024)}.
+
+No perfil criminal, a pesquisa do projeto examinou os arts. 798 e 798-A do CPP e preservou a distinção entre o fim nominal e a eventual prorrogação. No trabalhista, examinou os arts. 775 e 775-A da CLT. O catálogo inicial de atos inclui apelação civil, recurso ordinário trabalhista da Vara do Trabalho e declaração de sentença penal de primeiro grau. Cada seleção exige confirmação das condições específicas; não decide admissibilidade, tempestividade real ou efeitos de um recurso sobre outro prazo \hyperref[ref:CPP]{(BRASIL, 1941)} \hyperref[ref:CLT]{(BRASIL, 1943)} \hyperref[ref:CPC]{(BRASIL, 2015)}.
+
+O calendário constitui dado normativo e operacional versionado. A relação municipal do TJSP para 2026 e os atos forenses usados pelo projeto possuem âmbito e período próprios. A Portaria GP 19/2026 do TRT-2 fundamenta eventos de 2027 naquele tribunal. A presença dessa fonte não preenche a lacuna de outro tribunal ou comarca \hyperref[ref:TJSPMUN]{(TJSP, 2025a)} \hyperref[ref:TJSP2813]{(TJSP, 2025b)} \hyperref[ref:TRT2027]{(TRT-2, 2026)}. As fichas do repositório conservam dispositivo, consulta, vigência e estado de revisão de cada seleção.
+
+\section{Datas civis e reprodutibilidade}
+\label{section-2-3}
+A documentação de Temporal.PlainDate descreve uma data de calendário independente de fuso horário. Esse conceito foi adotado para os eventos processuais e para as datas percorridas pelo motor \hyperref[ref:TEMPORAL]{(TC39, s.d.)}. Um vencimento em 27 de outubro é armazenado como data civil; não é convertido implicitamente em meia-noite UTC. Já o envio de um lembrete exige um instante associado ao horário escolhido em America/Sao\_Paulo.
+
+Reprodutibilidade, neste projeto, significa executar a mesma entrada com as mesmas versões e obter a mesma memória. Não significa que o resultado esteja juridicamente aprovado nem que um JSON salvo seja autêntico. A implementação preserva cópias dos dados utilizados, identifica motores anteriores e separa uma recomputação possível do snapshot original. Essa separação permite reconhecer versões indisponíveis sem substituir a evidência histórica por um cálculo atual.
+
+\section{Arquitetura web e persistência}
+\label{section-2-4}
+Os Route Handlers do Next.js permitem implementar endpoints HTTP na aplicação. O projeto utilizou essa capacidade para separar contratos de cálculo, conta, histórico e lembretes, mantendo o algoritmo fora do framework \hyperref[ref:NEXT]{(VERCEL, s.d.)}. A escolha de monólito modular reduz a quantidade de serviços operados nesta entrega e conserva fronteiras que podem ser testadas isoladamente.
+
+A documentação de Supabase apresenta clientes distintos para contexto de navegador e servidor em integrações SSR e o uso de políticas PostgreSQL de segurança por linha. Essas capacidades fundamentam a infraestrutura escolhida \hyperref[ref:SUPABASESSR]{(SUPABASE, s.d.a)} \hyperref[ref:SUPABASERLS]{(SUPABASE, s.d.b)}. No sistema desenvolvido, a identidade é verificada no servidor, e a autorização do histórico também é expressa no banco. Uma resposta visual de conectado não é a única barreira para acessar dados privados.
+
+\section{Segurança, privacidade e acessibilidade}
+\label{section-2-5}
+O ASVS da OWASP oferece requisitos para verificação de segurança de aplicações. A referência consultada foi a versão estável 5.0.0; o projeto utilizou preocupações como validação e autorização para organizar sua análise, sem declarar conformidade integral \hyperref[ref:ASVS]{(OWASP, 2025)}. Os controles efetivamente existentes são descritos na implementação e nos testes. Não houve auditoria independente nem ensaio amplo de resistência a abuso.
+
+A LGPD fundamenta a atenção à finalidade, à necessidade e à proteção dos dados pessoais. O artefato evita exigir nomes de partes e números de processos para realizar cálculos; conta e e-mail são necessários aos recursos privados escolhidos. Esta documentação não substitui uma definição institucional de controlador, retenção, atendimento e base legal para eventual operação ampliada \hyperref[ref:LGPD]{(BRASIL, 2018)}.
+
+A WCAG 2.2 reúne critérios verificáveis de acessibilidade. Foi adotada como meta de nível AA, com foco em teclado, rótulos, mensagens de erro e percepção de estados \hyperref[ref:WCAG]{(W3C, 2024)}. Verificações automatizadas e inspeções de telas foram registradas, mas não abrangem todos os critérios nem equivalem a uma certificação. A avaliação com pessoas usuárias de tecnologias assistivas permanece como evolução.

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1400" height="875" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1400 875" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1400" height="875"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-875)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="310" y="25" width="455" height="825" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(95%,96%,97%); fill-rule: evenodd;"/>
+			<text x="322" y="825" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1650) scale(1,-1)">VERCEL | Monólito modular Next.js</text>
+			<rect x="810" y="25" width="365" height="825" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1.2; fill: rgb(95%,96%,97%); fill-rule: evenodd;"/>
+			<text x="822" y="825" style="font-family: Helvetica-Bold; font-size: 14px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1650) scale(1,-1)">SUPABASE | Serviços gerenciados</text>
+			<rect x="15" y="645" width="250" height="165" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="15" y="779" width="250" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="25" y="789" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1578) scale(1,-1)">Usuário e navegador</text>
+			<text x="25" y="761" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1522) scale(1,-1)">React / TypeScript / formulário validado</text>
+			<text x="25" y="746" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1492) scale(1,-1)">Simulação e memória cronológica</text>
+			<text x="25" y="731" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1462) scale(1,-1)">Histórico privado e lembretes opt-in</text>
+			<text x="25" y="716" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1432) scale(1,-1)">Exportação da memória no cliente</text>
+			<text x="25" y="701" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1402) scale(1,-1)">Link do e-mail abre a conta própria</text>
+			<text x="25" y="686" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1372) scale(1,-1)">HTTPS; cookies e sessão da aplicação</text>
+			<rect x="330" y="650" width="415" height="140" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="330" y="759" width="415" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="340" y="769" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1538) scale(1,-1)">Interface e fronteiras HTTP</text>
+			<text x="340" y="741" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1482) scale(1,-1)">SSR; /api/auth/* e /auth/callback</text>
+			<text x="340" y="726" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1452) scale(1,-1)">/api/calculate: simulação pública</text>
+			<text x="340" y="711" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1422) scale(1,-1)">/api/history: GET / POST / DELETE privados</text>
+			<text x="340" y="696" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1392) scale(1,-1)">/api/reminders: programação e cancelamento</text>
+			<text x="340" y="681" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1362) scale(1,-1)">Origem, validação, sessão e respostas privadas</text>
+			<rect x="330" y="485" width="415" height="130" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="330" y="584" width="415" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="340" y="594" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1188) scale(1,-1)">Aplicação e adaptadores</text>
+			<text x="340" y="566" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1132) scale(1,-1)">Zod; calculateForMvp; histórico e snapshots</text>
+			<text x="340" y="551" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1102) scale(1,-1)">Cliente SSR sob identidade autenticada</text>
+			<text x="340" y="536" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1072) scale(1,-1)">Paginação por proprietário e filtro por regime</text>
+			<text x="340" y="521" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1042) scale(1,-1)">Clock externo ao domínio; data de São Paulo</text>
+			<rect x="330" y="295" width="415" height="155" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="330" y="419" width="415" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="340" y="429" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,858) scale(1,-1)">Domínio puro e catálogos versionados</text>
+			<text x="340" y="401" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,802) scale(1,-1)">TypeScript / Temporal; civil, criminal e trabalhista</text>
+			<text x="340" y="386" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,772) scale(1,-1)">Atos, regras, calendários e fontes no código</text>
+			<text x="340" y="371" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,742) scale(1,-1)">Motor determinístico: sem rede, banco ou relógio</text>
+			<text x="340" y="356" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,712) scale(1,-1)">Resultado provisional / incomplete e memória</text>
+			<text x="340" y="341" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,682) scale(1,-1)">Catálogos SQL não substituem a seleção do motor</text>
+			<text x="340" y="326" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,652) scale(1,-1)">Revisão jurídica e calendário parcial identificados</text>
+			<rect x="330" y="45" width="415" height="210" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="330" y="224" width="415" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="340" y="234" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,468) scale(1,-1)">Dispatcher de lembretes | server-only</text>
+			<text x="340" y="206" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,412) scale(1,-1)">/api/internal/reminders/dispatch</text>
+			<text x="340" y="191" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,382) scale(1,-1)">Assinatura HMAC + timestamp + nonce consumível</text>
+			<text x="340" y="176" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,352) scale(1,-1)">Cliente privilegiado separado; modo brevo</text>
+			<text x="340" y="161" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,322) scale(1,-1)">RPCs: claim → prepare → envio → settle</text>
+			<text x="340" y="146" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,292) scale(1,-1)">Token, lease e limites de tentativa / janela</text>
+			<text x="340" y="131" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,262) scale(1,-1)">Incerteza: sem reenvio automático</text>
+			<text x="340" y="116" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,232) scale(1,-1)">probe: diagnóstico sem claim nem e-mail</text>
+			<text x="340" y="101" style="font-family: Helvetica; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,202) scale(1,-1)">Segredos somente no ambiente do servidor</text>
+			<rect x="830" y="650" width="325" height="140" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="830" y="759" width="325" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="840" y="769" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1538) scale(1,-1)">Auth e identidade</text>
+			<text x="840" y="741" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1482) scale(1,-1)">Cadastro / confirmação / login / recuperação</text>
+			<text x="840" y="726" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1452) scale(1,-1)">OAuth Google e convites</text>
+			<text x="840" y="711" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1422) scale(1,-1)">auth.users e emissão de sessão / JWT</text>
+			<text x="840" y="696" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1392) scale(1,-1)">Mensagens de conta pelo SMTP Brevo</text>
+			<text x="840" y="681" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1362) scale(1,-1)">Provedor Google configurado no Supabase</text>
+			<rect x="830" y="490" width="325" height="115" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="830" y="574" width="325" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="840" y="584" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1168) scale(1,-1)">Data API / PostgREST e RPC</text>
+			<text x="840" y="556" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1112) scale(1,-1)">Cliente comum: JWT da conta + GRANT / RLS</text>
+			<text x="840" y="541" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1082) scale(1,-1)">Usuário não escolhe outro owner_id</text>
+			<text x="840" y="526" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1052) scale(1,-1)">Serviço: acesso exclusivo ao dispatcher</text>
+			<text x="840" y="511" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1022) scale(1,-1)">Sem conexão ORM direta no recorte atual</text>
+			<rect x="830" y="260" width="325" height="185" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="830" y="414" width="325" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="840" y="424" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,848) scale(1,-1)">PostgreSQL | dados e integridade</text>
+			<text x="840" y="396" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,792) scale(1,-1)">public: 3 tabelas de catálogo, cálculos e fila</text>
+			<text x="840" y="381" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,762) scale(1,-1)">reminder_private: config e invocações</text>
+			<text x="840" y="366" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,732) scale(1,-1)">7 tabelas próprias; 65 colunas; 4 FKs</text>
+			<text x="840" y="351" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,702) scale(1,-1)">PKs, UKs, CHECKs, índices e políticas RLS</text>
+			<text x="840" y="336" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,672) scale(1,-1)">Wrappers públicos; funções internas limitadas</text>
+			<text x="840" y="321" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,642) scale(1,-1)">Snapshots JSONB com versões e pendências</text>
+			<text x="840" y="306" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,612) scale(1,-1)">Memórias preservadas; autenticidade não atestada</text>
+			<text x="840" y="291" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,582) scale(1,-1)">Reservas atômicas: FOR UPDATE SKIP LOCKED</text>
+			<rect x="830" y="45" width="325" height="175" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="830" y="189" width="325" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="840" y="199" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,398) scale(1,-1)">Agendamento e operação privada</text>
+			<text x="840" y="171" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,342) scale(1,-1)">pg_cron: tick por minuto, se habilitado</text>
+			<text x="840" y="156" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,312) scale(1,-1)">Vault: segredo dedicado de assinatura</text>
+			<text x="840" y="141" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,282) scale(1,-1)">pg_net: HTTPS assíncrono após commit</text>
+			<text x="840" y="126" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,252) scale(1,-1)">Nonce / request_id / resposta e resumo</text>
+			<text x="840" y="111" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,222) scale(1,-1)">Habilitação exige probe recente elegível</text>
+			<text x="840" y="96" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,192) scale(1,-1)">Coleta de resultados e retenção de sete dias</text>
+			<text x="840" y="81" style="font-family: Helvetica; font-size: 10.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,162) scale(1,-1)">request_id é correlação, sem FK para net</text>
+			<rect x="1210" y="665" width="175" height="125" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1210" y="759" width="175" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="1220" y="769" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1538) scale(1,-1)">Google OAuth</text>
+			<text x="1220" y="741" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1482) scale(1,-1)">Identidade Google</text>
+			<text x="1220" y="726" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1452) scale(1,-1)">Consentimento da conta</text>
+			<text x="1220" y="711" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1422) scale(1,-1)">Retorno via Supabase</text>
+			<text x="1220" y="696" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1392) scale(1,-1)">e callback do aplicativo</text>
+			<rect x="1210" y="440" width="175" height="160" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1210" y="569" width="175" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="1220" y="579" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1158) scale(1,-1)">Brevo | dois canais</text>
+			<text x="1220" y="551" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1102) scale(1,-1)">SMTP: e-mails do Auth</text>
+			<text x="1220" y="536" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1072) scale(1,-1)">API: lembretes de prazo</text>
+			<text x="1220" y="521" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1042) scale(1,-1)">Credenciais separadas</text>
+			<text x="1220" y="506" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1012) scale(1,-1)">Aceite HTTP não prova</text>
+			<text x="1220" y="491" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,982) scale(1,-1)">recebimento na caixa</text>
+			<text x="1220" y="476" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,952) scale(1,-1)">Template com link privado</text>
+			<rect x="1210" y="200" width="175" height="115" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="1210" y="284" width="175" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="1220" y="294" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,588) scale(1,-1)">Caixa do usuário</text>
+			<text x="1220" y="266" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,532) scale(1,-1)">Confirmação / recuperação</text>
+			<text x="1220" y="251" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,502) scale(1,-1)">Aviso de prazo</text>
+			<text x="1220" y="236" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,472) scale(1,-1)">Memória exige conta própria</text>
+			<text x="1220" y="221" style="font-family: Helvetica; font-size: 9.5px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,442) scale(1,-1)">Recebimento: aceite humano</text>
+			<rect x="15" y="350" width="250" height="235" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="15" y="554" width="250" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="25" y="564" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1128) scale(1,-1)">Engenharia e entrega</text>
+			<text x="25" y="536" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1072) scale(1,-1)">GitHub privado e Git versionado</text>
+			<text x="25" y="521" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1042) scale(1,-1)">4 migrations SQL imutáveis no repositório</text>
+			<text x="25" y="506" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1012) scale(1,-1)">GitHub Actions: aplicação e banco</text>
+			<text x="25" y="491" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,982) scale(1,-1)">check, audit, build e Playwright</text>
+			<text x="25" y="476" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,952) scale(1,-1)">Banco CI: pgTAP e lint em stack descartável</text>
+			<text x="25" y="461" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,922) scale(1,-1)">Vercel publica a aplicação</text>
+			<text x="25" y="446" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,892) scale(1,-1)">Migrations hospedadas: etapa controlada</text>
+			<text x="25" y="431" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,862) scale(1,-1)">CI não é evidência de migração remota</text>
+			<text x="25" y="416" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,832) scale(1,-1)">Registros de testes / aceite / operação</text>
+			<text x="25" y="401" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,802) scale(1,-1)">Backups e RPO/RTO não validados aqui</text>
+			<rect x="15" y="45" width="250" height="245" style="stroke: rgb(37%,43%,47%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="15" y="259" width="250" height="31" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="25" y="269" style="font-family: Helvetica-Bold; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,538) scale(1,-1)">Desenvolvimento e ensaio local</text>
+			<text x="25" y="241" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,482) scale(1,-1)">Node / pnpm; Supabase CLI fixada</text>
+			<text x="25" y="226" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,452) scale(1,-1)">Docker: PostgreSQL 17 configurado</text>
+			<text x="25" y="211" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,422) scale(1,-1)">API 54321; banco 54322; Studio 54323</text>
+			<text x="25" y="196" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,392) scale(1,-1)">Mailpit: captura local sem envio externo</text>
+			<text x="25" y="181" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,362) scale(1,-1)">Dispatcher local usa loopback</text>
+			<text x="25" y="166" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,332) scale(1,-1)">Ambientes isolados: local / preview / prod</text>
+			<text x="25" y="151" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,302) scale(1,-1)">Valores de segredos ausentes do relatório</text>
+			<text x="25" y="136" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,272) scale(1,-1)">Leitura de código e DDL em 04/11/2026</text>
+			<text x="25" y="121" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,242) scale(1,-1)">Sem reinspeção de produção nesta edição</text>
+			<text x="25" y="106" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,212) scale(1,-1)">Topologia lógica; região / capacidade</text>
+			<text x="25" y="91" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,182) scale(1,-1)">contratada não foram verificadas</text>
+			<path d="M 265,740 L 330,740 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="330 740, 322.7964 743.4797, 322.7964 736.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="274" y="758" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1516) scale(1,-1)">HTTPS</text>
+			<path d="M 537,650 L 537,615 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="537 615, 540.4797 622.2036, 533.5203 622.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<path d="M 537,485 L 537,450 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="537 450, 540.4797 457.2036, 533.5203 457.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<path d="M 745,715 L 830,715 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="830 715, 822.7964 718.4797, 822.7964 711.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="770" y="729" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1458) scale(1,-1)">sessão</text>
+			<path d="M 745,550 L 830,550 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="830 550, 822.7964 553.4797, 822.7964 546.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="762" y="565" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1130) scale(1,-1)">JWT / RPC</text>
+			<path d="M 993,490 L 993,445 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="993 445, 996.4797 452.2036, 989.5203 452.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<path d="M 993,260 L 993,220 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="993 220, 996.4797 227.2036, 989.5203 227.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<path d="M 830,120 L 745,120 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<polygon points="745 120, 752.2036 116.5203, 752.2036 123.4797" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="770" y="136" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,272) scale(1,-1)">HMAC</text>
+			<path d="M 745,220 L 785,220 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<path d="M 785,220 L 785,510 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<path d="M 785,510 L 830,510 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<polygon points="830 510, 822.7964 513.4797, 822.7964 506.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="769" y="246" style="font-family: Helvetica-Bold; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,492) scale(1,-1)">RPC</text>
+			<path d="M 1155,740 L 1210,740 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="1210 740, 1202.796 743.4797, 1202.796 736.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<path d="M 1155,685 L 1190,685 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<path d="M 1190,685 L 1190,575 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<path d="M 1190,575 L 1210,575 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<polygon points="1210 575, 1202.796 578.4797, 1202.796 571.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="1178" y="617" style="font-family: Helvetica-Bold; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1234) scale(1,-1)">SMTP</text>
+			<path d="M 745,70 L 790,70 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 790,70 L 790,10 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 790,10 L 1393,10 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 1393,10 L 1393,490 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 1393,490 L 1385,490 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="1385 490, 1392.204 486.5203, 1392.204 493.4797" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="1165" y="20" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,40) scale(1,-1)">Envio pela API HTTPS do Brevo</text>
+			<path d="M 1298,440 L 1298,315 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="1298 315, 1301.48 322.2036, 1294.52 322.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

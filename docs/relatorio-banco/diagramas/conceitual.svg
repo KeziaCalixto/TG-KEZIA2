@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="660" height="380" preserveAspectRatio="xMinYMin meet" viewBox="0 0 660 380" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="660" height="380"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-380)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="20" y="250" width="180" height="95" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="20" y="311" width="180" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="30" y="322" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,644) scale(1,-1)">Pessoa autenticada</text>
+			<text x="30" y="288" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,576) scale(1,-1)">Identidade gerenciada</text>
+			<rect x="240" y="250" width="180" height="95" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="240" y="311" width="180" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="250" y="322" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,644) scale(1,-1)">Cálculo</text>
+			<text x="250" y="288" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,576) scale(1,-1)">Entrada e resultado</text>
+			<rect x="460" y="250" width="180" height="95" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="460" y="311" width="180" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="470" y="322" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,644) scale(1,-1)">Lembrete</text>
+			<text x="470" y="288" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,576) scale(1,-1)">Programação e estado</text>
+			<path d="M 200,298 L 240,298 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="240 298, 232.7964 301.4797, 232.7964 294.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="205" y="315" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,630) scale(1,-1)">1 : N</text>
+			<path d="M 420,298 L 460,298 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="460 298, 452.7964 301.4797, 452.7964 294.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="425" y="315" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,630) scale(1,-1)">1 : N</text>
+			<rect x="20" y="45" width="180" height="100" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="20" y="111" width="180" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="30" y="122" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,244) scale(1,-1)">Regra versionada</text>
+			<text x="30" y="88" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,176) scale(1,-1)">Âmbito e fundamento</text>
+			<rect x="240" y="45" width="180" height="100" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="240" y="111" width="180" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="250" y="122" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,244) scale(1,-1)">Calendário</text>
+			<text x="250" y="88" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,176) scale(1,-1)">Cobertura e eventos</text>
+			<rect x="460" y="45" width="180" height="100" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="460" y="111" width="180" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="470" y="122" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,244) scale(1,-1)">Memória</text>
+			<text x="470" y="88" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,176) scale(1,-1)">Trilha e versões</text>
+			<path d="M 110,145 L 110,205 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 110,205 L 285,205 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 285,205 L 285,250 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="285 250, 281.5203 242.7964, 288.4797 242.7964" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="140" y="212" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,424) scale(1,-1)">aplica</text>
+			<path d="M 330,145 L 330,250 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="330 250, 326.5203 242.7964, 333.4797 242.7964" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="340" y="180" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,360) scale(1,-1)">usa</text>
+			<path d="M 385,250 L 385,180 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 385,180 L 550,180 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 550,180 L 550,145 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="550 145, 553.4797 152.2036, 546.5203 152.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="455" y="193" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,386) scale(1,-1)">preserva</text>
+			<text x="20" y="12" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,24) scale(1,-1)">Relações conceituais; os componentes de memória não exigem tabelas separadas.</text>
+		</g>
+	</g>
+</svg>

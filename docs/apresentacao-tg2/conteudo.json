@@ -1,0 +1,421 @@
+{
+  "edition": "24/10/2026",
+  "functionalCommit": "9632fd2",
+  "author": "Kezia Calixto",
+  "advisor": "Prof. Eduardo Felipe Fonseca de Freitas",
+  "course": "Análise e Desenvolvimento de Sistemas",
+  "slides": [
+    {
+      "title": "PRAZO CLARO",
+      "kind": "cover",
+      "time": 35,
+      "subtitle": "Sistema de contagem de prazos\nprocessuais brasileiros",
+      "notes": "Apresentar o tema como uma aplicação web acadêmica para produzir estimativas explicáveis. A contribuição central é mostrar como cada data resulta das entradas, das regras e do calendário selecionados. Explicar que a entrega possui um recorte definido e revisão jurídica pendente.",
+      "sources": ["docs/relatorio-tg2/conteudo.md, capítulos 1 e 7"]
+    },
+    {
+      "title": "Problema e justificativa",
+      "kind": "statements",
+      "items": [
+        [
+          "A data depende do contexto",
+          "Regime, comunicação e calendário local alteram a contagem."
+        ],
+        [
+          "O resultado precisa de explicação",
+          "Uma data isolada dificulta a conferência dos dias e das fontes."
+        ],
+        [
+          "Questão do trabalho",
+          "Como produzir uma estimativa reproduzível, com memória de cálculo e limites explícitos?"
+        ]
+      ],
+      "time": 50,
+      "notes": "Explicar a dificuldade sem afirmar que houve pesquisa de campo ou medição da frequência de erros. O problema foi delimitado por análise documental e desenvolvimento do artefato. A proposta organiza evidências para conferência e não certifica tempestividade.",
+      "sources": ["docs/relatorio-tg2/conteudo.md, capítulo 1"]
+    },
+    {
+      "title": "Objetivos",
+      "kind": "objectives",
+      "lead": "Construir uma aplicação web de estimativas processuais com motor determinístico e memória de cálculo.",
+      "items": [
+        "Especificar perfis, fontes e calendários versionados.",
+        "Implementar contagem, exportação e histórico privado.",
+        "Verificar o sistema com testes e registrar seus limites."
+      ],
+      "time": 45,
+      "notes": "Distinguir o objetivo geral dos três objetivos específicos. Relacionar a rastreabilidade normativa à especificação, a separação do motor à implementação e as evidências técnicas à verificação. A avaliação com participantes não foi executada.",
+      "sources": ["docs/relatorio-tg2/conteudo.md, objetivos e conclusão"]
+    },
+    {
+      "title": "Recorte implementado",
+      "kind": "scope",
+      "table": [
+        ["Perfil ordinário", "Tribunal e localidade", "Período"],
+        ["Civil", "TJSP, dez comarcas de SP", "2026"],
+        ["Criminal", "TJSP, mesmas dez comarcas", "2026"],
+        ["Trabalhista", "TRT-2, São Paulo Capital", "2026–2027"]
+      ],
+      "foot": "Comunicação pelo DJEN. Calendários parciais e revisão jurídica pendente.",
+      "time": 65,
+      "notes": "As dez comarcas são São Paulo, Campinas, Guarulhos, Osasco, Ribeirão Preto, Santo André, Santos, São Bernardo do Campo, São José dos Campos e Sorocaba. Os perfis são ordinários e possuem condições próprias. Não anunciar cobertura de todo o estado, de todos os ritos, TRT-15, juizados ou todas as formas de comunicação. Fora da cobertura, o cálculo pode ficar incompleto.",
+      "sources": [
+        "docs/relatorio-tg2/conteudo.md, delimitação e resultados",
+        "docs/requirements.md"
+      ]
+    },
+    {
+      "title": "Fundamentação do trabalho",
+      "kind": "statements",
+      "items": [
+        [
+          "Normas e calendário",
+          "CPC, CPP, CLT, Lei 11.419/2006 e atos dos tribunais sustentam perfis específicos."
+        ],
+        [
+          "Engenharia de software",
+          "Requisitos, decisões arquiteturais e testes organizam o desenvolvimento incremental."
+        ],
+        [
+          "Segurança e acessibilidade",
+          "Autorização por proprietário e verificações de interface seguem recortes documentados."
+        ]
+      ],
+      "foot": "Referenciais: SWEBOK, ASVS 5.0.0 e WCAG 2.2. Sem certificação integral.",
+      "time": 50,
+      "notes": "As normas definem regras distintas por perfil. Exemplo: a contagem civil em dias úteis não pode ser aplicada indiscriminadamente ao criminal. SWEBOK orienta atividades de engenharia, ASVS e WCAG orientam verificações delimitadas. Não afirmar auditoria integral ou aprovação jurídica.",
+      "refs": ["CPC", "CPP", "CLT", "LEI11419", "SWEBOK", "ASVS", "WCAG"],
+      "sources": ["docs/relatorio-tg2/conteudo.md, capítulo 2"]
+    },
+    {
+      "title": "Materiais e métodos",
+      "kind": "statements",
+      "items": [
+        [
+          "Pesquisa aplicada e documental",
+          "Leitura dos trabalhos anteriores, requisitos e fontes primárias."
+        ],
+        [
+          "Desenvolvimento incremental",
+          "Casos de referência, especificação, implementação e regressão."
+        ],
+        [
+          "Verificação em diferentes fronteiras",
+          "Motor, banco, navegador e integrações locais com serviços reais."
+        ]
+      ],
+      "foot": "Instrumentos: Git, testes automatizados, evidências de execução e roteiro de aceite.",
+      "time": 55,
+      "notes": "Descrever a evolução do trabalho e a estratégia de teste nas regras de negócio. Diferenciar testes automatizados com mocks, integrações locais reais e aceites humanos no ambiente hospedado. Não atribuir entrevistas, amostra, SUS ou desempenho medido ao estudo.",
+      "sources": [
+        "docs/relatorio-tg2/conteudo.md, capítulo 3",
+        "docs/testing/documentacao-tg2.md"
+      ]
+    },
+    {
+      "title": "Requisitos e rastreabilidade",
+      "kind": "requirements",
+      "table": [
+        ["Necessidade", "Entrega no aplicativo"],
+        ["Calcular e conferir", "Perfil, marcos, trilha diária e fontes"],
+        ["Preservar o resultado", "Versões, memória exportável e histórico"],
+        ["Controlar dados pessoais", "Conta, autorização no servidor e RLS"],
+        ["Lembrar do prazo", "Agendamento opcional e cancelamento"]
+      ],
+      "foot": "Cada requisito possui módulo e evidência identificados na documentação.",
+      "time": 50,
+      "notes": "Usar um exemplo concreto: preservar o resultado exige guardar as versões e a memória, e não somente a data final. A matriz de rastreabilidade relaciona requisitos, módulos e registros de teste. A lembrança por e-mail tem um aceite próprio, distinto do cálculo.",
+      "sources": ["docs/relatorio-tg2/conteudo.md, capítulo 4 e apêndice D"]
+    },
+    {
+      "title": "Arquitetura da solução",
+      "kind": "architecture",
+      "image": "arquitetura.png",
+      "foot": "Motor separado de interface, rede, banco e relógio do sistema.",
+      "time": 65,
+      "notes": "Ler o diagrama a partir da interface. A aplicação valida a requisição e seleciona entradas versionadas. O domínio realiza a contagem sem depender de React, Next.js, Supabase, rede ou relógio. Adaptadores cuidam de autenticação, persistência e e-mail. Vercel hospeda a aplicação. Fonte da figura: diagrama do relatório, elaborado a partir da arquitetura implementada.",
+      "sources": [
+        "docs/relatorio-tg2/figuras/arquitetura.png",
+        "docs/architecture.md",
+        "docs/relatorio-tg2/conteudo.md, capítulo 4"
+      ]
+    },
+    {
+      "title": "Persistência e acesso privado",
+      "kind": "data",
+      "table": [
+        ["Conjunto", "Responsabilidade"],
+        ["Fontes e versões", "Registrar origem, vigência e revisão"],
+        ["Cálculos", "Entrada e memória original por proprietário"],
+        ["Lembretes", "Programação, estado e tentativas"],
+        ["Agendador privado", "Invocações e controle operacional"]
+      ],
+      "foot": "Supabase Auth e PostgreSQL. RLS restringe os dados de cada conta.",
+      "time": 50,
+      "notes": "O banco possui cinco tabelas públicas de domínio e fila, além do schema privado do agendador e das tabelas gerenciadas de autenticação. Os catálogos ativos do motor estão no código versionado. RLS complementa a autorização no servidor. A memória histórica aparece como original não verificado, sem promessa de assinatura criptográfica.",
+      "sources": [
+        "docs/relatorio-tg2/conteudo.md, capítulo 4 e apêndice B",
+        "supabase/migrations/"
+      ]
+    },
+    {
+      "title": "Motor e memória de cálculo",
+      "kind": "engine",
+      "items": [
+        [
+          "Entrada identificada",
+          "Regime, data do evento, localidade e versões."
+        ],
+        [
+          "Decisões registradas",
+          "Marcos, dias contados ou excluídos e motivos."
+        ],
+        ["Saída explicável", "Estimativa provisória ou cálculo incompleto."]
+      ],
+      "image": "tela-calculadora.png",
+      "foot": "A ausência de cobertura impede uma data final presumida.",
+      "time": 60,
+      "notes": "A captura real mostra um caso criminal diferente do exemplo civil do próximo slide: evento em 28/10/2026, cinco dias, fim nominal em 02/11 e prorrogação para 03/11. A tela identifica calendário parcial e revisão pendente. Não confundir quantidade informada, início útil e dias contínuos do curso criminal. A memória preserva fontes e versões.",
+      "sources": [
+        "docs/relatorio-tg2/figuras/tela-calculadora.png",
+        "docs/relatorio-tg2/conteudo.md, capítulos 5 e 6"
+      ]
+    },
+    {
+      "title": "Exemplo civil demonstrativo",
+      "kind": "demo",
+      "table": [
+        ["Data de 2026", "Decisão no caso"],
+        ["06/10", "Publicação, marco excluído"],
+        ["07 a 09/10", "Dias úteis 1, 2 e 3"],
+        ["10 a 12/10", "Fim de semana e feriado"],
+        ["13 e 14/10", "Dias úteis 4 e 5"]
+      ],
+      "lead": "TJSP, São Paulo Capital, publicação no DJEN em 06/10/2026, prazo de cinco dias úteis.",
+      "foot": "Vencimento estimado: 14/10/2026. Simulação com revisão pendente.",
+      "time": 65,
+      "notes": "Percorrer a contagem na tabela. O exemplo usa publicação, não a data de disponibilização. O marco de 06/10 é excluído, 07/10 é o primeiro computado, 12/10 é feriado e 14/10 é o quinto dia útil. Na demonstração ao vivo, selecionar exatamente o perfil civil, São Paulo, publicação e cinco dias. A fonte do caso está no relatório e nos testes de referência.",
+      "sources": [
+        "docs/relatorio-tg2/conteudo.md, apêndices C e D",
+        "docs/entrega/guia-do-aplicativo.md"
+      ]
+    },
+    {
+      "title": "Conta, histórico e exportação",
+      "kind": "statements",
+      "items": [
+        [
+          "Acesso à conta",
+          "Cadastro com confirmação, recuperação de senha, convite e Google."
+        ],
+        [
+          "Histórico individual",
+          "Salvar, filtrar por regime, consultar e excluir cálculos."
+        ],
+        [
+          "Memória preservada",
+          "Exportação e impressão mantêm versões, avisos e decisões do cálculo."
+        ]
+      ],
+      "foot": "A consulta autenticada conserva o resultado original para conferência.",
+      "time": 45,
+      "notes": "Cadastro, confirmação e recuperação hospedados foram confirmados pelo responsável. Google retornou com a indicação Conectado. O convite tem verificação local e reensaio hospedado específico ainda pendente. No histórico, a busca textual é restrita à página disponível. Se a demonstração não tiver conta preparada, usar o caso público e o material estático, sem expor credenciais.",
+      "sources": [
+        "docs/relatorio-tg2/conteudo.md, capítulos 5 e 6",
+        "docs/testing/signup-confirmation-page.md",
+        "docs/testing/google-login.md"
+      ]
+    },
+    {
+      "title": "Lembretes por e-mail",
+      "kind": "statements",
+      "items": [
+        [
+          "Adesão por cálculo salvo",
+          "Usuário escolhe 3, 1 ou 0 dias antes, às 09h, 12h ou 18h de São Paulo."
+        ],
+        [
+          "Fila com estados explícitos",
+          "Agendado, processamento, aceitação pelo provedor, falha ou incerteza."
+        ],
+        [
+          "Controle pelo proprietário",
+          "Cancelar o lembrete ou excluir o cálculo remove a programação ativa."
+        ]
+      ],
+      "foot": "Envio local verificado. Recebimento externo ainda exige confirmação.",
+      "time": 55,
+      "notes": "O agendamento mostra confirmação no site. Não existe e-mail imediato de confirmação do lembrete. O e-mail é previsto para o horário escolhido, com consentimento e destinatário confirmado. Supabase Cron aciona o despacho hospedado, Brevo recebe a solicitação de envio. Estado accepted significa aceitação pelo provedor e não entrega comprovada na caixa. O corte documental não confirma o recebimento externo. Não enviar e-mail ao vivo para demonstrar sem preparar o aceite.",
+      "sources": [
+        "docs/relatorio-tg2/conteudo.md, capítulos 5 e 6",
+        "docs/testing/reminders-production.md",
+        "docs/testing/documentacao-tg2.md"
+      ]
+    },
+    {
+      "title": "Verificação técnica registrada",
+      "kind": "tests",
+      "table": [
+        ["Camada", "Resultado na execução identificada"],
+        ["Unitários", "256 aprovados"],
+        ["SQL", "146 aprovados"],
+        ["Navegador", "67 aprovados, 1 omitido"]
+      ],
+      "lead": "CI do aplicativo na versão 9632fd2, execução 40061653068.",
+      "foot": "Contagens de execução anterior. Testes técnicos não equivalem a revisão jurídica.",
+      "time": 55,
+      "notes": "Os números pertencem à execução de CI identificada no relatório, não a testes executados ao produzir estes slides. Há também registros de integrações reais locais para conta, isolamento e Mailpit. Explicar os limites: testes não demonstram cobertura jurídica universal, avaliação de usuários, desempenho sob carga nem recebimento do e-mail externo. O cenário omitido não é contado como aprovado.",
+      "sources": [
+        "https://github.com/Eduwilll/TG-KEZIA2/actions/runs/40061653068",
+        "docs/relatorio-tg2/conteudo.md, capítulo 6",
+        "docs/testing/documentacao-tg2.md"
+      ]
+    },
+    {
+      "title": "Resultados e limitações",
+      "kind": "columns",
+      "columns": [
+        [
+          "Resultados do recorte",
+          "Contagem reproduzível com versões.\nMemória diária exportável.\nHistórico privado e autenticação.\nAgendamento opcional de lembretes."
+        ],
+        [
+          "Limites da evidência",
+          "Calendários parciais.\nRevisão jurídica pendente.\nRecebimento externo sem aceite final.\nSem estudo com participantes ou carga."
+        ]
+      ],
+      "time": 55,
+      "notes": "Relacionar cada resultado aos objetivos, mantendo as pendências visíveis. Não usar termos como sistema definitivo, ausência de erros ou pronto para uso jurídico irrestrito. O trabalho demonstra uma implementação técnica rastreável no recorte descrito.",
+      "sources": ["docs/relatorio-tg2/conteudo.md, capítulos 6 e 7"]
+    },
+    {
+      "title": "Continuidade do projeto",
+      "kind": "statements",
+      "items": [
+        [
+          "Fechamento dos aceites",
+          "Conferir recebimento e link do lembrete e concluir revisão com autora e orientação."
+        ],
+        [
+          "Validação especializada",
+          "Revisão jurídica dos perfis e avaliação de uso e acessibilidade com participantes."
+        ],
+        [
+          "Expansão controlada",
+          "Novos anos, comarcas e atos com fontes, especificação e testes próprios."
+        ]
+      ],
+      "time": 40,
+      "notes": "Apresentar como trabalhos futuros, sem prometer expansão automática. Administração normativa, retenção e restauração precisam de definição e validação operacionais próprias. Mais fontes não substituem revisão humana. O relatório e o backlog preservam as pendências para a continuidade.",
+      "sources": [
+        "docs/relatorio-tg2/conteudo.md, trabalhos futuros",
+        "docs/backlog.md"
+      ]
+    },
+    {
+      "title": "Conclusão",
+      "kind": "conclusion",
+      "lead": "O Prazo Claro reúne contagem, memória e versões em uma aplicação acadêmica verificável.",
+      "items": [
+        "Os objetivos técnicos do recorte possuem implementação e evidências documentadas.",
+        "A revisão jurídica e os aceites humanos delimitam a conclusão do trabalho."
+      ],
+      "time": 35,
+      "notes": "Retomar a pergunta de pesquisa: a implementação mostra como produzir estimativas explicáveis e reproduzíveis, com limites explícitos. A conclusão é técnica e limitada ao artefato e às evidências apresentadas. Não constitui certificação de tempestividade. Agradecer e passar à demonstração ou às perguntas.",
+      "sources": ["docs/relatorio-tg2/conteudo.md, capítulo 7"]
+    },
+    {
+      "title": "Demonstração e perguntas",
+      "kind": "closing",
+      "lead": "Prazo Claro",
+      "url": "https://tg-kezia2.vercel.app",
+      "items": [
+        "Calcular o exemplo civil.",
+        "Conferir a memória e suas versões.",
+        "Exportar o resultado e abrir o histórico."
+      ],
+      "time": 90,
+      "notes": "Roteiro sugerido de demonstração de 90 segundos: abrir o endereço canônico, usar civil TJSP São Paulo Capital, publicação em 06/10/2026 e cinco dias, conferir 14/10/2026, mostrar trilha e exportar. Histórico requer conta previamente preparada. Usar título fictício, sem dados de processos ou partes. Se não houver rede, os slides 10 e 11 e o PDF permitem continuar. O tempo proposto deve ser ajustado às regras da banca.",
+      "sources": [
+        "docs/entrega/guia-do-aplicativo.md",
+        "docs/relatorio-tg2/conteudo.md, apêndice D"
+      ]
+    },
+    {
+      "title": "Referências selecionadas",
+      "kind": "references",
+      "time": 0,
+      "items": [
+        "BRASIL. CPC (2015), CPP (1941), CLT (1943) e Lei 11.419/2006.",
+        "TJSP. Provimento CSM 2.813/2025 e feriados municipais de 2026.",
+        "TRT-2. Portaria GP 19/2026, calendário de 2027.",
+        "IEEE COMPUTER SOCIETY. SWEBOK Guide, versão 4.0a, 2026.",
+        "OWASP. ASVS 5.0.0, 2025. W3C. WCAG 2.2, 2024."
+      ],
+      "foot": "Referências completas e evidências no relatório TG2. Links nas notas deste slide.",
+      "notes": "Slide de apoio. A bibliografia completa, as URLs e os dispositivos examinados estão nas 21 referências do relatório. Os itens selecionados não representam transcrição integral das normas nem aprovação jurídica dos perfis.",
+      "refs": [
+        "CPC",
+        "CPP",
+        "CLT",
+        "LEI11419",
+        "TJSP2813",
+        "TJSPMUN",
+        "TRT2027",
+        "SWEBOK",
+        "ASVS",
+        "WCAG"
+      ],
+      "sources": ["docs/relatorio-tg2/referencias.json"]
+    },
+    {
+      "title": "Casos de apoio à banca",
+      "kind": "cases",
+      "time": 0,
+      "table": [
+        ["Cenário demonstrativo", "Entrada", "Estimativa"],
+        ["Civil, TJSP Capital", "06/10/2026, 5 dias", "14/10/2026"],
+        ["Criminal, TJSP Capital", "06/10/2026, 5 dias", "13/10/2026"],
+        ["Trabalhista, TRT-2 Capital", "17/12/2026, 10 dias", "03/02/2027"]
+      ],
+      "foot": "Publicação no DJEN e perfis ordinários. Fora da cobertura, resultado incompleto.",
+      "notes": "Slide de apoio. Os casos compartilham o significado de publicação no DJEN, mas seguem regras próprias de início, curso, suspensão e prorrogação. Não comparar apenas as quantidades sem contexto. O caso trabalhista atravessa suspensão e calendários anuais. Consultar a memória para explicar os dias e as versões de cada exemplo.",
+      "sources": [
+        "docs/entrega/guia-do-aplicativo.md",
+        "docs/relatorio-tg2/conteudo.md, apêndice D"
+      ]
+    }
+  ],
+  "poster": {
+    "intro": [
+      "A contagem processual depende do regime, da comunicação e do calendário local. Uma data final isolada dificulta a conferência das decisões.",
+      "O Prazo Claro é uma aplicação web acadêmica que produz estimativas explicáveis e conserva a memória de cálculo.",
+      "OBJETIVO",
+      "Construir um motor determinístico com versões preservadas, exportação e histórico privado.",
+      "RECORTE IMPLEMENTADO",
+      "Civil e criminal ordinários do TJSP em dez comarcas de SP, em 2026. Trabalhista ordinário do TRT-2 na Capital, em 2026–2027. Comunicação pelo DJEN."
+    ],
+    "literature": [
+      "CPC, CPP, CLT e Lei 11.419/2006 fundamentam perfis específicos. Atos do TJSP e TRT-2 informam os calendários.",
+      "SWEBOK orienta requisitos, arquitetura e verificação. ASVS e WCAG 2.2 orientam recortes de segurança e acessibilidade.",
+      "Fontes, dispositivos, vigência e estado de revisão acompanham as regras e a memória."
+    ],
+    "methods": [
+      "Pesquisa aplicada e documental. Especificação incremental, casos de referência e testes de regressão.",
+      "Next.js e TypeScript na aplicação. Motor puro com datas civis, regras e calendários versionados. Supabase gerencia autenticação, banco e acesso por proprietário. Vercel hospeda o sistema.",
+      "Memória diária, exportação, conta e histórico individual. Lembretes opcionais usam fila, Supabase Cron e Brevo."
+    ],
+    "resultsHeading": "RESULTADOS E VERIFICAÇÃO",
+    "results": "CI 40061653068, versão 9632fd2: 256 testes unitários e 146 SQL aprovados. Navegador: 67 cenários aprovados e um omitido.",
+    "example": "Exemplo civil: TJSP Capital, publicação em 06/10/2026 e cinco dias úteis. Estimativa: 14/10/2026, com memória dos dias e motivos.",
+    "conclusion": [
+      "A entrega reúne estimativa reproduzível, versões e memória exportável no recorte técnico documentado.",
+      "Calendários parciais e revisão jurídica pendente limitam o uso. O recebimento externo do lembrete exige aceite. Avaliação com participantes e carga são trabalhos futuros."
+    ],
+    "references": [
+      "BRASIL. CPC, 2015. CPP, 1941. CLT, 1943. Lei 11.419, 2006.",
+      "TJSP. Provimento CSM 2.813/2025 e feriados municipais de 2026. TRT-2. Portaria GP 19/2026.",
+      "IEEE COMPUTER SOCIETY. SWEBOK Guide 4.0a, 2026. OWASP. ASVS 5.0.0, 2025. W3C. WCAG 2.2, 2024."
+    ]
+  }
+}

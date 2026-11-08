@@ -1,0 +1,9 @@
+flowchart TB
+U[Navegador] --> A[Vercel Next.js]
+A --> I[Supabase Auth]
+A --> R[Data API e RPC]
+R --> DB[(PostgreSQL com RLS)]
+I --> DB
+DB -. pg_cron pg_net HMAC nonce .-> A
+A --> B[Brevo API transacional]
+V[Vault] --> DB

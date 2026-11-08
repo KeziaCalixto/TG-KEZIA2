@@ -1,0 +1,208 @@
+{
+  "edition": "2026-11-04",
+  "repository_commit": "49c256d",
+  "functional_commit": "9632fd2",
+  "schema_counts": {
+    "migrations": 4,
+    "project_tables": 7,
+    "columns": 65,
+    "explicit_indexes": 7,
+    "rls_policies": 7,
+    "final_functions": 22
+  },
+  "sources": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "05ccf20cf50e2637d6cbba68bd7e6b2fa74a2ef6da841ace424902bbc4376dbe"
+    },
+    {
+      "path": "GLOSSARY.md",
+      "sha256": "8fcb32d2cc7d19e9b865d1e1e4591709ae857720e02e4a7a1abc9cbac4805469"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "fec8cb643de9e6c46356555c73184568067e88dff73a45b6eb8a74e5859f2061"
+    },
+    {
+      "path": "docs/architecture/adr/0002-supabase-data-api-sem-orm-inicial.md",
+      "sha256": "f9d78ea4ecbaea54abc0a44dd81f0fce3ebb33c6b90ce4d4f96b4741e3f62fc2"
+    },
+    {
+      "path": "docs/architecture/adr/0003-historico-individual-antes-de-organizacoes.md",
+      "sha256": "7867cb1915d90a02b14433206f95948a9b418f615bd7d7c7cd676f4757306b55"
+    },
+    {
+      "path": "docs/architecture/adr/0005-fila-de-lembretes-e-envio-incerto.md",
+      "sha256": "03c6c882a7410534b6f717b0713bf2f1a0b0d7537c46c9fc8f350e150811408a"
+    },
+    {
+      "path": "docs/architecture/adr/0006-agendamento-com-assinatura-descartavel.md",
+      "sha256": "43042e9518a01884420fc5defe00fb7eabc829a08a0b06b6a6dcaa3c899c65e8"
+    },
+    {
+      "path": "docs/email-reminders-external.md",
+      "sha256": "3334909b1c68d3e38a9182c5c5f411e27f27aa7c3d50444411b11a82e966115d"
+    },
+    {
+      "path": "docs/entrega/aceite.md",
+      "sha256": "24522c803f72a654aba739aea41514b0e1ce6f048d7cff6459cd9449f56e533e"
+    },
+    {
+      "path": "docs/reminder-scheduler-operations.md",
+      "sha256": "243cf6030326cf28b689d6b721a01243c461c64d36a4e6244b992f1c835b7520"
+    },
+    {
+      "path": "docs/requirements.md",
+      "sha256": "363fb65a0d35e728c9f0065e8fdd0d9280433171bc3bc5e7bf94f02bc9a1f296"
+    },
+    {
+      "path": "docs/security/README.md",
+      "sha256": "023978cc11bb6f1fae0d4a1e45e44de7465c434fe0243cbed46f1d8970a69300"
+    },
+    {
+      "path": "docs/security/release-review.md",
+      "sha256": "4b2ccf042be150a4b9d6d57324ff6dc6dffbeff0d409ab64268ee543aff776a6"
+    },
+    {
+      "path": "docs/testing/reminder-delivery-modes.md",
+      "sha256": "1fff1a382cce36aac52e2e695f4aa5af061ee6236ef380ac48a987f586000adb"
+    },
+    {
+      "path": "docs/testing/reminder-receipt-2026-10-24.md",
+      "sha256": "0eeec7e29122c0b0ce5961592d5e1aad72cd6fca4690aff2db58b1169e6c5362"
+    },
+    {
+      "path": "docs/testing/reminder-scheduler.md",
+      "sha256": "f7d1943620d211ff6d76ea9088bc7f4d8d9e7726e8e885ab188323afc7aba27f"
+    },
+    {
+      "path": "docs/testing/reminders-production.md",
+      "sha256": "23fd079f6b23aa76a3d62c0c2afa2c91bdaeb3ab66e77a28d2a1edf883ee8486"
+    },
+    {
+      "path": "docs/testing/signup-confirmation-page.md",
+      "sha256": "43b7082386cfa155f8489c00428d7878cd576783041c9fc9507fe24696d78ef1"
+    },
+    {
+      "path": "package.json",
+      "sha256": "853a807a9b84ef294f51778eb10d4cbc6d7c73547de9b9e0f67c4620a84f54d6"
+    },
+    {
+      "path": "src/app/api/history/route.ts",
+      "sha256": "34158cf479be1098e5a9b94cc264c764162111232d7502d46f2cdc6a31bc723a"
+    },
+    {
+      "path": "src/app/api/internal/reminders/dispatch/route.ts",
+      "sha256": "46479a825d83aff4ba82950aba390827a5f4d5e63aa167e94f5ea564725f8c73"
+    },
+    {
+      "path": "src/app/api/reminders/route.ts",
+      "sha256": "9fc3311fed21fb690429bb15f0cba89289283af8bb28a3c209780ce2d745ccca"
+    },
+    {
+      "path": "src/application/history-query.ts",
+      "sha256": "b54ef08f1b17cdaca41d1cd893f94391477bcf749954a73eaf3e8f548d2d0e09"
+    },
+    {
+      "path": "src/application/history-snapshot.ts",
+      "sha256": "97533ba62dae5ebd6fb328f0de7a4ba90ef732fe7dd627b7032e1d5442c8c99d"
+    },
+    {
+      "path": "src/lib/reminders/config.ts",
+      "sha256": "ac6100c95559c19b56de119e6f5fb475929e0b35192e34958cd803cbbe27914d"
+    },
+    {
+      "path": "src/lib/supabase/http.ts",
+      "sha256": "f1007fb7ed19032b653e7d7ab0bcca460d28f2341dc060199c401e0cee9a4c14"
+    },
+    {
+      "path": "src/lib/supabase/server.ts",
+      "sha256": "34b1e9ffac57ca3ef02e998f54675abfb0de6097bf5dc68daf59666d6374b650"
+    },
+    {
+      "path": "supabase/config.toml",
+      "sha256": "be294add6e416220557c53d522d18ac231db6b755b46abdff8afd3afa36011ed"
+    },
+    {
+      "path": "supabase/migrations/20261020001602_private_history_and_versioned_catalogs.sql",
+      "sha256": "a8de1ced42b5f8b2b169ae949baa8c19a821fdae83ecb4ceca24b4ef24dc7091"
+    },
+    {
+      "path": "supabase/migrations/20261023172741_deadline_reminders.sql",
+      "sha256": "4d6aea74438d08b708668f7b0dbccb4a73ce0a97351dc4dafead6712ae9255cc"
+    },
+    {
+      "path": "supabase/migrations/20261023184137_reminder_delivery_modes.sql",
+      "sha256": "6869a85f3b3717efaafb8f624a4c43853423b89c8ee93fc2d96e558222fb5943"
+    },
+    {
+      "path": "supabase/migrations/20261023192044_reminder_scheduler.sql",
+      "sha256": "3af1bdc5f65fd883b58299e3c40a9449a8656bbe538693f669901f0140912d45"
+    },
+    {
+      "path": "supabase/seed.sql",
+      "sha256": "95110da0188ca88bdc7f6523190ebbf1e6e0586a1fd5a428919f7d6b25f1cba0"
+    },
+    {
+      "path": "supabase/tests/catalogs_rls.test_test.sql",
+      "sha256": "b32255a41f6086b2303302cf34bdbe0e4bca2640e677b9f30e28a6ae1a9a82c2"
+    },
+    {
+      "path": "supabase/tests/deadline_calculations_rls.test_test.sql",
+      "sha256": "2c7c159e6ed0ac554e8e6edf1151e8082457754374f9ace68e4037ce184480e1"
+    },
+    {
+      "path": "supabase/tests/reminder_modes.test_test.sql",
+      "sha256": "a4db8a3ccd2d09f619603ceec6dce8554de5eb6e66e643823bcf10c085c1f965"
+    },
+    {
+      "path": "supabase/tests/reminder_scheduler.test_test.sql",
+      "sha256": "fcadd9c8c6ed79f8707ca4d07e3b0aecf96dbeb540728300d5deacf59ce8f3b7"
+    },
+    {
+      "path": "supabase/tests/reminders.test_test.sql",
+      "sha256": "02dc7a6c20f87349fc6f39487e039b3073a4a1e8c9443926cbe0570ee657f4d0"
+    }
+  ],
+  "external_sources": {
+    "T01": [
+      "POSTGRESQL GLOBAL DEVELOPMENT GROUP. PostgreSQL 17 Documentation. JSON Types. Consulta em 04/11/2026.",
+      [
+        "https://www.postgresql.org/docs/17/datatype-json.html"
+      ]
+    ],
+    "T02": [
+      "SUPABASE. Row Level Security. Consulta em 04/11/2026.",
+      [
+        "https://supabase.com/docs/guides/database/postgres/row-level-security"
+      ]
+    ],
+    "T03": [
+      "POSTGRESQL GLOBAL DEVELOPMENT GROUP. PostgreSQL 17 Documentation. Constraints e Partial Indexes. Consulta em 04/11/2026.",
+      [
+        "https://www.postgresql.org/docs/17/ddl-constraints.html",
+        "https://www.postgresql.org/docs/17/indexes-partial.html"
+      ]
+    ],
+    "T04": [
+      "POSTGRESQL GLOBAL DEVELOPMENT GROUP. PostgreSQL 17 Documentation. SELECT e cláusula SKIP LOCKED. Consulta em 04/11/2026.",
+      [
+        "https://www.postgresql.org/docs/17/sql-select.html"
+      ]
+    ],
+    "T05": [
+      "SUPABASE. pg_net Async Networking e Cron. Consulta em 04/11/2026, incluindo pesquisa no plugin oficial.",
+      [
+        "https://supabase.com/docs/guides/database/extensions/pg_net",
+        "https://supabase.com/docs/guides/cron"
+      ]
+    ],
+    "T06": [
+      "SUPABASE. Changelog. Anúncio de 04/11/2026 sobre CLI v3 e mudanças de alvo e confirmação. Consulta em 04/11/2026.",
+      [
+        "https://supabase.com/changelog"
+      ]
+    ]
+  },
+  "docx_sha256": "ec93671d3d34d2253d2636de37bed66490250c63c23343936fbfefc935f1d70f"
+}

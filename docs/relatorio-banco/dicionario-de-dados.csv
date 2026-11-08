@@ -1,0 +1,66 @@
+﻿tabela,coluna,tipo_sql,aceita_nulo,default,definicao_sql,descricao
+public.legal_sources,id,uuid,False,gen_random_uuid(),uuid primary key default gen_random_uuid(),PK. UUID gerado na inserção.
+public.legal_sources,title,text,False,,text not null check (length(title) between 1 and 300),Rótulo de exibição com limite de tamanho.
+public.legal_sources,url,text,False,,text not null check (url ~ '^https://'),URL da fonte; prefixo HTTPS exigido.
+public.legal_sources,provision,text,False,,text not null,Dispositivo ou trecho de referência normativa.
+public.legal_sources,consulted_at,timestamptz,False,,timestamptz not null,Instante de consulta à fonte.
+public.legal_sources,review_status,text,False,'pending',"text not null default 'pending' check (review_status in ('pending', 'approved', 'rejected'))","pending, approved ou rejected."
+public.legal_sources,created_at,timestamptz,False,now(),timestamptz not null default now(),Instante de criação; padrão now().
+public.legal_rule_versions,id,uuid,False,gen_random_uuid(),uuid primary key default gen_random_uuid(),PK. UUID gerado na inserção.
+public.legal_rule_versions,rule_key,text,False,,text not null,Identidade lógica estável da regra.
+public.legal_rule_versions,version,text,False,,text not null,Identidade da revisão no catálogo.
+public.legal_rule_versions,source_id,uuid,False,,uuid not null references public.legal_sources(id) on delete restrict,FK para legal_sources; exclusão restrita.
+public.legal_rule_versions,scope,jsonb,False,,jsonb not null check (jsonb_typeof(scope) = 'object'),Objeto com âmbito de aplicação.
+public.legal_rule_versions,valid_from,date,False,,date not null,Início da vigência.
+public.legal_rule_versions,valid_until,date,True,,date,"Fim opcional, não anterior ao início."
+public.legal_rule_versions,definition,jsonb,False,,jsonb not null check (jsonb_typeof(definition) = 'object'),Objeto com definição da regra.
+public.legal_rule_versions,review_status,text,False,'pending',"text not null default 'pending' check (review_status in ('pending', 'approved', 'rejected'))","pending, approved ou rejected."
+public.legal_rule_versions,created_at,timestamptz,False,now(),timestamptz not null default now(),Instante de criação; padrão now().
+public.calendar_versions,id,uuid,False,gen_random_uuid(),uuid primary key default gen_random_uuid(),PK. UUID gerado na inserção.
+public.calendar_versions,calendar_key,text,False,,text not null,Identidade lógica do calendário.
+public.calendar_versions,version,text,False,,text not null,Identidade da revisão no catálogo.
+public.calendar_versions,court,text,False,,text not null,Tribunal ao qual a versão se refere.
+public.calendar_versions,locality,text,False,,text not null,Localidade declarada na cobertura.
+public.calendar_versions,coverage_start,date,False,,date not null,Primeiro dia da cobertura.
+public.calendar_versions,coverage_end,date,False,,date not null,Último dia; não anterior ao início.
+public.calendar_versions,is_complete,boolean,False,false,boolean not null default false,Completude; necessária para approved.
+public.calendar_versions,review_status,text,False,'pending',"text not null default 'pending' check (review_status in ('pending', 'approved', 'rejected'))","pending, approved ou rejected."
+public.calendar_versions,snapshot,jsonb,False,,jsonb not null check (jsonb_typeof(snapshot) = 'object'),Objeto com a versão do calendário.
+public.calendar_versions,created_at,timestamptz,False,now(),timestamptz not null default now(),Instante de criação; padrão now().
+public.deadline_calculations,id,uuid,False,gen_random_uuid(),uuid primary key default gen_random_uuid(),PK. UUID gerado na inserção.
+public.deadline_calculations,owner_id,uuid,False,,uuid not null references auth.users(id) on delete cascade,FK para auth.users; cascata na exclusão.
+public.deadline_calculations,title,text,False,'Cálculo demonstrativo',text not null default 'Cálculo demonstrativo' check (length(title) between 1 and 120),Rótulo de exibição com limite de tamanho.
+public.deadline_calculations,input,jsonb,False,,jsonb not null check (jsonb_typeof(input) = 'object'),Objeto com entrada do cálculo; até 32 KiB em texto.
+public.deadline_calculations,result_snapshot,jsonb,False,,jsonb not null check (jsonb_typeof(result_snapshot) = 'object'),Objeto de memória original; até 1 MiB em texto.
+public.deadline_calculations,status,text,False,'provisional',text not null default 'provisional' check (status = 'provisional'),Estado persistido do registro.
+public.deadline_calculations,created_at,timestamptz,False,now(),timestamptz not null default now(),Instante de criação; padrão now().
+public.deadline_reminders,id,uuid,False,gen_random_uuid(),uuid NOT NULL DEFAULT gen_random_uuid(),PK. UUID gerado na inserção.
+public.deadline_reminders,calculation_id,uuid,False,,uuid NOT NULL,FK para cálculo; cascata na exclusão.
+public.deadline_reminders,owner_id,uuid,False,,uuid NOT NULL,FK para auth.users; cascata na exclusão.
+public.deadline_reminders,due_date,date,False,,date NOT NULL,Vencimento civil capturado ao agendar.
+public.deadline_reminders,lead_days,integer,False,,integer NOT NULL,"Antecedência de 0, 1 ou 3 dias corridos."
+public.deadline_reminders,send_hour,integer,False,,integer NOT NULL,"Hora local admitida: 9, 12 ou 18."
+public.deadline_reminders,time_zone,text,False,'America/Sao_Paulo'::text,text NOT NULL DEFAULT 'America/Sao_Paulo'::text,Valor fixo America/Sao_Paulo.
+public.deadline_reminders,send_at,timestamp with time zone,False,,timestamp with time zone NOT NULL,Instante planejado para envio.
+public.deadline_reminders,snapshot_metadata,jsonb,False,,jsonb NOT NULL,Cópia dos metadados originais de versão.
+public.deadline_reminders,status,text,False,'pending'::text,text NOT NULL DEFAULT 'pending'::text,Estado persistido do registro.
+public.deadline_reminders,attempt_count,integer,False,0,integer NOT NULL DEFAULT 0,Número de reservas; entre zero e três.
+public.deadline_reminders,next_attempt_at,timestamp with time zone,False,now(),timestamp with time zone NOT NULL DEFAULT now(),Instante mínimo para nova tentativa elegível.
+public.deadline_reminders,claim_token,uuid,True,,uuid,Token da reserva; necessário a prepare e settle.
+public.deadline_reminders,claimed_at,timestamp with time zone,True,,timestamp with time zone,Instante da reserva para controlar lease.
+public.deadline_reminders,accepted_at,timestamp with time zone,True,,timestamp with time zone,"Instante do aceite pelo serviço, se houver."
+public.deadline_reminders,error_code,text,True,,text,"Código fixo opcional, limitado por CHECK."
+public.deadline_reminders,created_at,timestamp with time zone,False,now(),timestamp with time zone NOT NULL DEFAULT now(),Instante de criação; padrão now().
+public.deadline_reminders,delivery_mode,text,False,'local'::text,text NOT NULL DEFAULT 'local'::text,local ou brevo; legado começa local.
+reminder_private.scheduler_config,singleton,boolean,False,true,boolean NOT NULL DEFAULT true,PK com CHECK true; no máximo uma linha.
+reminder_private.scheduler_config,enabled,boolean,False,false,boolean NOT NULL DEFAULT false,Habilitação operacional; começa false.
+reminder_private.scheduler_invocations,nonce,uuid,False,,uuid NOT NULL,PK. Identificador de uso único da invocação.
+reminder_private.scheduler_invocations,issued_at,bigint,False,,bigint NOT NULL,Timestamp de emissão em segundos; positivo.
+reminder_private.scheduler_invocations,operation,text,False,,text NOT NULL,dispatch ou probe.
+reminder_private.scheduler_invocations,created_at,timestamp with time zone,False,now(),timestamp with time zone NOT NULL DEFAULT now(),Instante de criação; padrão now().
+reminder_private.scheduler_invocations,used_at,timestamp with time zone,True,,timestamp with time zone,Marca do consumo único da invocação.
+reminder_private.scheduler_invocations,request_id,bigint,True,,bigint,ID HTTP único quando preenchido; sem FK.
+reminder_private.scheduler_invocations,http_status,integer,True,,integer,"Status HTTP coletado, quando disponível."
+reminder_private.scheduler_invocations,completed_at,timestamp with time zone,True,,timestamp with time zone,Instante de conclusão da coleta.
+reminder_private.scheduler_invocations,timed_out,boolean,True,,boolean,Flag de timeout quando a conclusão é conhecida.
+reminder_private.scheduler_invocations,summary,jsonb,False,'{}'::jsonb,jsonb NOT NULL DEFAULT '{}'::jsonb,Objeto de diagnóstico mínimo permitido.

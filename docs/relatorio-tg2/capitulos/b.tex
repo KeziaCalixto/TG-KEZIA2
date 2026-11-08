@@ -1,0 +1,77 @@
+\chapter{DICIONÁRIO DE DADOS}
+\label{chapter-B}
+\section{Catálogos e histórico}
+\label{section-B-1}
+\begin{quadro}[H]\centering
+\caption{Tabelas públicas de fontes e versões}
+\label{quadro-4}
+\begin{singlespace}\fontsize{10}{12}\selectfont
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Tabela} & \textbf{Campos e restrições essenciais} \\
+\hline
+legal\_sources & id, title, url, provision, consulted\_at, review\_status e created\_at; descreve origem e revisão. \\
+\hline
+legal\_rule\_versions & id, rule\_key, version, source\_id, scope JSONB, valid\_from, valid\_until, definition JSONB, review\_status e created\_at; chave única rule\_key/version e FK de fonte com restrição de exclusão. \\
+\hline
+calendar\_versions & id, calendar\_key, version, court, locality, coverage\_start, coverage\_end, is\_complete, review\_status, snapshot JSONB e created\_at; chave única calendar\_key/version. \\
+\hline
+deadline\_calculations & id UUID, owner\_id UUID, title opcional, input e result\_snapshot JSONB, status e created\_at; proprietário referencia auth.users com cascata; status persistível provisório. \\
+\hline
+\end{tabularx}\end{singlespace}
+\par\smallskip{\fontsize{10}{12}\selectfont Fonte: elaboração com base nos registros do projeto (2026).}
+\end{quadro}
+O catálogo ativo do motor está nos arquivos versionados do domínio. A existência das tabelas acima não significa que todas as versões estejam aprovadas e publicadas remotamente. Os campos de JSONB precisam conservar o contrato de leitura; não são prova de integridade criptográfica.
+
+\section{Fila e agendador}
+\label{section-B-2}
+\begin{quadro}[H]\centering
+\caption{Campos operacionais de lembretes}
+\label{quadro-5}
+\begin{singlespace}\fontsize{10}{12}\selectfont
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Grupo} & \textbf{Conteúdo} \\
+\hline
+Identidade & id, calculation\_id e owner\_id; chaves estrangeiras com cascata. \\
+\hline
+Programação & due\_date, lead\_days em 0/1/3, send\_hour em 9/12/18, send\_at e time\_zone identificado. \\
+\hline
+Estado & status em pending, processing, accepted, failed, cancelled ou uncertain; delivery\_mode em local ou brevo. \\
+\hline
+Concorrência & claim\_token, claimed\_at, attempt\_count limitado e next\_attempt\_at. \\
+\hline
+Resultado mínimo & accepted\_at, error\_code, snapshot\_metadata e created\_at. \\
+\hline
+\end{tabularx}\end{singlespace}
+\par\smallskip{\fontsize{10}{12}\selectfont Fonte: elaboração com base nos registros do projeto (2026).}
+\end{quadro}
+reminder\_private.scheduler\_config possui singleton e enabled, com restrição de linha única. scheduler\_invocations possui nonce UUID, issued\_at, operation, created\_at, used\_at, request\_id único, http\_status, completed\_at, timed\_out e summary JSONB. Os dados registram diagnóstico mínimo, com retenção operacional de sete dias para invocações; isso não define a retenção de contas ou históricos.
+
+O schema privado não é exposto como tabela pública da Data API. Wrappers e implementações internas distinguem ações do proprietário e ações exclusivas de serviço. Claim, preparação, conclusão e consumo de invocação não devem ser concedidos ao navegador. Alterações de permissões exigem migrations e testes de isolamento próprios.
+
+\section{Estrutura lógica da memória}
+\label{section-B-3}
+\begin{quadro}[H]\centering
+\caption{Principais elementos de CalculationResult}
+\label{quadro-6}
+\begin{singlespace}\fontsize{10}{12}\selectfont
+\begin{tabularx}{\linewidth}{|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Elemento} & \textbf{Significado} \\
+\hline
+status e dueDate & Provisório com estimativa ou incompleto com vencimento nulo. \\
+\hline
+input e marcos & Entrada normalizada, evento, publicação, início, primeiro computado e fim nominal quando aplicável. \\
+\hline
+trace & Datas, counted, ordinal, motivos, sourceIds e fase quando necessária. \\
+\hline
+sources e warnings & Referências utilizadas e pendências preservadas. \\
+\hline
+metadata & Versões de motor, regra, calendário, ato e contagem delegada conforme o caso. \\
+\hline
+snapshot & Cópia do calendário e das fichas de regra/ato pertinentes; componentes anuais opcionais. \\
+\hline
+\end{tabularx}\end{singlespace}
+\par\smallskip{\fontsize{10}{12}\selectfont Fonte: elaboração com base nos registros do projeto (2026).}
+\end{quadro}

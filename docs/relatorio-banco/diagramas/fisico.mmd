@@ -1,0 +1,11 @@
+erDiagram
+AUTH_USERS ||--o{ DEADLINE_CALCULATIONS : owner_id
+AUTH_USERS ||--o{ DEADLINE_REMINDERS : owner_id
+DEADLINE_CALCULATIONS ||--o{ DEADLINE_REMINDERS : calculation_id
+LEGAL_SOURCES ||--o{ LEGAL_RULE_VERSIONS : source_id
+CALENDAR_VERSIONS { uuid id PK }
+LEGAL_SOURCES { uuid id PK }
+LEGAL_RULE_VERSIONS { uuid id PK uuid source_id FK }
+AUTH_USERS { uuid id PK }
+DEADLINE_CALCULATIONS { uuid id PK uuid owner_id FK }
+DEADLINE_REMINDERS { uuid id PK uuid owner_id FK uuid calculation_id FK }

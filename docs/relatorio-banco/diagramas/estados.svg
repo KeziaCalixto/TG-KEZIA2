@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="660" height="460" preserveAspectRatio="xMinYMin meet" viewBox="0 0 660 460" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="660" height="460"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-460)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="20" y="320" width="170" height="80" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="20" y="366" width="170" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="30" y="377" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,754) scale(1,-1)">pending</text>
+			<text x="30" y="343" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,686) scale(1,-1)">Aguarda horário</text>
+			<rect x="245" y="320" width="170" height="80" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="245" y="366" width="170" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="255" y="377" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,754) scale(1,-1)">processing</text>
+			<text x="255" y="343" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,686) scale(1,-1)">Token e lease</text>
+			<rect x="470" y="320" width="170" height="80" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="470" y="366" width="170" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="480" y="377" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,754) scale(1,-1)">accepted</text>
+			<text x="480" y="343" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,686) scale(1,-1)">Aceite do provedor</text>
+			<rect x="245" y="145" width="170" height="90" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="245" y="201" width="170" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="255" y="212" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,424) scale(1,-1)">failed</text>
+			<text x="255" y="178" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,356) scale(1,-1)">Falha definitiva</text>
+			<rect x="470" y="145" width="170" height="90" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="470" y="201" width="170" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="480" y="212" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,424) scale(1,-1)">uncertain</text>
+			<text x="480" y="178" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,356) scale(1,-1)">Dúvida de envio</text>
+			<rect x="20" y="30" width="170" height="85" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="20" y="81" width="170" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="30" y="92" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,184) scale(1,-1)">cancelled</text>
+			<text x="30" y="58" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,116) scale(1,-1)">Pedido do dono</text>
+			<path d="M 190,360 L 245,360 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="245 360, 237.7964 363.4797, 237.7964 356.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="194" y="376" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,752) scale(1,-1)">claim</text>
+			<path d="M 415,360 L 470,360 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="470 360, 462.7964 363.4797, 462.7964 356.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="420" y="376" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,752) scale(1,-1)">aceite</text>
+			<path d="M 330,400 L 330,440 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 330,440 L 105,440 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 105,440 L 105,400 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="105 400, 108.4797 407.2036, 101.5203 407.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="130" y="447" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,894) scale(1,-1)">pré-envio: tentativa admissível</text>
+			<path d="M 330,320 L 330,235 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="330 235, 333.4797 242.2036, 326.5203 242.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="340" y="270" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,540) scale(1,-1)">falha</text>
+			<path d="M 415,340 L 445,340 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 445,340 L 445,265 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 445,265 L 555,265 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 555,265 L 555,235 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="555 235, 558.4797 242.2036, 551.5203 242.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="453" y="280" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,560) scale(1,-1)">timeout / lease</text>
+			<path d="M 605,235 L 605,320 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2; stroke-dasharray: 5, 4;"/>
+			<polygon points="605 320, 601.5203 312.7964, 608.4797 312.7964" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="505" y="300" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,600) scale(1,-1)">aceite tardio</text>
+			<path d="M 105,320 L 105,115 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="105 115, 108.4797 122.2036, 101.5203 122.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="115" y="215" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,430) scale(1,-1)">cancelar</text>
+			<text x="210" y="70" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,140) scale(1,-1)">Cancelamento também pode atingir processing e uncertain.</text>
+			<text x="210" y="48" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,96) scale(1,-1)">Aceite após cancelamento pode registrar accepted_at sem mudar cancelled.</text>
+			<text x="20" y="8" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,16) scale(1,-1)">Fluxo resumido; regras de token, janela e corrida estão descritas no texto.</text>
+		</g>
+	</g>
+</svg>

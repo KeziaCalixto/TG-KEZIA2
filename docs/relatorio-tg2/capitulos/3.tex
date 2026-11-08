@@ -1,0 +1,27 @@
+\chapter{MATERIAIS E MÉTODO DE DESENVOLVIMENTO}
+\label{chapter-3}
+\section{Natureza e fontes do trabalho}
+\label{section-3-1}
+O trabalho teve natureza aplicada, com desenvolvimento de um artefato de software e análise documental. O material de partida incluiu o master prompt, os rascunhos acadêmicos e os demais arquivos recebidos em docs. O manual de TG da FATEC Campinas, edição de maio de 2024, e o template institucional orientaram a organização desta documentação \hyperref[ref:FATECMANUAL]{(FATEC CAMPINAS, 2024)}. Os originais foram preservados, e as divergências da proposta foram registradas separadamente.
+
+O levantamento técnico utilizou o código, migrations, testes, registros de execução, decisões arquiteturais e documentos de operação do próprio projeto. O levantamento normativo utilizou fontes primárias, com fichas locais de consulta. Reuniões, entrevistas, amostragem de profissionais e pesquisa de satisfação não foram realizadas como parte do conjunto de evidências aqui apresentado. Os perfis de usuário descritos são analíticos, derivados das necessidades do produto, e não personas validadas por pesquisa de campo.
+
+\section{Procedimento incremental}
+\label{section-3-2}
+A sequência de trabalho consistiu em revisar a concepção, estabilizar um vocabulário, definir uma primeira fatia civil e implementar motor, interface e memória. Em seguida, foram integrados conta e histórico privado; a cobertura municipal e os perfis criminal e trabalhista receberam especificação própria. A composição de calendários anuais, o catálogo inicial de atos e os lembretes foram incorporados em marcos posteriores. Cada avanço ficou identificável no Git e nos documentos de verificação.
+
+Nas regras de negócio, adotou-se a sequência caso e fonte, teste inicialmente falho, implementação e regressão. Nos serviços de integração, as fronteiras de teste foram escolhidas conforme o risco: funções puras, contratos HTTP, políticas SQL, navegador e integração real local. O processo foi incremental; não há registro suficiente para descrevê-lo como uma aplicação completa de Scrum, com sprints, cerimônias e métricas formais.
+
+Ferramentas de assistência por IA apoiaram programação, pesquisa documental e preparação dos materiais. O produto publicado não depende de modelo de linguagem para calcular datas. A autora e a orientação devem revisar o conteúdo, a aderência às regras acadêmicas de autoria e a declaração institucional de uso dessas ferramentas antes da submissão. O texto não atribui a participantes entrevistas, avaliações ou aprovações inexistentes.
+
+\section{Ambiente e instrumentos}
+\label{section-3-3}
+O ambiente local utilizou Windows, Node.js da linha 22 a partir de 22.14, pnpm 11.0.8 e Docker Desktop. As versões declaradas no package.json incluem Next.js 16.4.2, React 19.3.1, TypeScript 6.0.3 e Supabase CLI 2.121.0. O lockfile fixa a resolução de dependências. A integração contínua também executa em Linux, evitando apresentar Windows como único ambiente possível.
+
+Vitest e fast-check apoiam testes de unidades e propriedades; Playwright e Axe apoiam navegação e acessibilidade automatizada; pgTAP verifica políticas e funções SQL. Supabase local fornece banco, Auth e Mailpit para mensagens de teste. GitHub Actions executa verificações, Vercel hospeda a aplicação e Supabase hospeda os serviços de dados e identidade. O Brevo foi configurado para SMTP de autenticação e, separadamente, para a API de lembretes.
+
+\section{Critérios de verificação e corte de evidências}
+\label{section-3-4}
+Um requisito técnico foi considerado verificado apenas quando houve execução ou observação identificada. Arquivos de configuração não foram tratados como prova de integração. Testes com respostas simuladas no navegador verificam interação, enquanto cadastro, cookies, persistência e isolamento exigem serviços reais. O aceite de uma mensagem pelo provedor também foi separado do recebimento pelo destinatário.
+
+O registro consolidado usa a CI 40061653068 da versão funcional 9632fd2. As verificações locais e hospedadas possuem documentos próprios em docs/testing \hyperref[ref:PROJETO]{(PRAZO CLARO, 2026)}. A elaboração deste relatório não executou uma nova pesquisa de usuários nem repetiu toda a bateria do aplicativo. Os números apresentados pertencem aos registros identificados, e a análise de limitações considera essa origem.

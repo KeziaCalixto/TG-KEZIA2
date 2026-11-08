@@ -1,6 +1,6 @@
 # Portal de documentação do Prazo Claro
 
-Data: 08/11/2026. Estado: proposta para aprovação, sem implementação iniciada.
+Data: 08/11/2026. Estado: aprovada pelo responsável em 08/11/2026; implementação pelo workflow Matt Pocock.
 
 ## Objetivo e destinatários
 

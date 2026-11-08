@@ -1,0 +1,262 @@
+{
+  "edition": "2026-10-24",
+  "functional_commit": "9632fd25e9faacaf9ab7d75622febce60b30b446",
+  "status": "Para revisão da autora e do orientador",
+  "pdf_pages": {
+    "prazo-claro-guia-entrega-2026-10-24.pdf": 10,
+    "prazo-claro-relatorio-tg2-2026-10-24.pdf": 51,
+    "prazo-claro-relatorio-tg2-latex-2026-10-24.pdf": 52
+  },
+  "files": [
+    {
+      "path": "docs/entrega/guia-do-aplicativo.md",
+      "bytes": 23448,
+      "sha256": "7af25a20f425e868ebd2e83e787b9afeb5ddb67a8a7b2365ff4b91470ceffc95"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/1.tex",
+      "bytes": 5199,
+      "sha256": "4f9c30bb4ed4d3c1e496338d014562258ce7f4c2e7efa9d7a7e6f736a85aaeb1"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/2.tex",
+      "bytes": 7141,
+      "sha256": "ea65870322aa801581ff92e43da0346351a3dae5164172c8fbb4362b969a8cf7"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/3.tex",
+      "bytes": 4522,
+      "sha256": "8c388dd72dabe68af5fab91bd52be4019e88f9f7593bcffc354052c2a8077f34"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/4.tex",
+      "bytes": 12360,
+      "sha256": "38c97df8d72544d8047528d344451fac2f73a2457a4d8a761de83b38b9b1d40c"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/5.tex",
+      "bytes": 11015,
+      "sha256": "62da8f79eea885ec998c13a7dcd8060febfedd194debf96fd1e088d766bf9164"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/6.tex",
+      "bytes": 9361,
+      "sha256": "4466702a19f0ebd9e3ab517f16b9e6bdcdf3e5ea1372ee92f5f310961d9d2d8c"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/7.tex",
+      "bytes": 1459,
+      "sha256": "d40964643f659f6e7ea61e43ee0e444e43958d9b2828923c380763a62443447d"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/a.tex",
+      "bytes": 5181,
+      "sha256": "275be1db397d77aed91dd3a1d4f89382f2e30757e34a8add6a222b5f88ed85dd"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/b.tex",
+      "bytes": 4609,
+      "sha256": "5733c202c75a18c7b2aabf886f46243e6421778ba308b8c21e79a789bebd4e29"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/c.tex",
+      "bytes": 4645,
+      "sha256": "98b3d298bae8b127750d3fcec84c89dfdd144e11c7b5e9e892464e8944a2075f"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/d.tex",
+      "bytes": 4207,
+      "sha256": "e16153d67939cf0b22ed4412d079b78e38d3bd2810d3214cd13fc56eba70bca7"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/e.tex",
+      "bytes": 1822,
+      "sha256": "8e2e9e136712e57c88aded3e8c76ae48b0467b6d6b0d5632e97a98243649678a"
+    },
+    {
+      "path": "docs/relatorio-tg2/capitulos/f.tex",
+      "bytes": 2435,
+      "sha256": "edfeff6058f94ac9a676b7aa64e7138fe79a4636e263fb29698d18c871e0687a"
+    },
+    {
+      "path": "docs/relatorio-tg2/conteudo.md",
+      "bytes": 63468,
+      "sha256": "3877ba9ed3371e1e6c1507c2845a57e314e6534116a2873d258851903153292a"
+    },
+    {
+      "path": "docs/relatorio-tg2/empacotar_documentacao.py",
+      "bytes": 3953,
+      "sha256": "cc53fd80ee67cec18a8404dc821a6e3aa678374f887c952bff40cac4c257c3c9"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/arquitetura.pdf",
+      "bytes": 43649,
+      "sha256": "7ab0bf7429e7bf55297c3ded159561570f967947cf7ec30d65a39e83861785bc"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/arquitetura.png",
+      "bytes": 89197,
+      "sha256": "27e3e6c90aea2f34490a6ed6eb77e6e16c07fd7acb98a538ac9d2b04482e93c7"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/autenticacao.pdf",
+      "bytes": 42917,
+      "sha256": "caf0f2b47d3f5745b8d4b3a3bdfe335951bf64b41724a8280d7cd65bc30cda50"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/autenticacao.png",
+      "bytes": 70215,
+      "sha256": "28eaeedf00d7ab7b8e695b4c3dc0bfad6136853134fc0033f048dd88803c4c4e"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/calculo.pdf",
+      "bytes": 43413,
+      "sha256": "53b61e8098354437d9ad32e496d6a6e966e575f576ecb18557faacbcd8d25145"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/calculo.png",
+      "bytes": 104818,
+      "sha256": "3b3405bc59f2fe85fb981c41ea3297cc6c234e8384a0d45fd59f2aa0e14612b7"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/contexto.pdf",
+      "bytes": 43273,
+      "sha256": "3f11451b543bbc770b53f3a7006fc9301f2639a7bec81a7b681b24da8c47819f"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/contexto.png",
+      "bytes": 76525,
+      "sha256": "523b644278eb02acd816ef613729ec939a73e2420b1d3109aa96505a8af3a575"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/dados.pdf",
+      "bytes": 43366,
+      "sha256": "b9e922a5a387a48c1a7bdf1fac2004f4491d470a6f8de528b8793ceaf18e5b34"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/dados.png",
+      "bytes": 90941,
+      "sha256": "60ff4660ff71b747d3450a5665b7dd24fabeee5aed971748777a8040baa751b9"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/dominio.pdf",
+      "bytes": 43835,
+      "sha256": "ea3a6e81a61c614f4ff4fa7a5f72d39d034023eeb3a5671a6097a2dd65f20472"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/dominio.png",
+      "bytes": 111113,
+      "sha256": "2547c33111db056a5359b81750ee21e2260093c1fcaa20d5c5c2d642795a9d12"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/implantacao.pdf",
+      "bytes": 43489,
+      "sha256": "20103d3e03b0a264a0ddee179995ef7b2eab97f0ef84cde2374423b475c43211"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/implantacao.png",
+      "bytes": 109866,
+      "sha256": "34317ff18bb8ebd227d7ec4ef2453fe361c3e250f2c238a3250150583e0d27b9"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/lembretes.pdf",
+      "bytes": 43539,
+      "sha256": "a7a12a73686c7ae8c189b2c61e66bb82fe644d6a3e8ba7460ce2793e9532c560"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/lembretes.png",
+      "bytes": 92340,
+      "sha256": "4b304360d26e0f9eeee8aaaa17421d1a7b2f2033497ea811d2b33045c06fe80c"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/tela-calculadora.png",
+      "bytes": 47284,
+      "sha256": "5fe08100044e0de2eccc73b2eacd08aa73235b1e12554affc626fb01ed7e8705"
+    },
+    {
+      "path": "docs/relatorio-tg2/figuras/tela-confirmacao.png",
+      "bytes": 63402,
+      "sha256": "980616e02d27122fec82312ed3b40a443859f1f8192e73989e0fd899235fcbce"
+    },
+    {
+      "path": "docs/relatorio-tg2/fontes-pesquisa.md",
+      "bytes": 3394,
+      "sha256": "adbbc240bf93be702a577cef541558112dfe53f2dc49ee9e1eacf996000a978f"
+    },
+    {
+      "path": "docs/relatorio-tg2/gerar_documentos.py",
+      "bytes": 35752,
+      "sha256": "7f22dd542e337c3ff024434392e914548925f47ea4f98bcb3477b9c836889a21"
+    },
+    {
+      "path": "docs/relatorio-tg2/main.tex",
+      "bytes": 8832,
+      "sha256": "061b60b5b3043ae38c13031caa3d8d8e1c404a0a394737d5f7a7ecd4cefa7d04"
+    },
+    {
+      "path": "docs/relatorio-tg2/matriz-fatec.md",
+      "bytes": 3843,
+      "sha256": "b0b14d5073504e6504a3d873f80f8a605dbe2e28e6642a79b3dd1f8125de917f"
+    },
+    {
+      "path": "docs/relatorio-tg2/metadados.json",
+      "bytes": 3759,
+      "sha256": "00d054fbe30e0f0dfb168e536bb160dedcb24886d497f30ed1175a1368ecbc82"
+    },
+    {
+      "path": "docs/relatorio-tg2/paginacao-word.json",
+      "bytes": 1923,
+      "sha256": "c7960b8d9a9b8a1a230a1ec3b7084afae1208579c1383d4ef6317035212749f8"
+    },
+    {
+      "path": "docs/relatorio-tg2/README.md",
+      "bytes": 4292,
+      "sha256": "ce9621d342234d4230153ea31bdca0e84c48febfb0ef04a63010500ac2940193"
+    },
+    {
+      "path": "docs/relatorio-tg2/referencias.json",
+      "bytes": 5599,
+      "sha256": "5f40765ce2cfddf68cc714426608a4ca2c8c452651e973170b10366fa90e1c17"
+    },
+    {
+      "path": "docs/relatorio-tg2/referencias.tex",
+      "bytes": 6678,
+      "sha256": "5b625f3d5bde12bfb46180385eb00aa0a056804150276a988d3468994550e19c"
+    },
+    {
+      "path": "docs/relatorio-tg2/verificar_paginacao.py",
+      "bytes": 1949,
+      "sha256": "54b0b36d4fd9a114827dcf64801d9fb4c0f0105d73f034e3966ae624b84bd001"
+    },
+    {
+      "path": "docs/testing/documentacao-tg2.md",
+      "bytes": 5928,
+      "sha256": "822a3dd97ca81b78e3890ef9ca699da8e75842ea896e2157b7ab6f43ad021eb3"
+    },
+    {
+      "path": "output/documents/prazo-claro-guia-entrega-2026-10-24.docx",
+      "bytes": 50672,
+      "sha256": "550e0386504159be65d998719731a8317cc76055a7fbcf76400944a4ea985892"
+    },
+    {
+      "path": "output/documents/prazo-claro-guia-entrega-2026-10-24.pdf",
+      "bytes": 260394,
+      "sha256": "bfd9118605cce44c02769f4bbce27e2b6db6f875c25d822a858dfdc4c209a87e"
+    },
+    {
+      "path": "output/documents/prazo-claro-relatorio-tg2-2026-10-24.docx",
+      "bytes": 833640,
+      "sha256": "80a1aaa4a2eefa19bca2dbf749e7ff68cf2ee1968cd73469c72979e84e521b39"
+    },
+    {
+      "path": "output/documents/prazo-claro-relatorio-tg2-2026-10-24.pdf",
+      "bytes": 1354638,
+      "sha256": "e8d3e86c73bdc5e8c8b875c4172d04ef624f3d8cf164c10a0ffa10d90c1a132a"
+    },
+    {
+      "path": "output/documents/prazo-claro-relatorio-tg2-latex-2026-10-24.pdf",
+      "bytes": 565083,
+      "sha256": "881fde70d362604d1563399b8062bf9185181c6e29235da558ef77f505513e71"
+    }
+  ]
+}

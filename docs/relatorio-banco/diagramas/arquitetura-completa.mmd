@@ -1,0 +1,21 @@
+flowchart TB
+Browser[React formulário histórico e exportação] --> Next[Next.js SSR e Route Handlers na Vercel]
+Next --> App[Aplicação validação sessão snapshots e paginação]
+App --> Engine[Motor TypeScript determinístico sem IO ou relógio]
+Catalog[Atos regras calendários e fontes versionados no código] --> Engine
+App --> Auth[Supabase Auth]
+Google[Google OAuth] --> Auth
+Auth --> SMTP[Brevo SMTP para mensagens de conta]
+App --> API[Data API e RPC sob identidade JWT]
+API --> DB[(PostgreSQL public e reminder_private com RLS)]
+Auth --> Users[(auth.users gerenciada)]
+DB --> Scheduler[pg_cron pg_net e Vault]
+Scheduler -. HMAC timestamp e nonce .-> Worker[Dispatcher server-only na Vercel]
+Worker --> RPC[RPCs de serviço claim prepare settle]
+RPC --> DB
+Worker --> Brevo[Brevo API transacional de lembretes]
+Brevo --> Mail[Caixa de e-mail do usuário]
+Mail --> Browser
+Git[GitHub e migrations] --> CI[GitHub Actions check build E2E pgTAP lint]
+Git --> Next
+Local[Docker Supabase CLI PostgreSQL e Mailpit locais] -. ensaio isolado .-> App

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="660" height="690" preserveAspectRatio="xMinYMin meet" viewBox="0 0 660 690" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="660" height="690"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-690)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="20" y="480" width="270" height="150" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="20" y="596" width="270" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="30" y="607" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1214) scale(1,-1)">public.legal_sources</text>
+			<text x="30" y="573" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1146) scale(1,-1)">PK id : uuid</text>
+			<text x="30" y="552" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1104) scale(1,-1)">title, url, provision</text>
+			<text x="30" y="531" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1062) scale(1,-1)">review_status, consulted_at</text>
+			<text x="30" y="510" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1020) scale(1,-1)">created_at</text>
+			<rect x="20" y="250" width="270" height="160" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="20" y="376" width="270" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="30" y="387" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,774) scale(1,-1)">public.legal_rule_versions</text>
+			<text x="30" y="353" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,706) scale(1,-1)">PK id : uuid</text>
+			<text x="30" y="332" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,664) scale(1,-1)">FK source_id : uuid</text>
+			<text x="30" y="311" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,622) scale(1,-1)">UK (rule_key, version)</text>
+			<text x="30" y="290" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,580) scale(1,-1)">scope, definition : jsonb</text>
+			<text x="30" y="269" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,538) scale(1,-1)">valid_from, valid_until</text>
+			<rect x="20" y="35" width="270" height="155" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="20" y="156" width="270" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="30" y="167" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,334) scale(1,-1)">public.calendar_versions</text>
+			<text x="30" y="133" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,266) scale(1,-1)">PK id : uuid</text>
+			<text x="30" y="112" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,224) scale(1,-1)">UK (calendar_key, version)</text>
+			<text x="30" y="91" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,182) scale(1,-1)">court, locality, coverage</text>
+			<text x="30" y="70" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,140) scale(1,-1)">is_complete, review_status</text>
+			<text x="30" y="49" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,98) scale(1,-1)">snapshot : jsonb</text>
+			<rect x="370" y="510" width="270" height="120" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="370" y="596" width="270" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="380" y="607" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1214) scale(1,-1)">auth.users  [gerenciada]</text>
+			<text x="380" y="573" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1146) scale(1,-1)">PK id : uuid</text>
+			<text x="380" y="552" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1104) scale(1,-1)">Identidade usada pelo projeto</text>
+			<text x="380" y="531" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1062) scale(1,-1)">Estrutura mantida pelo Auth</text>
+			<rect x="370" y="280" width="270" height="160" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="370" y="406" width="270" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="380" y="417" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,834) scale(1,-1)">public.deadline_calculations</text>
+			<text x="380" y="383" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,766) scale(1,-1)">PK id : uuid</text>
+			<text x="380" y="362" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,724) scale(1,-1)">FK owner_id : uuid</text>
+			<text x="380" y="341" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,682) scale(1,-1)">input, result_snapshot : jsonb</text>
+			<text x="380" y="320" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,640) scale(1,-1)">status = provisional</text>
+			<text x="380" y="299" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,598) scale(1,-1)">title, created_at</text>
+			<rect x="370" y="35" width="270" height="170" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<rect x="370" y="171" width="270" height="34" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="380" y="182" style="font-family: Helvetica-Bold; font-size: 13px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,364) scale(1,-1)">public.deadline_reminders</text>
+			<text x="380" y="148" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,296) scale(1,-1)">PK id : uuid</text>
+			<text x="380" y="127" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,254) scale(1,-1)">FK calculation_id, owner_id</text>
+			<text x="380" y="106" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,212) scale(1,-1)">due_date, send_at, status</text>
+			<text x="380" y="85" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,170) scale(1,-1)">delivery_mode, claim_token</text>
+			<text x="380" y="64" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,128) scale(1,-1)">Uma geração ativa por cálculo</text>
+			<path d="M 155,480 L 155,410 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="155 410, 158.4797 417.2036, 151.5203 417.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="165" y="445" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,890) scale(1,-1)">1 : 0..N</text>
+			<path d="M 505,510 L 505,440 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="505 440, 508.4797 447.2036, 501.5203 447.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="515" y="475" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,950) scale(1,-1)">1 : 0..N</text>
+			<path d="M 505,280 L 505,205 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="505 205, 508.4797 212.2036, 501.5203 212.2036" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="515" y="242" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,484) scale(1,-1)">1 : 0..N</text>
+			<path d="M 370,560 L 335,560 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 335,560 L 335,110 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<path d="M 335,110 L 370,110 Z" style="stroke: rgb(32%,38%,42%); stroke-linecap: butt; stroke-width: 1.2;"/>
+			<polygon points="370 110, 362.7964 113.4797, 362.7964 106.5203" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 0; fill: rgb(32%,38%,42%); fill-rule: evenodd;"/>
+			<text x="299" y="350" style="font-family: Helvetica-Bold; font-size: 11px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,700) scale(1,-1)">FK</text>
+			<text x="299" y="332" style="font-family: Helvetica; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,664) scale(1,-1)">owner</text>
+			<text x="20" y="12" style="font-family: Helvetica; font-size: 12px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,24) scale(1,-1)">Setas: pai para filho por FK. Campos resumidos; o dicionário lista todas as colunas.</text>
+		</g>
+	</g>
+</svg>

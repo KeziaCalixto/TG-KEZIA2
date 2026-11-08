@@ -1,0 +1,3 @@
+flowchart LR
+Config["scheduler_config"] -. habilita .-> Cron["cron.job"]
+Invocacoes["scheduler_invocations.request_id"] -. correlaciona sem FK .-> Resposta["net._http_response.id"]

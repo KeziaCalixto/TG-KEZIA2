@@ -1,0 +1,6 @@
+flowchart LR
+Pessoa -->|possui 0..N|Calculo
+Calculo -->|origina 0..N|Lembrete
+RegraVersionada -->|aplicada no|Calculo
+CalendarioVersionado -->|utilizado no|Calculo
+Calculo -->|preserva|Memoria

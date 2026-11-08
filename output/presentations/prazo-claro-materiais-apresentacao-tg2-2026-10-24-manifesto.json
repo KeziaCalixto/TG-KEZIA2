@@ -1,0 +1,35 @@
+{
+  "edition": "2026-10-24",
+  "files": [
+    {
+      "path": "LEIA-ME.md",
+      "bytes": 1733,
+      "sha256": "3dc46ee2a7f5bf30b495f2f5cb5830c01b8cce8c98f7875659b1235d59b47991"
+    },
+    {
+      "path": "prazo-claro-apresentacao-tg2-2026-10-24.pdf",
+      "bytes": 228626,
+      "sha256": "d3842c7b6b87a18de7d17dc8a2c2a9f8f6486332fb0d3692c6fd01fdebc16848"
+    },
+    {
+      "path": "prazo-claro-apresentacao-tg2-2026-10-24.pptx",
+      "bytes": 171529,
+      "sha256": "8a5b0ef6602d9e3a127c6d9ec461dd376a5477e9dfd74f8b1f60b2be3ef73418"
+    },
+    {
+      "path": "prazo-claro-poster-tg2-2026-10-24.pdf",
+      "bytes": 186595,
+      "sha256": "5844953b843c56433f750e4eba37f129322dd23f1bf1c4192a4fd66fa291b434"
+    },
+    {
+      "path": "prazo-claro-poster-tg2-2026-10-24.pptx",
+      "bytes": 162240,
+      "sha256": "74ca3dea9ceaac7f43c5dbd113e74fe6c732ae76b4436217ae5736d369d35841"
+    },
+    {
+      "path": "roteiro-de-fala.md",
+      "bytes": 10296,
+      "sha256": "4feca1684bbefb57e457f0e4e18c30d90b9dff59703b9799e24f3be5f58a6a19"
+    }
+  ]
+}
