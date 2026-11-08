@@ -6,12 +6,12 @@ Base da implementação: 5f21224. Permanecer na branch login/prazo e fazer commi
 
 ## Etapas
 
-- [ ] Recuperar materiais posteriores com lista explícita e SHA-256, preservando código e migrations.
-- [ ] Criar publisher determinístico: manifest de páginas/arquivos → Markdown e assets permitidos. Testar reescrita de links, arquivo ausente, rota e bloqueio de credenciais/travessia de caminho.
-- [ ] Criar website/ isolado com Docusaurus, identidade Prazo Claro, navegação e configuração do prefixo /TG-KEZIA2/.
-- [ ] Escrever percursos atuais e publicar referências existentes, relatório de banco expandido, diagramas e biblioteca acadêmica. Distinguir referências históricas do estado atual.
-- [ ] Validar testes do publisher, build, todos os links/âncoras/arquivos locais do HTML, desktop/celular/teclado e regressões pertinentes da aplicação.
-- [ ] Criar workflow de PR e Pages, registrar operação, evidências e revisão Standards/Spec conforme Matt Pocock.
+- [x] Recuperar materiais posteriores com lista explícita e SHA-256, preservando código e migrations.
+- [x] Criar publisher determinístico: manifest de páginas/arquivos → Markdown e assets permitidos. Testar reescrita de links, arquivo ausente, rota e bloqueio de credenciais/travessia de caminho.
+- [x] Criar website/ isolado com Docusaurus, identidade Prazo Claro, navegação e configuração do prefixo /TG-KEZIA2/.
+- [x] Escrever percursos atuais e publicar referências existentes, relatório de banco expandido, diagramas e biblioteca acadêmica. Distinguir referências históricas do estado atual.
+- [x] Validar testes do publisher, build, todos os links/âncoras/arquivos locais do HTML, desktop/celular/teclado e regressões pertinentes da aplicação.
+- [x] Criar workflow de PR e Pages, registrar operação, evidências e revisão Standards/Spec conforme Matt Pocock.
 - [ ] Enviar commits e verificar a publicação; se Pages exigir ação administrativa indisponível, informar exatamente a etapa restante com o portal já validado.
 
 ## Interfaces de verificação aprovadas pelo escopo

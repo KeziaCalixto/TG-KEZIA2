@@ -2,5 +2,9 @@
   "theme.SearchBar.label": {
     "message": "Pesquisar",
     "description": "Rótulo da pesquisa local"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Pular para o conteúdo principal",
+    "description": "Atalho de navegação por teclado"
   }
 }

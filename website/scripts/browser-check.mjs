@@ -57,15 +57,28 @@ try {
     await page.goto(base, { waitUntil: "networkidle" });
     await page.getByRole("link", { name: "Começar a leitura" }).waitFor();
     assert.equal(await page.locator("h1").count(), 1);
+    await page.evaluate(() => document.fonts.ready);
+    const loadedFonts = await page.evaluate(() =>
+      Array.from(document.fonts)
+        .filter((f) => f.status === "loaded")
+        .map((f) => f.family.replaceAll(/['"]/g, "")),
+    );
+    assert(
+      loadedFonts.includes("Lato") && loadedFonts.includes("EB Garamond"),
+      "Local brand fonts were not loaded",
+    );
     await page.keyboard.press("Tab");
     assert.match(
       await page.evaluate(() => document.activeElement.textContent),
       /pular|skip/i,
     );
     await page.keyboard.press("Enter");
-    await expect(
-      page.locator("#__docusaurus_skipToContent_fallback"),
-    ).toBeFocused();
+    await page.keyboard.press("Tab");
+    assert.equal(
+      await page.evaluate(() => document.activeElement.textContent.trim()),
+      "Começar a leitura →",
+      "Skip link did not continue navigation inside main",
+    );
     await page.locator("h1").click();
     assert(
       await page.evaluate(
@@ -101,7 +114,23 @@ try {
     );
     if (device === "desktop") {
       const mode = page.getByRole("button", { name: /escuro|dark/i });
-      await mode.click();
+      for (
+        let i = 0;
+        i < 3 &&
+        (await page.locator("html").getAttribute("data-theme")) !== "dark";
+        i++
+      ) {
+        const previous = await page
+          .locator("html")
+          .getAttribute("data-theme-choice");
+        await mode.click();
+        await page.waitForFunction(
+          (before) =>
+            document.documentElement.getAttribute("data-theme-choice") !==
+            before,
+          previous,
+        );
+      }
       await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
       const dark = await new AxeBuilder({ page })
         .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
@@ -118,7 +147,7 @@ try {
       await page.getByRole("button", { name: /claro|light/i }).click();
       await expect(page.locator("html")).toHaveAttribute("data-theme", "light");
     }
-    const search = page.getByLabel("Search", { exact: true });
+    const search = page.getByLabel("Pesquisar", { exact: true });
     await search.fill("lembretes");
     await page
       .locator('[class*="hitTitle"]')
@@ -201,6 +230,7 @@ try {
     findings.push({
       device,
       home: true,
+      localFonts: true,
       navigation: true,
       keyboardSkipLink: true,
       localSearch: true,

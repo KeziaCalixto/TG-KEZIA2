@@ -1,6 +1,6 @@
 # Backlog e critérios de conclusão
 
-**Atualização de 08/11/2026:** portal Docusaurus em implementação na nova cópia/repositório da autora. Materiais acadêmicos posteriores recuperados com hashes; recebimento externo e abertura da memória confirmados em 24/10. As pendências antigas de lembrete e relatório dos registros abaixo não representam o estado atual. [Aceite humano](testing/reminder-receipt-2026-10-24.md), [plano e fontes do portal](documentation-portal/README.md). Publicação do portal depende de build e Pages verificados; revisão jurídica e acadêmica permanecem independentes.
+**Atualização de 08/11/2026:** portal Docusaurus validado localmente na nova cópia/repositório da autora: 88 documentos, 57 assets, 6.416 referências locais sem erro, cinco testes da geração, 256 unitários e navegação desktop/celular aprovados. Materiais acadêmicos posteriores recuperados com hashes; recebimento externo e abertura da memória confirmados em 24/10. As pendências antigas de lembrete e relatório dos registros abaixo não representam o estado atual. [Aceite humano](testing/reminder-receipt-2026-10-24.md), [plano e fontes do portal](documentation-portal/README.md). Publicação no Pages aguarda configuração administrativa e workflow verificados; revisão jurídica e acadêmica permanecem independentes.
 
 ## Registros anteriores
 
