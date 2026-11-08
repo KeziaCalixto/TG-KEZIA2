@@ -13,7 +13,7 @@ function inside(root, name) {
   return result;
 }
 
-export async function prepareSite({ repoRoot, manifest }) {
+export async function prepareSite({ repoRoot, manifest, baseUrl = "/" }) {
   const root = path.resolve(repoRoot);
   const ids = new Set();
   const sourceNames = new Set();
@@ -105,7 +105,12 @@ export async function prepareSite({ repoRoot, manifest }) {
           );
           url = relative.startsWith(".") ? relative : "./" + relative;
         } else if (assets.has(target)) {
-          url = "@site/static/generated/" + target;
+          url = label.startsWith("!")
+            ? "@site/static/generated/" + target
+            : "pathname://" +
+              baseUrl +
+              "generated/" +
+              target.split("/").map(encodeURIComponent).join("/");
         } else {
           if (label.startsWith("!"))
             throw new Error(`Unpublished image ${target} in ${page.source}`);

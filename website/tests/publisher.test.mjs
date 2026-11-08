@@ -32,7 +32,7 @@ test("a reader follows a relative source link to the published document and down
       "utf8",
     );
     assert.match(page, /\.\.\/engenharia\/modelo\.md#dados/);
-    assert.match(page, /@site\/static\/generated\/report\.pdf/);
+    assert.match(page, /pathname:\/\/\/generated\/report\.pdf/);
     assert.equal(result.pages, 2);
   } finally {
     await rm(root, { recursive: true, force: true });

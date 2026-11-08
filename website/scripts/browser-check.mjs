@@ -97,6 +97,7 @@ try {
     await page.screenshot({
       path: path.join(artifacts, `docs-portal-${device}.png`),
       fullPage: true,
+      animations: "disabled",
     });
     let axe = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
@@ -132,17 +133,37 @@ try {
         );
       }
       await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
+      // Theme attributes change before the finite CSS color transitions finish.
+      await page.evaluate(() =>
+        Promise.all(
+          document
+            .getAnimations()
+            .filter(
+              (animation) =>
+                animation.playState === "running" &&
+                Number.isFinite(animation.effect?.getComputedTiming().endTime),
+            )
+            .map((animation) => animation.finished.catch(() => {})),
+        ),
+      );
       const dark = await new AxeBuilder({ page })
         .withTags(["wcag2a", "wcag2aa", "wcag21aa"])
         .analyze();
       assert.deepEqual(
-        dark.violations.map((v) => v.id),
+        dark.violations.map((v) => ({
+          id: v.id,
+          nodes: v.nodes.map((n) => ({
+            target: n.target,
+            summary: n.failureSummary,
+          })),
+        })),
         [],
         "Dark-mode accessibility",
       );
       await page.screenshot({
         path: path.join(artifacts, "docs-portal-dark.png"),
         fullPage: true,
+        animations: "disabled",
       });
       await page.getByRole("button", { name: /claro|light/i }).click();
       await expect(page.locator("html")).toHaveAttribute("data-theme", "light");

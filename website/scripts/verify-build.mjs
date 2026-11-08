@@ -64,6 +64,14 @@ for (const file of html) {
       errors.push(`${relative}: outside build ${raw}`);
       continue;
     }
+    if (
+      $(element).is("a") &&
+      url.pathname.endsWith("/") &&
+      (await exists(candidate))
+    ) {
+      errors.push(`${relative}: file URL has a trailing slash ${raw}`);
+      continue;
+    }
     let target;
     for (const f of [
       candidate,
