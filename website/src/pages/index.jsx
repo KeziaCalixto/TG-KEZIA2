@@ -76,8 +76,7 @@ export default function Home() {
               <p className="heroCaption">
                 Kezia Calixto · Análise e Desenvolvimento de Sistemas
                 <br />
-                FATEC Campinas · Orientação: Prof. Eduardo Felipe Fonseca de
-                Freitas
+                FATEC Campinas · Orientação: Prof. Eduardo Freitas
               </p>
             </div>
             <aside className="scopePanel" aria-label="Escopo documentado">
