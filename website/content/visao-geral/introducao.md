@@ -1,6 +1,6 @@
 # Clareza para conferir cada prazo
 
-O **Prazo Claro** é uma aplicação acadêmica para simular a contagem de prazos processuais brasileiros e explicar como se chegou à data estimada. Este portal reúne o manual, as decisões de engenharia, o banco de dados, a operação e os materiais do Trabalho de Graduação II de **Kezia Calixto**, de Análise e Desenvolvimento de Sistemas da **FATEC Campinas**, com orientação do Prof. Eduardo Felipe Fonseca de Freitas.
+O **Prazo Claro** é uma aplicação acadêmica para simular a contagem de prazos processuais brasileiros e explicar como se chegou à data estimada. Este portal reúne o manual, as decisões de engenharia, o banco de dados, a operação e os materiais do Trabalho de Graduação II de **Kezia Calixto**, de Análise e Desenvolvimento de Sistemas da **FATEC Campinas**, com orientação do Prof. Eduardo Freitas.
 
 ## Escolha um percurso
 
